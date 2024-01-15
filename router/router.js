@@ -1,18 +1,18 @@
 /*
 
-Made and Maintained by FireCodes. Any Modification is prohibited and could lead to faulty behaviour of the site - v0.0.0 
+Made and Maintained by Blockly For Discord. Any Modification is prohibited and could lead to faulty behaviour of the site - v0.0.0 
 
 */
 
 const router = {
     "home" : {
-        "dest" : "https://cloud.firecodes.xyz/assets/home",
+        "dest" : "https://",
         "function" : "InitHome",
         "switch" : "EndHome",
     },
     // 404 - routes when no other match is found
     "404" : {
-        "dest" : "https://cloud.firecodes.xyz/assets/404",
+        "dest" : "https://",
         "function" : "Init404",
         "switch" : "End404",
     }
