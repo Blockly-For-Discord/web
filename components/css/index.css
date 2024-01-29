@@ -185,14 +185,38 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 .showcase-1 {
     display: flex;
     width: 70%;
     height: auto;
+    justify-content: space-between;
 }
 
 .showcase-2 {
     
+}
+
+.showcase-1-title {
+    color: #DADADA;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.showcase-1-desc {
+    color: #7E828D;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.showcase-1-text {
+    display: flex;
+     flex-direction: column;
+     max-width: 400px;
 }
