@@ -4,15 +4,21 @@ Listen for event when login succeeded and get the locale, if not available set t
 Issue: Can't find out if Local Storage item stops existing, needs some kind of safety measure.
 
 */
-
+import en_US from 'components/lang/languages/en_US.js';
+import es_ES from 'components/lang/languages/es_ES.js';
 
 const config = {
-    "en-US": {
+    "en_US": {
         "name" : "English",
-        "icon" : "src",
+        "icon" : "https://blockly-for-discord.xyz/components/svg/country-flags/uk.svg",
     },
-    "en-ES": {
+    "en_ES": {
         "name" : "Español",
-        "icon" : "src",
+        "icon" : "https://blockly-for-discord.xyz/components/svg/country-flags/spain.svg",
     }
+}
+
+
+function test () {
+    console.log(en_US);
 }
