@@ -6,8 +6,8 @@ Issue: Can't find out if Local Storage item stops existing, needs some kind of s
 */
 
 import en_US from './languages/en_US.js';
-import es_ES from '../../components/lang/languages/es_ES.js';
-import nl_NL from '../../components/lang/languages/nl_NL.js';
+import es_ES from './languages/es_ES.js';
+import nl_NL from './languages/nl_NL.js';
 
 const config = {
     "en_US": {
