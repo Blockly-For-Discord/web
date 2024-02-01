@@ -4,8 +4,8 @@ Listen for event when login succeeded and get the locale, if not available set t
 Issue: Can't find out if Local Storage item stops existing, needs some kind of safety measure.
 
 */
-import en_US from 'components/lang/languages/en_US.js';
-import es_ES from 'components/lang/languages/es_ES.js';
+import en_US from '../../components/lang/languages/en_US.js';
+import es_ES from '../../components/lang/languages/es_ES.js';
 
 const config = {
     "en_US": {
@@ -22,3 +22,4 @@ const config = {
 function test () {
     console.log(en_US);
 }
+window.lang = test
