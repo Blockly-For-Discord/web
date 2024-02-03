@@ -32,11 +32,15 @@ function AutoTranslate (language) {
 
 window.AutoTranslate = AutoTranslate
 
-// Get certain key value for id in a language file
+// Get a certain key value for id in a language file
 function GetTranslation (language, id) {
 
 }
 
 window.GetTranslation = GetTranslation
 
-custom.GetTranslation = GetTranslation
+function DefineLocale (language) {
+    localStorage.setItem('locale', language);
+}
+
+window.DefineLocale = DefineLocale
