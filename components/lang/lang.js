@@ -17,11 +17,26 @@ const config = {
     "en_ES": {
         "name" : "Español",
         "icon" : "https://blockly-for-discord.xyz/components/svg/country-flags/spain.svg",
+    },
+    "nl_NL": {
+        "name" : "Nederlands",
+        "icon" : ""
     }
 }
 
 
-function test () {
-    console.log(en_US);
+// Automatic Page translation
+function AutoTranslate (language) {
+
 }
-window.lang = test
+
+window.AutoTranslate = AutoTranslate
+
+// Get certain key value for id in a language file
+function GetTranslation (language, id) {
+
+}
+
+window.GetTranslation = GetTranslation
+
+custom.GetTranslation = GetTranslation
