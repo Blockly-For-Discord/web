@@ -144,6 +144,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 13px;
+    cursor: pointer;
 }
 .banner-action {
     display: flex;
@@ -203,7 +204,7 @@ a {
     margin-top: 80px;
 }
 .final-showcase {
-    
+
 }
 
 .showcase-1 {
