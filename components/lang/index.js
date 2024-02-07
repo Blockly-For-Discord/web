@@ -3,11 +3,13 @@
 Listen for event when login succeeded and get the locale, if not available set to en-US. Dont use DomContentLoaded listener, make custom because dom loads too soon. 
 Issue: Can't find out if Local Storage item stops existing, needs some kind of safety measure.
 
-*/
+
 
 import en_US from './languages/en_US.js';
 import es_ES from './languages/es_ES.js';
-import nl_NL from './languages/nl_NL.js';
+import nl_NL from './languages/nl_NL.js';*/
+import * as lang from './languages';
+
 
 const config = {
     "en_US": {
@@ -24,6 +26,7 @@ const config = {
     }
 }
 
+console.log(lang.en_ES);
 
 // Automatic Page translation
 function AutoTranslate (language) {

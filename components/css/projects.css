@@ -157,6 +157,7 @@ body {
 a {
     color: #82889c;
     transition: 0.25s;
+    text-decoration: none;
 }
 
 a:hover {
