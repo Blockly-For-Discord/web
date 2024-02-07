@@ -26,7 +26,7 @@ const config = {
     }
 }
 
-console.log(lang.en_ES);
+console.log(lang.es_ES);
 
 // Automatic Page translation
 function AutoTranslate (language) {
