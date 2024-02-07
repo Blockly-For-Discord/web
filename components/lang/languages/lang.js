@@ -1,2 +1,2 @@
-export * from './en_US';
-export * from './es_ES';
+export * from './en_US.js';
+export * from './es_ES.js';
