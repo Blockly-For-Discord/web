@@ -1,15 +1,15 @@
 const discordjs_tree = {
     "/": {
-        "file": {
+        "file-0": {
             "name" : "index.js",
             "content" : `<xml></xml>`,
             "type" : "b4d",
         },
-        "folder": {
+        "folder-0": {
             "name" : "Commands",
             "content" : {}
         },
-        "file": {
+        "file-1": {
             "name" : "readme.md",
             "content" : `Write something important or notes about your bot here...`,
             "type" : "txt",
