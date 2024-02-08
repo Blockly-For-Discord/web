@@ -4,6 +4,7 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 */
 
+
 document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < 3; i++) {
         console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
