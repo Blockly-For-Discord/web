@@ -21,7 +21,7 @@ What are Extensions? Extensions are our way of bringing extra features to the us
 
 
 ### Running locally
-1.
+1. cd to the repo, and then write in your terminal
 ```
 npm install
 webpack
