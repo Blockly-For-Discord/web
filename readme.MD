@@ -10,16 +10,6 @@ The entire project is made with pure JS and as the name of the site suggest we u
 
 
 
-
-## Contributing
-
-Contributions are always welcome! You can contribute with new blocks by creating Extensions or improving the sites code.
-
-### Extensions
-
-What are Extensions? Extensions are our way of bringing extra features to the users made by the community! They can add any type of block and can range from libraries to simply shortcuts to finish code faster. We don't integrate these blocks by default into the toolbox because it would get pretty crammed overtime.
-
-
 ### Running locally
 1. cd to the repo, and then write in your terminal
 ```
