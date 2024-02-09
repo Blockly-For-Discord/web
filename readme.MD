@@ -2,7 +2,7 @@
 # Blockly For Discord
 
 Blockly for Discord is a project we made to build Discord Bots with simple blocks, so you dont have to touch a line of code. All of your blocks then can get translated to either DiscordJS or Discord.py .
-
+You can visit the official site here: https://blockly-for-discord.xyz/
 
 ## How it works
 
