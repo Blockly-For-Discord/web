@@ -1,1 +1,1 @@
-import Blockly from "./node_modules/blockly";
+import * as Blockly from 'blockly/core';
