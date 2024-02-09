@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: './webpack/webpack-blockly.js',
-    index2: './webpack/webpack-generator.js',
+    BlocklyCompressed: './webpack/webpack-blockly.js',
+    BlocklyJS: './webpack/webpack-generator.js',
   },
   output: {
     path: path.resolve(__dirname, './components/webpack'),
