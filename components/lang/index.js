@@ -9,7 +9,7 @@ Issue: Can't find out if Local Storage item stops existing, needs some kind of s
 
 // import everything from lang.js so we dont have to add each import here.
 
-
+import * as lang from './languages.js';
 
 const config = {
     "en_US": {
