@@ -10,9 +10,6 @@ Issue: Can't find out if Local Storage item stops existing, needs some kind of s
 // import everything from lang.js so we dont have to add each import here.
 
 
-import Blockly from "blockly";
-const workspace = Blockly.inject(
-    document.getElementById('blocklyDiv'), { /* config */ });
 
 const config = {
     "en_US": {
