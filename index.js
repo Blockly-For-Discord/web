@@ -5,9 +5,10 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 */
 let b4d = {
   version: function() {
-      console.log("[B4D] Version")
       console.log("B4D - " + "v0.0.0/production");
       console.log("Blockly - " + b4d.Blockly.VERSION);
+      console.log("CSS - " + "v0.0.0");
+      console.log("JS - " + "v0.0.0");
   }
 };
 
