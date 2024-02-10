@@ -6,7 +6,7 @@ module.exports = {
     BlocklyJS: './webpack/webpack-generator.js',
   },
   output: {
-    library: 'Blockly',
+    library: 'Bla',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, './components/webpack'),
     filename: '[name].bundle.js', 
