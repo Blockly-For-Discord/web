@@ -7,7 +7,7 @@ let b4d = {
   version: function() {
       console.log("[B4D] Version")
       console.log("B4D - " + "v0.0.0/production");
-      console.log("Blockly - " + Blockly.VERSION);
+      console.log("Blockly - " + b4d.Blockly.VERSION);
   }
 };
 
