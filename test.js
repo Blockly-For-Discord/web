@@ -43,9 +43,7 @@ function customTooltip(block) {
     // Add your custom content to the div
     tooltipDiv.innerHTML = 'Custom Tooltip Content';
     // Return the div element
-    return tooltipDiv;
+    return "test";
   }
   
-  // Set the custom tooltip function to the block
-  block.setTooltip(customTooltip);
 b4d.Blockly.setLocale(b4d.En);
