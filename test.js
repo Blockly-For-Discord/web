@@ -36,14 +36,5 @@ const toolbox = {
   
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
-
-function customTooltip(block) {
-    // Create a div element
-    var tooltipDiv = document.createElement('div');
-    // Add your custom content to the div
-    tooltipDiv.innerHTML = 'Custom Tooltip Content';
-    // Return the div element
-    return "test";
-  }
   
 b4d.Blockly.setLocale(b4d.En);
