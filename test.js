@@ -6,11 +6,11 @@ const toolbox = {
       {
         "kind": "block",
         "type": "controls_if"
-      },
+      },/*
       {
         "kind": "block",
         "type": "controls_repeat_ext"
-      },
+      },*/
       {
         "kind": "block",
         "type": "logic_compare"
