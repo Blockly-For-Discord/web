@@ -1,5 +1,4 @@
-// import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
-import * as Blockly from 'blockly/core';
+import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 
 const toolbox = {
     "kind": "flyoutToolbox",
