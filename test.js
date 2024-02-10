@@ -34,4 +34,4 @@ const toolbox = {
     ]
   }
 
-const workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
+const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
