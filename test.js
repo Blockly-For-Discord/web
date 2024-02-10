@@ -1,4 +1,4 @@
-import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
+//import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 
 const toolbox = {
     "kind": "flyoutToolbox",
@@ -34,4 +34,4 @@ const toolbox = {
     ]
   }
 
-const workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
+const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
