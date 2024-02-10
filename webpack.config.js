@@ -9,6 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, './components/webpack'),
     filename: '[name].bundle.js',
     libraryTarget: 'umd',
+    library: 'Blockly',
+    libraryExport: 'default',
   },
   module: {
     rules: [
