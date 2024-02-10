@@ -5,49 +5,34 @@ const toolbox = {
     "contents": [
       {
         "kind": "category",
-        "name": "Core",
+        "name": "Control",
         "contents": [
           {
             "kind": "block",
             "type": "controls_if"
           },
-          {
-            "kind": "block",
-            "type": "logic_compare"
-          },
         ]
       },
       {
         "kind": "category",
-        "name": "Custom",
+        "name": "Logic",
         "contents": [
           {
             "kind": "block",
-            "type": "start"
+            "type": "logic_compare"
           },
           {
-            "kind": "category",
-            "name": "Move",
-            "contents": [
-              {
-                "kind": "block",
-                "type": "move_forward"
-              }
-            ]
+            "kind": "block",
+            "type": "logic_operation"
           },
           {
-            "kind": "category",
-            "name": "Turn",
-            "contents": [
-              {
-                "kind": "block",
-                "type": "turn_left"
-              }
-            ]
+            "kind": "block",
+            "type": "logic_boolean"
           }
         ]
       }
     ]
   }
+  
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
