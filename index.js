@@ -3,7 +3,13 @@
 This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
 
 */
-let b4d = {}
+let b4d = {
+  version: function() {
+      console.log("[B4D] Version")
+      console.log("B4D - " + "v0.0.0/production");
+      console.log("Blockly - " + Blockly.VERSION);
+  }
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < 3; i++) {
