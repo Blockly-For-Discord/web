@@ -4,3 +4,4 @@ import * as En from 'blockly/msg/en';
 
 b4d.Blockly = Blockly
 b4d.libraryBlocks = libraryBlocks
+b4d.En = En
