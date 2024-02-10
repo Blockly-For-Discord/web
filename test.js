@@ -36,3 +36,4 @@ const toolbox = {
   
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
+b4d.Blockly.setLocale(b4d.En);
