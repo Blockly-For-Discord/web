@@ -1,5 +1,5 @@
 import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
-
+import * as Blockly from 'blockly/core';
 
 const toolbox = {
     "kind": "flyoutToolbox",
@@ -34,5 +34,5 @@ const toolbox = {
       },
     ]
   }
-  
+
 const workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
