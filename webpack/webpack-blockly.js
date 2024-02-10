@@ -2,4 +2,5 @@ import * as Blockly from 'blockly/core';
 /* import * as libraryBlocks from 'blockly/blocks';
 import * as En from 'blockly/msg/en'; */
 
-export Blockly
+console.log(Blockly)
+document.Blockly = Blockly
