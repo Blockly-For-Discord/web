@@ -1,4 +1,4 @@
-import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
+// import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 import * as Blockly from 'blockly/core';
 
 const toolbox = {
