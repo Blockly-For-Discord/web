@@ -11,7 +11,6 @@ module.exports = {
     filename: '[name].bundle.js',
     libraryTarget: 'umd',
     library: 'Blockly',
-    libraryExport: 'default',
   },
   module: {
     rules: [
