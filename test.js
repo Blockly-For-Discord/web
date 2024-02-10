@@ -1,3 +1,3 @@
 import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 
-console.log(Blockly);
+const workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
