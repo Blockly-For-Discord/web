@@ -3,4 +3,4 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en'; */
 
 console.log(Blockly)
-document.Blockly = Blockly
+b4d.Blockly = Blockly
