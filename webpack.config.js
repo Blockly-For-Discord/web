@@ -6,7 +6,6 @@ module.exports = {
     BlocklyJS: './webpack/webpack-generator.js',
   },
   output: {
-    library: 'b4d',
     path: path.resolve(__dirname, './components/webpack'),
     filename: '[name].bundle.js', 
   },
