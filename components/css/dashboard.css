@@ -23,8 +23,34 @@
 }
 
 .LoadScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: red;
+  background: #131417;
+  position: absolute;
   z-index: 5;
+  
+}
+
+.loadbar {
+  height: 7px;
+  width: 250px;
+  border-radius: 15px;
+  background-color: #1c2129;
+  overflow: hidden;
+}
+.progress {
+  height: 7px;
+  width: 0px;
+  background-color: #d3d9e3;
+  transition: width 0.7s cubic-bezier(0.45, 0.23, 0.4, 0.96);
+}
+
+.LoadScreenText {
+  color: gray;
+  font-family: sans-serif;
+  margin-bottom: 7px;
 }
