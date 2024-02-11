@@ -20,7 +20,6 @@ const router = {
 
 // Router on first Page Load
 document.addEventListener('DOMContentLoaded', function() {
-    InitLoadScreen();
     const pathArray = window.location.pathname.split('/');
     const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
     
@@ -51,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
   
-function InitHome () {
-    console.log("This would trigger the 404 Page");
-}
 // Router on page switch
 
 async function SwitchPage (from, to) {
@@ -67,6 +63,17 @@ async function SwitchPage (from, to) {
             window[switchFunction]();
 
             const response = await window[switchFunction]();
+
+            if (router[to]) {
+                const switchToFunction = router[to].function;
+
+                const query = window.location.search;
+
+                if (typeof window[switchToFunction] === 'function') {
+                    window[switchToFunction](query);
+                }
+
+            }
 
         } else {
 
