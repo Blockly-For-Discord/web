@@ -5,7 +5,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 */
 
 const router = {
-    "home" : {
+    "dashboard" : {
         "dest" : "https://",
         "function" : "InitHome",
         "switch" : "EndHome",
