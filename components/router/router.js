@@ -5,7 +5,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 */
 
 const router = {
-    "dashboard" : {
+    "" : {
         "dest" : "https://",
         "function" : "InitHome",
         "switch" : "EndHome",
@@ -21,7 +21,7 @@ const router = {
 // Router on first Page Load
 document.addEventListener('DOMContentLoaded', function() {
     InitLoadScreen();
-    const PathOnload = window.location.pathname.split('/')[1].toLowerCase();
+    const PathOnload = window.location.pathname.split('/')[2].toLowerCase();
 
     const query = window.location.search;
 
