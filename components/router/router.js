@@ -21,8 +21,9 @@ const router = {
 // Router on first Page Load
 document.addEventListener('DOMContentLoaded', function() {
     InitLoadScreen();
-    const PathOnload = window.location.pathname.split('/')[2].toLowerCase();
-
+    const pathArray = window.location.pathname.split('/');
+    const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
+    
     const query = window.location.search;
 
     if (PathOnload in router) {
