@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
   
-
+function Init404 () {
+    console.log("This would trigger the 404 Page");
+}
 // Router on page switch
 
 async function SwitchPage (from, to) {
