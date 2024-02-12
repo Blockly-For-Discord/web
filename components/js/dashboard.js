@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
       
 
       if (!Cookies.get('token')) {
+        const LoadingBar = document.getElementById('loadbar');
+        const Progress = document.getElementById('progress');
+        const widthPercentage = LoadingBar.offsetWidth / 100;
+          Progress.style.width = widthPercentage * 20 + 'px';
+          
         const link = document.createElement('a');
         link.href = 'https://discord.com/api/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fblockly-for-discord.xyz%2Fcallback&scope=identify+email';
         link.rel = 'noopener noreferrer';
