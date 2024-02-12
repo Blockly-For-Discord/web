@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     BlocklyCompressed: './webpack/webpack-blockly.js',
-    BlocklyJS: './webpack/webpack-generator.js'
+    BlocklyJS: './webpack/webpack-generator.js',
+    ToasitfyJS: './webpack/webpack-toastify.js',
   },
   output: {
     path: path.resolve(__dirname, './components/webpack'),
@@ -20,6 +21,10 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
