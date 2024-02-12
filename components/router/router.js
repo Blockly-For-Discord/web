@@ -4,7 +4,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 
 */
 
-
+// import { HomeInit } from '../dashboard/home.js';
 
 const router = {
     "" : {
