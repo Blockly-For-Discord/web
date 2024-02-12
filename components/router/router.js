@@ -24,7 +24,7 @@ const router = {
 }
 
 // Router on first Page Load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('AuthConfirmed', function() {
     const pathArray = window.location.pathname.split('/');
     const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
     
