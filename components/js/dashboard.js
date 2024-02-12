@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
           link.click();
-        }, 3000);
+        }, 2000);
 
       } else {
 
