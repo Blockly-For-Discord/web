@@ -5,6 +5,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 */
 
 import { HomeInit } from '../dashboard/home.js';
+window.HomeInit = HomeInit;
 
 const router = {
     "" : {
@@ -31,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const FunctionToRun = router[PathOnload].function;
 
-        if (typeof [FunctionToRun] === "function") {
+        if (typeof window[FunctionToRun] === "function") {
 
 
             // Set loading screen
-            [FunctionToRun](query);
+            window[FunctionToRun](query);
 
         } else { console.error("[Router] Couldn't find Initiator for " + PathOnload) };
 
