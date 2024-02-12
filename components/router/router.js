@@ -4,7 +4,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 
 */
 
-// import { HomeInit } from '../dashboard/home.js';
+import { HomeInit } from '../dashboard/home.js';
 
 const router = {
     "" : {
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const FunctionToRun = router[PathOnload].function;
 
-        if (typeof window[FunctionToRun] === "function") {
+        if (typeof [FunctionToRun] === "function") {
 
 
             // Set loading screen
-            window[FunctionToRun](query);
+            [FunctionToRun](query);
 
         } else { console.error("[Router] Couldn't find Initiator for " + PathOnload) };
 
@@ -52,9 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  function HomeInit () {
-    console.log("e");
-  }
   
 // Router on page switch
 
