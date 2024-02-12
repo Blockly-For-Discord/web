@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const callback = window.location.search;
 
     
-    if(!callback === '') {
+    if(!callback === undefined) {
 
         var searchParams = new URLSearchParams(callback);
         var codeValue = searchParams.get('code');
