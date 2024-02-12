@@ -51,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
   });
+
+  function HomeInit () {
+    console.log("e");
+  }
   
 // Router on page switch
 
