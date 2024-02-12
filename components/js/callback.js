@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const callback = window.location.search;
 
     
-    if(!callback === undefined) {
+    if(callback !== '') {
 
         var searchParams = new URLSearchParams(callback);
         var codeValue = searchParams.get('code');
@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             if (data.response === "ok") {
+                const tokenHeaderValue = response.headers.get('token');
+                Cookies.set('token', tokenHeaderValue, { expires: 7 });
+                window.location.href = "https://blockly-for-discord.xyz/dashboard/";
 
             } else {
 
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         
 
-        window.location.href = "https://blockly-for-discord.xyz/dashboard/";
+        
     } else {
         window.location.href = "https://blockly-for-discord.xyz/";
     }
