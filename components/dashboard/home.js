@@ -5,7 +5,7 @@ export function HomeInit (query) {
     const container = document.getElementById("MainContainer");
 }
 
-export function Switch () {
+export function HomeSwitch () {
 
 
     const response = `{"response":"success"}`;

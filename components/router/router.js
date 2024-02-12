@@ -6,6 +6,8 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 
 import { HomeInit } from '../dashboard/home.js';
 window.HomeInit = HomeInit;
+import { HomeSwitch } from '../dashboard/home.js';
+window.HomeSwitch = HomeSwitch;
 
 const router = {
     "" : {
