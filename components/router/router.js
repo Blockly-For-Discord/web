@@ -3,12 +3,13 @@
 Made and Maintained by Blockly For Discord. Any Modification is prohibited and could lead to faulty behaviour of the site - v0.0.0 
 
 */
-import * as Home from "../dashboard/home.js"
+
+import { HomeInit } from '../dashboard/home.js';
 
 const router = {
     "" : {
         "dest" : "https://",
-        "function" : "Home.Init",
+        "function" : "HomeInit",
         "switch" : "Home.Switch",
     },
     // 404 - routes when no other match is found

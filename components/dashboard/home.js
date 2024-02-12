@@ -1,6 +1,6 @@
 
 
-export function Init (query) {
+export function HomeInit (query) {
     console.log("Should log on /");
     const container = document.getElementById("MainContainer");
 }
