@@ -5,15 +5,15 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 */
 
 import { HomeInit } from '../dashboard/home.js';
-window.HomeInit = HomeInit;
 import { HomeSwitch } from '../dashboard/home.js';
 window.HomeSwitch = HomeSwitch;
+window.HomeInit = HomeInit;
 
 const router = {
     "" : {
         "dest" : "https://",
         "function" : "HomeInit",
-        "switch" : "Home.Switch",
+        "switch" : "HomeSwitch",
     },
     // 404 - routes when no other match is found
     "404" : {
@@ -69,7 +69,7 @@ async function SwitchPage (from, to) {
             window[switchFunction]();
 
             const response = await window[switchFunction]();
-
+            console.log(response);
             if (router[to]) {
                 const switchToFunction = router[to].function;
 
