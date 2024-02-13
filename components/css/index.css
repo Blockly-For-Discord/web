@@ -401,3 +401,6 @@ a:hover {
     font-size: 25px;
 }
 
+.Toastify__toast {
+    border-radius: 10px; 
+    }

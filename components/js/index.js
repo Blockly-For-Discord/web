@@ -21,7 +21,7 @@ function ThrowErrorMessage (text) {
         position: "center", 
         stopOnFocus: false,
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "#cf3429",
         },
         onClick: function(){}
       }).showToast();
