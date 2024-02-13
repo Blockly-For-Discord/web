@@ -1,8 +1,4 @@
 
-
-let b4d = {};
-
-
 document.addEventListener('DOMContentLoaded', function() {
     
     const callback = window.location.search;
