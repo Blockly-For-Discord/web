@@ -1,3 +1,8 @@
+
+
+let b4d = {};
+
+
 document.addEventListener('DOMContentLoaded', function() {
     
     const callback = window.location.search;
@@ -8,3 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
         ThrowErrorMessage(codeValue);
     }
 })
+
+
