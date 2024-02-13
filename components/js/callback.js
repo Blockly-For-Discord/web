@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => {
             console.error('Error during fetch:', error);
-            window.location.href = "https://blockly-for-discord.xyz?error=generic_error";
+            window.location.href = "https://blockly-for-discord.xyz?error=Couldn't access sever. Is it down?";
         });
     } else {
         window.location.href = "https://blockly-for-discord.xyz/";
