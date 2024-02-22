@@ -23,17 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         ProgressChange(20);
         const ProgressText = document.getElementById('LoadScreenText');
-        ProgressText.textContent = 'Redirecting...';
         setTimeout(function() {
           const link = document.createElement('a');
           link.href = 'https://discord.com/api/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fblockly-for-discord.xyz%2Fcallback&scope=identify+email';
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
+          ProgressText.textContent = 'Redirecting...';
           link.click();
         }, 1400);
 
       } else {
-
+        
 
 
       }
