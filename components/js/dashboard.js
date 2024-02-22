@@ -13,6 +13,7 @@ let b4d = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
+  /*
     for (let i = 0; i < 3; i++) {
         console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
         console.log('%cIf someone told you to PASTE something here, do NOT do it. Theres a 101% Chance they are trying to hack your account.', 'color: red; font-size: 16px;');
@@ -38,7 +39,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
       }
       
-    
+    */
+
+    // UI TESTS AND CO, GOES AFTER CHECK PREFERRABLY NEW FUNCTION OR EVENT
+    const navbar = ` <div class="nav-logo">
+    <svg class="logo" width="944" height="804" viewBox="0 0 944 804" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M561.878 89.3585C493.097 -29.7862 321.138 -29.7862 252.356 89.3585L24.398 484.226C-44.3843 603.373 41.5938 752.302 179.159 752.302H407.011C357.571 697.914 342.251 614.313 384.29 541.855L496.453 348.529C532.648 286.142 597.169 256.545 660.236 259.737L561.878 89.3585Z" fill="#308FE7"/>
+        <path d="M535.111 406.33C603.984 287.672 775.335 287.672 844.208 406.33L918.65 534.576C987.807 653.723 901.856 803.019 764.101 803.019H615.218C477.464 803.019 391.51 653.723 460.668 534.576L535.111 406.33Z" fill="#D9D9D9"/>
+        </svg>
+    <span class="logo-text">B4D</span>
+</div>
+<div class="nav-items">
+</div>`;
+    SetNavbar(navbar);
+
 });
 
 
