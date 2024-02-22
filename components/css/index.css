@@ -6,14 +6,6 @@
     font-family: inter;
 }
 
-:root {
-    --primary-dark: #0E0F12;
-    --secondary-dark: #131417;
-    --components-dark: #D9D9D9;
-    --text-secondary-dark: #DADADA;
-}
-
-
 
 * {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
