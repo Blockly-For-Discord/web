@@ -30,7 +30,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: #131417;
+  background: var(--grad-4);
   position: absolute;
   z-index: 5;
   
