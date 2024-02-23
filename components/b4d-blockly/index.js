@@ -1,0 +1,1 @@
+const libs = ["discordjs", "discordpy"]
