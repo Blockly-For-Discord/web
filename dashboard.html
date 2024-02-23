@@ -17,6 +17,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
 </head>
 <body>
+    <!-- LoadScreen takes layer priority -->
     <div class="LoadScreen">
         <span id="LoadScreenText" class="LoadScreenText">Authenticating</span>
         <div id="loadbar" class="loadbar">
@@ -24,7 +25,15 @@
         </div>
     </div>
     <div class="page">
+        <!-- Nav Bar -->
         <div class="navbar" id="navbar"></div>
+
+        <!-- Main Site -->
+        <div class="main" id="main">
+
+            <div class="sidebar" id="sidebar"></div>
+            <div class="content" id="content"></div>
+        </div>
     </div>
 </body>
 </html>

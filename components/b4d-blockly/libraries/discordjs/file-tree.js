@@ -2,7 +2,7 @@ const discordjs_tree = {
     "/": {
         "file-0": {
             "name" : "index.js",
-            "content" : `<xml></xml>`,
+            "content" : `<xml xmlns="https://developers.google.com/blockly/xml"></xml>`,
             "type" : "b4d",
         },
         "folder-0": {

@@ -1,1 +1,2 @@
-const libs = ["discordjs", "discordpy"]
+const libs = ["discordjs", "discordpy"];
+
