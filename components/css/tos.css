@@ -31,3 +31,25 @@ body {
     max-width: 100vw;
     background: var(--grad-4);
   }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-text {
+    color: var(--grad-10);
+    font-weight: 800;
+    font-size: 30px;
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
