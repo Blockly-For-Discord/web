@@ -33,7 +33,9 @@ body {
     background: var(--grad-4);
   }
   .page > :not(:first-child) {
-    margin: 20px;
+    margin: 10px;
+    margin-left: 37px;
+    margin-right: 37px;
   }
   .logo {
     width: 40px;
