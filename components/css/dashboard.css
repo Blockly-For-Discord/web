@@ -108,4 +108,84 @@
 .sidebar {
   width: 56px;
   background: var(--grad-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionbar {
+  padding-top: 15px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-parent {
+  width: 30px;
+  height: auto;
+}
+
+.action-item {
+  fill: var(--grad-6);
+  width: 27px;
+  height: auto;
+  transition: fill 0.25s, transform 0.15s;
+}
+
+.home-action-item {
+  width: 25px !important;
+}
+
+.action-item:hover {
+  fill: var(--grad-7);
+  cursor: pointer;
+}
+
+.action-item:active {
+  fill: var(--grad-10);
+  transform: scale(0.95);
+}
+
+.action-item-active {
+  fill: var(--grad-10) !important;
+}
+
+.setting-action:hover {
+  fill: var(--accent-6) !important;
+}
+.setting-action:active {
+  fill: var(--accent-6) !important;
+}
+
+.content {
+  width: 100%;
+  border-left: 1px solid var(--grad-5);
+}
+
+.settingsbar {
+  padding-bottom: 15px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.avatar-container:hover {
+  filter: brightness(0.75);
+  cursor: pointer;
+}
+
+.avatar-container:active {
+  transform: scale(0.9);
 }
