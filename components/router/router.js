@@ -23,7 +23,7 @@ const router = {
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
-    document.dispatchEvent(authConfirmed);
+    AuthEvent();
 });
 
 
