@@ -4,6 +4,26 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 */
 
+let items = ["s-home", "s-projects", "s-explore", "s-extensions", "s-updates", "s-developer", "s-settings"];
+
+items.forEach(item => {
+
+  let element = document.getElementById(item);
+
+  element.addEventListener("click", function() {
+
+      items.forEach(otherItem => {
+
+          let otherElement = document.getElementById(otherItem);
+
+          if (otherElement !== element) {
+              otherElement.classList.remove("action-item-active");
+          }
+      });
+      element.classList.add("action-item-active");
+  });
+});
+
 let b4d = {
   version: function() {
       console.log("B4D - " + "v0.0.0/production");
