@@ -150,7 +150,9 @@
 .action-item-active {
   fill: var(--grad-10) !important;
 }
-
+.action-item-settings {
+  fill: var(--accent-6) !important;
+}
 .setting-action:hover {
   fill: var(--accent-6) !important;
 }

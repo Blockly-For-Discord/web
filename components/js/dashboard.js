@@ -12,7 +12,7 @@ let b4d = {
       console.log("JS - " + "v0.0.0");
   }
 };
-let items = ["s-home", "s-projects", "s-explore", "s-extensions", "s-updates", "s-developer", "s-settings"];
+let items = ["s-home", "s-projects", "s-explore", "s-users", "s-extensions", "s-updates", "s-developer", "s-settings"];
 document.addEventListener("DOMContentLoaded", function() {
   /*
     for (let i = 0; i < 3; i++) {
@@ -55,22 +55,25 @@ document.addEventListener("DOMContentLoaded", function() {
     SetNavbar(navbar);
 
     items.forEach(item => {
-
       let element = document.getElementById(item);
-    
       element.addEventListener("click", function() {
-    
           items.forEach(otherItem => {
-    
               let otherElement = document.getElementById(otherItem);
-    
               if (otherElement !== element) {
-                  otherElement.classList.remove("action-item-active");
+                  if (otherItem === "s-settings") {
+                      otherElement.classList.remove("action-item-settings");
+                  } else {
+                      otherElement.classList.remove("action-item-active");
+                  }
               }
           });
-          element.classList.add("action-item-active");
+          if (item === "s-settings") {
+              element.classList.add("action-item-settings");
+          } else {
+              element.classList.add("action-item-active");
+          }
       });
-    });
+  });
 
 });
 
