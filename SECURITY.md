@@ -6,7 +6,7 @@ Latest Server Software Security Updates
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+| 1.0.x   | Not out yet |
 
 ## Reporting a Vulnerability
 
