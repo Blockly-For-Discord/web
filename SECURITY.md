@@ -16,7 +16,7 @@ or
 write a DM to one of the Lead Developers on our Discord Server
 
 Ideally do both, and with the following information:
-What happens?
-Expected Bheaviour?
-What privacy or vulnerability can or is being exploited?
-What steps to reproduce?
+- What happens?
+- Expected Behaviour?
+- What privacy or vulnerability can or is being exploited?
+- What steps to reproduce?
