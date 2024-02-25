@@ -22,6 +22,10 @@ const router = {
         "switch" : "End404",
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    document.dispatchEvent(authConfirmed);
+});
+
 
 // Router on first Page Load
 document.addEventListener('AuthConfirmed', function() {
