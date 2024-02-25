@@ -11,7 +11,7 @@ window.HomeInit = HomeInit;
 
 const router = {
     "" : {
-        "dest" : "https://",
+        "dest" : "s-home",
         "function" : "HomeInit",
         "switch" : "HomeSwitch",
     },
@@ -43,6 +43,8 @@ document.addEventListener('AuthConfirmed', function() {
 
             // Set loading screen
             window[FunctionToRun](query);
+            const element = document.getElementById(router[PathOnload].dest);
+            element.classList.add("action-item-active");
 
         } else { console.error("[Router] Couldn't find Initiator for " + PathOnload) };
 
