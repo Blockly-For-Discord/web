@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
       let element = document.getElementById(item);
       element.addEventListener("click", function() {
           items.forEach(otherItem => {
+              window.IconPageLoader(otherItem);
               let otherElement = document.getElementById(otherItem);
               if (otherElement !== element) {
                   if (otherItem === "s-settings") {
