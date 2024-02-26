@@ -125,6 +125,7 @@ function InitLoadBar () {
 function IconPageLoader (to) {
 
     const item = TranslateIconToRouter[to];
+    console.log("Icon Page Translator: " + item)
     SwitchPage(item);
 }
 
