@@ -73,7 +73,7 @@ document.addEventListener('AuthConfirmed', function() {
 
 async function SwitchPage (to) {
 
-    if (CurrentActiveSite == 'none') {
+    if (CurrentActiveSite == 'no_site') {
 
         const switchToFunction = router[to].function;
 
