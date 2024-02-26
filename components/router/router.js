@@ -10,12 +10,15 @@ window.HomeSwitch = HomeSwitch;
 window.HomeInit = HomeInit;
 
 
-let CurrentActiveSite = 'no_site';
+let CurrentPage = 'none';
+
 const router = {
     "" : {
         "dest" : "s-home",
         "function" : "HomeInit",
         "switch" : "HomeSwitch",
+        "icon" : "s-home",
+        "class" : "action-item-active"
     },
     // 404 - routes when no other match is found
     "404" : {
@@ -25,6 +28,7 @@ const router = {
     }
 }
 
+
 const TranslateIconToRouter = {
     "s-home":""
 }
@@ -32,8 +36,81 @@ document.addEventListener('DOMContentLoaded', function () {
     AuthEvent();
 });
 
+document.addEventListener('AuthConfirmed', function() {
+    LoadPage(page);
+});
 
-// Router on first Page Load
+
+async function LoadPage(page) {
+
+    const query = window.location.search;
+
+    if (CurrentPage === 'none') {
+
+        if (FunctionExists(router[page].function)) {
+
+            window[router[page].function](query);
+            SidebarHighlight(page);
+
+        } else {
+            console.error("[Router] No Function for " + page + " was found")
+        }
+
+
+
+    } else {
+
+        if (FunctionExists(router[page].switch)) {
+
+            const response = await window[router[page].function](query);
+
+            if (FunctionExists(router[page].function)) {
+
+                window[router[page].function](query);
+                SidebarHighlight(page);
+
+            } else {
+                console.error("[Router] No Function for " + page + " was found")
+            }
+
+        } else {
+            console.error("[Router] No Switch Function for " + page + " was found")
+        }
+    }   
+}
+
+
+function FunctionExists(func) {
+
+
+    let result = typeof window[func] === "function" ? true : false;
+
+    return result;
+}
+
+function SidebarHighlight(page) {
+
+    let IconElement = document.getElementById(router[page].icon);
+    let IconClass = router[page].class;
+
+    for (let key in router) {
+        let DisableClass = router[key].class;
+
+        let element = document.getElementById(router[key].icon);
+        if (element) {
+            element.classList.remove(DisableClass);
+        }
+    }
+
+    if (IconElement) {
+        IconElement.classList.add(IconClass);
+    }
+    
+}
+
+
+
+/*
 document.addEventListener('AuthConfirmed', function() {
     const pathArray = window.location.pathname.split('/');
     const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
@@ -47,7 +124,6 @@ document.addEventListener('AuthConfirmed', function() {
         if (typeof window[FunctionToRun] === "function") {
 
 
-            // Set loading screen
             window[FunctionToRun](query);
             CurrentActiveSite = PathOnload;
             const element = document.getElementById(router[PathOnload].dest);
@@ -129,4 +205,4 @@ function IconPageLoader (to) {
     SwitchPage(item);
 }
 
-window.IconPageLoader = IconPageLoader;
+window.IconPageLoader = IconPageLoader; */
