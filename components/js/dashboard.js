@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     items.forEach(item => {
       let element = document.getElementById(item);
-      window.IconPageLoader(Item);
+      window.IconPageLoader(item);
       element.addEventListener("click", function() {
           items.forEach(otherItem => {
               console.log("the oter thing" + otherItem);
