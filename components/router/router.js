@@ -14,7 +14,6 @@ let CurrentPage = 'none';
 
 const router = {
     "" : {
-        "dest" : "s-home",
         "function" : "HomeInit",
         "switch" : "HomeSwitch",
         "icon" : "s-home",
@@ -22,9 +21,10 @@ const router = {
     },
     // 404 - routes when no other match is found
     "404" : {
-        "dest" : "https://",
         "function" : "Init404",
         "switch" : "End404",
+        "icon" : "",
+        "class" : ""
     }
 }
 
@@ -37,7 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('AuthConfirmed', function() {
-    LoadPage(page);
+    const pathArray = window.location.pathname.split('/');
+    const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
+
+    if (PathOnload in router) {
+        LoadPage(PathOnload);
+    } else { 
+        LoadPage("404");
+     }
+    
 });
 
 
