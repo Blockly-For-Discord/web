@@ -2,7 +2,8 @@
 
 export function HomeInit (query) {
     console.log("Should log on /");
-    // const container = document.getElementById("MainContainer");
+    const container = document.getElementById("content");
+    container.innerHTML = "This should appear when loading home :D";
 }
 
 export function HomeSwitch () {
