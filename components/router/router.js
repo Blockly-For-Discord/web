@@ -12,7 +12,7 @@ window.HomeInit = HomeInit;
 
 let CurrentActiveSite = 'no_site';
 const router = {
-    "" : {
+    " " : {
         "dest" : "s-home",
         "function" : "HomeInit",
         "switch" : "HomeSwitch",
@@ -26,7 +26,7 @@ const router = {
 }
 
 const TranslateIconToRouter = {
-    "s-home":""
+    "s-home":" "
 }
 document.addEventListener('DOMContentLoaded', function () {
     AuthEvent();
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Router on first Page Load
 document.addEventListener('AuthConfirmed', function() {
     const pathArray = window.location.pathname.split('/');
-    const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
+    const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : " ";
     
     const query = window.location.search;
 
