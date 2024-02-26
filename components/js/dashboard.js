@@ -56,9 +56,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     items.forEach(item => {
       let element = document.getElementById(item);
+      window.IconPageLoader(Item);
       element.addEventListener("click", function() {
           items.forEach(otherItem => {
-              window.IconPageLoader(otherItem);
+              console.log("the oter thing" + otherItem);
+              
               let otherElement = document.getElementById(otherItem);
               if (otherElement !== element) {
                   if (otherItem === "s-settings") {
