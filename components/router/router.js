@@ -12,6 +12,8 @@ window.HomeInit = HomeInit;
 
 let CurrentPage = 'none';
 
+let items = ["s-home", "s-projects", "s-explore", "s-users", "s-extensions", "s-updates", "s-developer", "s-settings"];
+
 const router = {
     "" : {
         "function" : "HomeInit",
@@ -29,11 +31,18 @@ const router = {
 }
 
 
-const TranslateIconToRouter = {
-    "s-home":""
-}
 document.addEventListener('DOMContentLoaded', function () {
     AuthEvent();
+
+    items.forEach(item => {
+        document.getElementById(item).addEventListener('click', function () {
+
+            const destination = this.getAttribute('destination');
+            SidebarHighlight(destination);
+            LoadPage(destination);
+            
+        });
+    });
 });
 
 document.addEventListener('AuthConfirmed', function() {
