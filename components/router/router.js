@@ -8,8 +8,8 @@ import { HomeInit } from '../dashboard/home.js';
 import { HomeSwitch } from '../dashboard/home.js';
 window.HomeSwitch = HomeSwitch;
 window.HomeInit = HomeInit;
-import { Init404 } from '../dashboard/40e4.js';
-import { Switch404 } from '../dashboard/4e04.js';
+import { Init404 } from '../dashboard/404.js';
+import { Switch404 } from '../dashboard/404.js';
 window.Switch404 = Switch404;
 window.Init404 = Init404;
 
