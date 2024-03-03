@@ -6,14 +6,22 @@
 
 
 .home-button {
-    padding: 20px;
     background: var(--grad-5);
     color: var(--grad-8);
     transition: 0.25s;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .home-button:hover {
+    cursor: pointer;
     color: var(--grad-9);
+    background: var(--grad-6);
 }
 
 .home-button:active {
