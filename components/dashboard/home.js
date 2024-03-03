@@ -10,9 +10,9 @@ export function HomeInit (query) {
     document.title = "B4D - Home";
     const box = document.createElement("div");
     box.id = "box-container";
-    newDiv.classList.add("box-container");
+    box.classList.add("box-container");
     container.appendChild(box);
-    container.innerHTML("a");
+    box.innerHTML("a");
 }
 
 export async function HomeSwitch () {
