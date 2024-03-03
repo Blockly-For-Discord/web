@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: inter;
+}
+
+
+.home-button {
+    padding: 20px;
+    background: var(--grad-5);
+    color: var(--grad-8);
+    transition: 0.25s;
+}
+
+.home-button:hover {
+    color: var(--grad-9);
+}
+
+.home-button:active {
+    transform: scale(0.95);
+}
