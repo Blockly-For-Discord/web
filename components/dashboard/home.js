@@ -12,7 +12,7 @@ export function HomeInit (query) {
     box.id = "box-container";
     box.classList.add("box-container");
     container.appendChild(box);
-    box.innerHTML("a");
+    box.innerHTML = "FOO BAR";
 }
 
 export async function HomeSwitch () {
