@@ -13,5 +13,5 @@
     align-items: center;
     flex-direction: row;
     color: white;
-    
+    gap: 15px;
 }
