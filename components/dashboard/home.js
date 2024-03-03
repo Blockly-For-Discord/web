@@ -8,8 +8,11 @@ export function HomeInit (query) {
     // when home loads update title and push state
     history.pushState({}, "", "/dashboard");
     document.title = "B4D - Home";
-
-    container.innerHTML = "This should appear when loading home :D";
+    const box = document.createElement("div");
+    box.id = "box-container";
+    newDiv.classList.add("box-container");
+    container.appendChild(box);
+    container.innerHTML("a");
 }
 
 export async function HomeSwitch () {
