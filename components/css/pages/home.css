@@ -24,9 +24,6 @@
 .home-header {
     color: var(--grad-10);
     font-weight: 600;
-    margin-bottom: 56px;
-}
-
-.parent-element * {
-    margin-top: -25px;
+    margin-bottom: 55px;
+    margin-top: -250px;
 }
