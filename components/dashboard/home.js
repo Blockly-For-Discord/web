@@ -12,7 +12,8 @@ export function HomeInit (query) {
     box.id = "box-container";
     box.classList.add("box-container");
     container.appendChild(box);
-    box.innerHTML = "<button class=\"home-button\">New Blank Project</button><button class=\"home-button\">Start with a template</button><button class=\"home-button\">Explore for now</button>";
+    box.innerHTML = "<div class=\"button-row\"><button class=\"home-button\">New Blank Project</button><button class=\"home-button\">Start with a template</button><button class=\"home-button\">Explore for now</button></div>";
+    box.innerHTML = "<h1 class=\"\">What will you be doing today?</h1>" + box.innerHTML
 }
 
 export async function HomeSwitch () {
