@@ -27,3 +27,20 @@
     margin-bottom: 55px;
     margin-top: -250px;
 }
+
+
+.info-tour {
+    position: absolute;
+    bottom: 12px;
+    color: var(--grad-7);
+}
+
+.tour {
+    color: var(--grad-9);
+    margin-left: 5px;
+    transition: 0.25s;
+}
+
+.tour:hover {
+    color: var(--grad-10)
+}
