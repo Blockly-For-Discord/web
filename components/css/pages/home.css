@@ -26,3 +26,7 @@
     font-weight: 600;
     margin-bottom: 56px;
 }
+
+.parent-element * {
+    margin-top: -25px;
+}
