@@ -13,7 +13,7 @@ export function HomeInit (query) {
     box.classList.add("box-container");
     container.appendChild(box);
     box.innerHTML = "<div class=\"button-row\"><button class=\"home-button\">New Blank Project</button><button class=\"home-button\">Start with a template</button><button class=\"home-button\">Explore for now</button></div>";
-    box.innerHTML = "<h1 class=\"\">What will you be doing today?</h1>" + box.innerHTML
+    box.innerHTML = "<h1 class=\"home-header\">What will you be making today?</h1>" + box.innerHTML
 }
 
 export async function HomeSwitch () {
