@@ -33,6 +33,7 @@
     position: absolute;
     bottom: 12px;
     color: var(--grad-7);
+    font-size: 15px;
 }
 
 .tour {
@@ -42,5 +43,6 @@
 }
 
 .tour:hover {
-    color: var(--grad-10)
+    color: var(--grad-10);
+    cursor: pointer;
 }
