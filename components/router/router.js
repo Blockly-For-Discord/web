@@ -44,6 +44,18 @@ const router = {
     }
 }
 
+function showLoading(promise) {
+    navigation.addEventListener('navigate', evt => {
+       evt.intercept({
+         scroll: 'manual',
+         handler: () => promise,
+       });
+    }, { once: true });
+    return navigation.navigate(location.href).finished;
+   }
+   
+   window.showLoading = showLoading;
+   
 
 document.addEventListener('DOMContentLoaded', function () {
     AuthEvent();
@@ -142,15 +154,3 @@ function SidebarHighlight(page) {
 
 
 
-function showLoading(promise) {
-    navigation.addEventListener('navigate', evt => {
-       evt.intercept({
-         scroll: 'manual',
-         handler: () => promise,
-       });
-    }, { once: true });
-    return navigation.navigate(location.href).finished;
-   }
-   
-   window.showLoading = showLoading;
-   window.showLoading(new Promise(r => setTimeout(r, 1500)));
