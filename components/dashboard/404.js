@@ -1,6 +1,7 @@
 
 
 export function Init404 (query) {
+
     console.log("404 Page Loaded");
     const container = document.getElementById("content");
     container.innerHTML = "404 Site should load here";

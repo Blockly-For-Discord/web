@@ -80,6 +80,7 @@ async function LoadPage(page) {
 
         if (FunctionExists(router[page].function)) {
 
+            window.showLoading(new Promise(r => setTimeout(r, 1500)));
             window[router[page].function](query);
             SidebarHighlight(page);
             CurrentPage = page;
@@ -98,6 +99,7 @@ async function LoadPage(page) {
 
             if (FunctionExists(router[page].function)) {
 
+                window.showLoading(new Promise(r => setTimeout(r, 1500)));
                 window[router[page].function](query);
                 SidebarHighlight(page);
 
@@ -139,3 +141,18 @@ function SidebarHighlight(page) {
     }
     
 }
+
+
+
+function showLoading(promise) {
+    navigation.addEventListener('navigate', evt => {
+       evt.intercept({
+         scroll: 'manual',
+         handler: () => promise,
+       });
+    }, { once: true });
+    return navigation.navigate(location.href).finished;
+   }
+   
+   window.showLoading = showLoading;
+  
