@@ -12,6 +12,8 @@ import { Init404 } from '../dashboard/404.js';
 import { Switch404 } from '../dashboard/404.js';
 window.Switch404 = Switch404;
 window.Init404 = Init404;
+import { SettingsInit } from '../dashboard/settings.js';
+import { SettingsSwitch } from '../dashboard/settings.js';
 
 
 let CurrentPage = 'none';
@@ -24,6 +26,12 @@ const router = {
         "switch" : "HomeSwitch",
         "icon" : "s-home",
         "class" : "action-item-active"
+    },
+    "settings" : {
+        "function" : "SettingsInit",
+        "switch" : "SettingsSwitch",
+        "icon" : "s-settings",
+        "class" : "action-item-settings"
     },
     // 404 - routes when no other match is found
     "404" : {
