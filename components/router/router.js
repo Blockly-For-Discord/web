@@ -14,6 +14,8 @@ window.Switch404 = Switch404;
 window.Init404 = Init404;
 import { SettingsInit } from '../dashboard/settings.js';
 import { SettingsSwitch } from '../dashboard/settings.js';
+window.SettingsInit = SettingsInit;
+window.SettingsSwitch = SettingsSwitch;
 
 
 let CurrentPage = 'none';
