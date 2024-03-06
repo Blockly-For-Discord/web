@@ -2,6 +2,7 @@
 
 export function HomeInit (query) {
 
+    window.showLoading(new Promise(r => setTimeout(r, 1500)));
     console.log("Should log on / aka Home");
     const container = document.getElementById("content");
 

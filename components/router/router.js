@@ -80,7 +80,6 @@ async function LoadPage(page) {
 
         if (FunctionExists(router[page].function)) {
 
-            window.showLoading(new Promise(r => setTimeout(r, 1500)));
             window[router[page].function](query);
             SidebarHighlight(page);
             CurrentPage = page;
@@ -99,7 +98,6 @@ async function LoadPage(page) {
 
             if (FunctionExists(router[page].function)) {
 
-                window.showLoading(new Promise(r => setTimeout(r, 1500)));
                 window[router[page].function](query);
                 SidebarHighlight(page);
 
@@ -155,4 +153,4 @@ function showLoading(promise) {
    }
    
    window.showLoading = showLoading;
-  
+   window.showLoading(new Promise(r => setTimeout(r, 1500)));
