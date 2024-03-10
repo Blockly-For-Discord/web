@@ -3,8 +3,8 @@
 export function SettingsInit (query) {
 
     const settings = {
-        "General": `<div></div>`,
-        "Appearance": `<div></div>`,
+        "general": `<div></div>`,
+        "appearance": `<div></div>`,
     }
 
 
@@ -17,7 +17,7 @@ export function SettingsInit (query) {
     const sidebar = document.getElementById("settings-sidebar");
 
     settings.forEach(element => {
-         
+         console.log(element);
     });
 
 
@@ -40,8 +40,12 @@ function injectHTML() {
     const inject = `
     <div class="settings-container">
         <div class="settings-sidebar">
-            <div class="settings-title"></div>
-            <div class="setting-items" id="setting-items"></div>
+            <div class="settings-title">Settings</div>
+            <div class="setting-items" id="setting-items">
+                <div class="setting-item">General</div>
+                <div class="setting-item">Appearance</div>
+                <div class="setting-item">Other</div>
+            </div>
         </div>
     </div>
     `
