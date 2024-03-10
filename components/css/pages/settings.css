@@ -30,16 +30,3 @@
     color: var(--grad-14);
 }
 
-.settings-flex {
-    display: flex;
-    flex-direction: column;
-}
-
-.setting-items {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin-top: 20px;
-    width: 100%;
-    
-}

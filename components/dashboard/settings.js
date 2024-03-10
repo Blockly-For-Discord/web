@@ -29,11 +29,7 @@ export function SettingsInit (query) {
     const title = document.createElement("div");
     title.innerHTML = "Settings";
     title.classList.add("settings-title");
-    sidebar.appendChild(title);
-
-    const settingitems = document.createElement("div");
-    settingitems.classList.add("setting-items");
-    sidebar.appendChild(settingitems);
+    sidebar.innerHTML = sidebar.innerHTML + "<div class=\"setting-items\" id=\"setting-items\"><div>";
 
 }
 
