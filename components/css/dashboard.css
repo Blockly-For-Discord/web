@@ -2,6 +2,7 @@
 @import url('root.css');
 
 @import url('./pages/home.css');
+@import url('./pages/settings.css');
 
 * {
     margin: 0px;
