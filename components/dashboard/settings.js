@@ -5,6 +5,7 @@ export function SettingsInit (query) {
     window.showLoading(new Promise(r => setTimeout(r, 1500)));
     console.log("Settings Page Loaded");
     const container = document.getElementById("content");
+    container.innerHTML("");
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";
 
