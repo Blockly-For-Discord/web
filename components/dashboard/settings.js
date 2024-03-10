@@ -1,13 +1,30 @@
 
 
 export function SettingsInit (query) {
-
+    
     window.showLoading(new Promise(r => setTimeout(r, 1500)));
     console.log("Settings Page Loaded");
     const container = document.getElementById("content");
     container.innerHTML = "";
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";
+    SettingsHTML();
+
+}
+
+export async function SettingsSwitch () {
+
+    console.log("Settings Page Switch Requested");
+    const response = `{"response":"success"}`;
+    return response;
+}
+
+
+
+
+
+function SettingsHTML() {
+    
 
     const box = document.createElement("div");
     container.appendChild(box);
@@ -31,12 +48,4 @@ export function SettingsInit (query) {
     title.classList.add("settings-title");
     sidebar.appendChild(title);
     sidebar.innerHTML = sidebar.innerHTML + "<div class=\"setting-items\" id=\"setting-items\"><div>";
-
-}
-
-export async function SettingsSwitch () {
-
-    console.log("Settings Page Switch Requested");
-    const response = `{"response":"success"}`;
-    return response;
 }
