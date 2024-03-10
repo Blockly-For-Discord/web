@@ -25,6 +25,11 @@ export function SettingsInit (query) {
 
     box.appendChild(sidebar);
     box.appendChild(main);
+
+    const title = document.createElement("div");
+    title.innerHTML = "Settings";
+    title.classList.add("settings-title");
+    sidebar.appendChild(title);
 }
 
 export async function SettingsSwitch () {
