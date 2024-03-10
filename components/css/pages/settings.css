@@ -24,8 +24,6 @@
 
 .settings-title {
     border-radius: 10px;
-    flex-direction: center;
-    justify-content: center;
     color: var(--grad-14);
 }
 
@@ -35,5 +33,5 @@
 }
 
 .setting-item {
-    
+
 }

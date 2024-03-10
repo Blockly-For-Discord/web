@@ -1,13 +1,12 @@
 
 
 export function SettingsInit (query) {
-    
+
     window.showLoading(new Promise(r => setTimeout(r, 1500)));
     console.log("Settings Page Loaded");
-    const container = document.getElementById("content");
-    container.innerHTML = "";
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";
+
     SettingsHTML();
 
 }
@@ -25,7 +24,8 @@ export async function SettingsSwitch () {
 
 function SettingsHTML() {
     
-
+    const container = document.getElementById("content");
+    container.innerHTML = "";
     const box = document.createElement("div");
     container.appendChild(box);
     box.classList.add("settings-container");
