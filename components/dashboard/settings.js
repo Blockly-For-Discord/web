@@ -30,6 +30,11 @@ export function SettingsInit (query) {
     title.innerHTML = "Settings";
     title.classList.add("settings-title");
     sidebar.appendChild(title);
+
+    const settingitems = document.createElement("div");
+    settingitems.classList.add("setting-items");
+    sidebar.appendChild(settingitems);
+
 }
 
 export async function SettingsSwitch () {
