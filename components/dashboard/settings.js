@@ -2,12 +2,24 @@
 
 export function SettingsInit (query) {
 
+    const settings = {
+        "General": `<div></div>`,
+        "Appearance": `<div></div>`,
+    }
+
+
     window.showLoading(new Promise(r => setTimeout(r, 1500)));
     console.log("Settings Page Loaded");
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";
 
-    SettingsHTML();
+    injectHTML();
+    const sidebar = document.getElementById("settings-sidebar");
+
+    settings.forEach(element => {
+        
+    });
+
 
 }
 
@@ -22,30 +34,19 @@ export async function SettingsSwitch () {
 
 
 
-function SettingsHTML() {
+function injectHTML() {
     
     const container = document.getElementById("content");
     container.innerHTML = "";
-    const box = document.createElement("div");
-    container.appendChild(box);
-    box.classList.add("settings-container");
+    container.innerHTML = inject;
 
-    // create sidebar
-    const sidebar = document.createElement("div");
-    sidebar.classList.add("settings-sidebar");
-
-    // create main box
-    const main = document.createElement("div");
-    main.classList.add("settings-box");
-
-    // append as children
-
-    box.appendChild(sidebar);
-    box.appendChild(main);
-
-    const title = document.createElement("div");
-    title.innerHTML = "Settings";
-    title.classList.add("settings-title");
-    sidebar.appendChild(title);
-    sidebar.innerHTML = sidebar.innerHTML + "<div class=\"setting-items\" id=\"setting-items\"><div>";
+    const inject = `
+    <div class="settings-container">
+        <div class="settings-sidebar">
+            <div class="settings-title"></div>
+            <div class="setting-items" id="setting-items"></div>
+        </div>
+    </div>
+    `
+    
 }
