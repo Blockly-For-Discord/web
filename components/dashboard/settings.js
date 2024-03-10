@@ -17,7 +17,7 @@ export function SettingsInit (query) {
     const sidebar = document.getElementById("settings-sidebar");
 
     settings.forEach(element => {
-        
+         
     });
 
 
@@ -36,10 +36,7 @@ export async function SettingsSwitch () {
 
 function injectHTML() {
     
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-    container.innerHTML = inject;
-
+    
     const inject = `
     <div class="settings-container">
         <div class="settings-sidebar">
@@ -48,5 +45,9 @@ function injectHTML() {
         </div>
     </div>
     `
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+    container.innerHTML = inject;
+
     
 }
