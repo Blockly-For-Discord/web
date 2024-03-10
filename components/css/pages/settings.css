@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: center;
     justify-content: center;
-    background: var(--grad-2) ;
+    color: var(--grad-14);
 }
 
 .settings-flex {
