@@ -16,11 +16,10 @@ export function SettingsInit (query) {
     injectHTML();
     const sidebar = document.getElementById("settings-sidebar");
 
-    settings.forEach(element => {
-         console.log(element);
-    });
-
-
+    for (var key in settings) {
+        console.log(key, settings[key]);
+        
+    }
 }
 
 export async function SettingsSwitch () {
