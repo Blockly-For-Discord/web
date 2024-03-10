@@ -17,8 +17,19 @@ export function SettingsInit (query) {
     const sidebar = document.getElementById("settings-sidebar");
 
     for (var key in settings) {
+
         console.log(key, settings[key]);
+
+        const element = document.getElementById(key);
         
+        element.addEventListener('click', function() {
+            const elements = document.querySelectorAll('#setting-items *');
+            elements.forEach((element) => {
+                element.classList.remove('setting-item-active');
+               });
+            element.classList.add("setting-item-active");
+               LoadSettings(key);
+        });
     }
 }
 
@@ -31,7 +42,10 @@ export async function SettingsSwitch () {
 
 
 
-
+function LoadSettings(){
+    // remember to add one for /settings/whatever
+    // default will load /settings/general
+}
 
 function injectHTML() {
     
