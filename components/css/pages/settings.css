@@ -13,7 +13,6 @@
 
 .settings-sidebar {
     width: 200px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     background: var(--grad-3);
@@ -29,7 +28,6 @@
 
 .setting-items {
     width: 100%;
-    height: 20px;
 }
 
 .setting-item {
@@ -41,8 +39,8 @@
 }
 
 .setting-item:hover {
-    background: #ffffff17;
-    color: #959595;
+    background: #ffffff0d;
+    color: #626262;
     cursor: pointer;
 }
 

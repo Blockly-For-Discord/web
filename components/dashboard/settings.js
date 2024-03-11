@@ -5,6 +5,7 @@ export function SettingsInit (query) {
     const settings = {
         "general": `<div></div>`,
         "appearance": `<div></div>`,
+        "other": `div`,
     }
 
 
@@ -46,7 +47,7 @@ function LoadSettings(){
     // remember to add one for /settings/whatever
     // default will load /settings/general
 
-    
+
 }
 
 function injectHTML() {
