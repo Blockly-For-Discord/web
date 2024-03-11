@@ -33,5 +33,24 @@
 }
 
 .setting-item {
+    color: #484c5c;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: transform 0.25s;
+}
 
+.setting-item:hover {
+    background: #ffffff17;
+    color: #959595;
+    cursor: pointer;
+}
+
+.setting-item:active {
+    transform: scale(0.95);
+}
+
+.setting-item-active {
+    background: #ffffff17;
+    color: #959595;
 }

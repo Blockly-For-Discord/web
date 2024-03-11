@@ -45,6 +45,8 @@ export async function SettingsSwitch () {
 function LoadSettings(){
     // remember to add one for /settings/whatever
     // default will load /settings/general
+
+    
 }
 
 function injectHTML() {
@@ -55,9 +57,9 @@ function injectHTML() {
         <div class="settings-sidebar">
             <div class="settings-title">Settings</div>
             <div class="setting-items" id="setting-items">
-                <div class="setting-item">General</div>
-                <div class="setting-item">Appearance</div>
-                <div class="setting-item">Other</div>
+                <div class="setting-item" id="general">General</div>
+                <div class="setting-item" id="appearance">Appearance</div>
+                <div class="setting-item" id="other">Other</div>
             </div>
         </div>
     </div>
