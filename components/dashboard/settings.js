@@ -2,6 +2,7 @@
 
 export function SettingsInit (query) {
 
+    window.showLoading(new Promise(r => setTimeout(r, 1000)));
     const settings = {
         "general": `<div></div>`,
         "appearance": `<div></div>`,
@@ -9,7 +10,7 @@ export function SettingsInit (query) {
     }
 
 
-    window.showLoading(new Promise(r => setTimeout(r, 1500)));
+    
     console.log("Settings Page Loaded");
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";

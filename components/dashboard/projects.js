@@ -2,7 +2,7 @@
 
 export function ProjectsInit (query) {
 
-    window.showLoading(new Promise(r => setTimeout(r, 1500)));
+    window.showLoading(new Promise(r => setTimeout(r, 1000)));
     console.log("My Projects Page Loaded");
     const container = document.getElementById("content");
     container.innerHTML = "My Projects Site should load here";
