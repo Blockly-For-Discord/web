@@ -16,6 +16,10 @@ import { SettingsInit } from '../dashboard/settings.js';
 import { SettingsSwitch } from '../dashboard/settings.js';
 window.SettingsInit = SettingsInit;
 window.SettingsSwitch = SettingsSwitch;
+import { ProjectsInit } from '../dashboard/projects.js';
+import { ProjectsSwitch } from '../dashboard/projects.js';
+window.ProjectsInit = ProjectsInit;
+window.ProjectsSwitch = ProjectsSwitch;
 
 
 let CurrentPage = 'none';
@@ -34,6 +38,12 @@ const router = {
         "switch" : "SettingsSwitch",
         "icon" : "s-settings",
         "class" : "action-item-settings"
+    },
+    "my-projects" : {
+        "function" : "ProjectsInit",
+        "switch" : "ProjectsSwitch",
+        "icon" : "s-projects",
+        "class" : "action-item-active"
     },
     // 404 - routes when no other match is found
     "404" : {

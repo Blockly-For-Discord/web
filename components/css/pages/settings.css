@@ -24,6 +24,7 @@
 .settings-title {
     border-radius: 10px;
     color: var(--grad-14);
+    margin-bottom: 11px;
 }
 
 .setting-items {
