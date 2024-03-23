@@ -57,6 +57,8 @@
   color: var(--grad-8);
   font-size: 14px;
   outline: none;
+  transition: 0.25s;
+  width: 200px;
 }
 
 .nav-search::placeholder {
