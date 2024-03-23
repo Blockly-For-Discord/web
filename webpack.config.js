@@ -5,6 +5,7 @@ module.exports = {
     BlocklyCompressed: './webpack/webpack-blockly.js',
     BlocklyJS: './webpack/webpack-generator.js',
     ToastifyJS: './webpack/webpack-toastify.js',
+    TippyJS: './webpack/webpack-tippy.js'
   },
   output: {
     path: path.resolve(__dirname, './components/webpack'),
