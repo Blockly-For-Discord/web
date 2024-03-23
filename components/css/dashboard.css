@@ -59,6 +59,10 @@
   outline: none;
 }
 
+.nav-search::placeholder {
+  color: var(--grad-8);
+}
+
 .nav-search:focus {
   color: var(--grad-9);
 }
