@@ -50,7 +50,11 @@ document.addEventListener("DOMContentLoaded", function() {
         </svg>
     <span class="logo-text">B4D</span>
 </div>
-<div class="nav-items">
+<div class="nav-right">
+  <div class="nav-items">
+      <div class="nav-item">a<div>
+  </div>
+  <div class="nav-search"><input type="text"></div>
 </div>`;
     SetNavbar(navbar);
 
