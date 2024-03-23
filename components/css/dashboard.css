@@ -41,6 +41,27 @@
 
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search {
+  height: 32px;
+  background: var(--grad-5);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: var(--grad-8);
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-search:focus {
+  color: var(--grad-9);
+}
 .logo {
   width: 40px;
   height: 40px;

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="nav-items">
       <div class="nav-item">a</div>
   </div>
-  <div class="nav-search"><input type="text"></div>
+  <div class="nav-search" placeholder="Search something here..."><input type="text"></div>
 </div>`;
     SetNavbar(navbar);
 
