@@ -26,3 +26,12 @@
     --accent-5: #3978ff;
     --accent-6: #ffb618;
 }
+
+
+.tippy-tooltip.b4ddark-theme {
+    background: rgba(0, 0, 0, 0.56);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
