@@ -90,6 +90,11 @@ function ProgressChange (value) {
 
 function TippyJS () {
   b4d.tippy('#avatar-container', {
+
     content: "I'm a Tippy tooltip!",
+    position:'right',
+    animation:'perspective',
+    allowHTML: true,
+    interactive: true,
   });
 }
