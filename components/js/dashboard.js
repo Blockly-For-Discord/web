@@ -1,3 +1,4 @@
+
 /*
 
 This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
@@ -14,6 +15,8 @@ let b4d = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  TippyJS();
   /*
     for (let i = 0; i < 3; i++) {
         console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
@@ -75,11 +78,18 @@ function AuthEvent() {
   }
 }
 
-function ProgressChange(value) {
+function ProgressChange (value) {
   const LoadingBar = document.getElementById('loadbar');
   const Progress = document.getElementById('progress');
   const widthPercentage = LoadingBar.offsetWidth / 100;
   Progress.style.width = widthPercentage * value + 'px';
 
     
+}
+
+
+function TippyJS () {
+  b4d.tippy('#avatar-container', {
+    content: "I'm a Tippy tooltip!",
+  });
 }
