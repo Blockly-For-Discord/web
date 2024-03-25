@@ -96,6 +96,7 @@ function TippyJS () {
     animation:'perspective',
     allowHTML: true,
     interactive: true,
-    theme: 'b4ddark'
+    theme: 'b4ddark',
+    arrow: false,
   });
 }
