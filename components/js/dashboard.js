@@ -92,7 +92,7 @@ function TippyJS () {
   b4d.tippy('#avatar-container', {
 
     content: "I'm a Tippy tooltip!",
-    position:'right',
+    placement: 'right',
     animation:'perspective',
     allowHTML: true,
     interactive: true,
