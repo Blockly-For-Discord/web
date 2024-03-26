@@ -113,8 +113,6 @@ function TippyJS (router) {
               content: tooltip,
               placement: 'right',
               animation:'perspective',
-              allowHTML: true,
-              interactive: true,
               theme: 'b4ddark',
               arrow: false,
             });
