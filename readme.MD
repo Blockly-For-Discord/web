@@ -1,3 +1,6 @@
+![Stable - v1.0.0](https://img.shields.io/badge/Stable-v1.0.0-2ea44f) ![Release - soon](https://img.shields.io/badge/Release-soon-ff3333)
+
+
 !THE PRODUCTION READY SITE IS NOT OUT YET NOR DONE!
 # Blockly For Discord
 
