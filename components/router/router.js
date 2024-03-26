@@ -136,6 +136,7 @@ async function LoadPage(page) {
     }   
 }
 
+window.LoadPage = LoadPage;
 
 function FunctionExists(func) {
 
