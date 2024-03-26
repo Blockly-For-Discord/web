@@ -31,19 +31,22 @@ const router = {
         "function" : "HomeInit",
         "switch" : "HomeSwitch",
         "icon" : "s-home",
-        "class" : "action-item-active"
+        "class" : "action-item-active",
+        "tooltip" : "Home"
     },
     "settings" : {
         "function" : "SettingsInit",
         "switch" : "SettingsSwitch",
         "icon" : "s-settings",
-        "class" : "action-item-settings"
+        "class" : "action-item-settings",
+        "tooltip" : "Settings"
     },
     "my-projects" : {
         "function" : "ProjectsInit",
         "switch" : "ProjectsSwitch",
         "icon" : "s-projects",
-        "class" : "action-item-active"
+        "class" : "action-item-active",
+        "tooltip" : "Projects"
     },
     // 404 - routes when no other match is found
     "404" : {
@@ -69,7 +72,7 @@ function showLoading(promise) {
 
 document.addEventListener('DOMContentLoaded', function () {
     AuthEvent();
-
+    window.TippyJS(router);
     items.forEach(item => {
         document.getElementById(item).addEventListener('click', function () {
 

@@ -16,7 +16,7 @@ let b4d = {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  TippyJS();
+  
   /*
     for (let i = 0; i < 3; i++) {
         console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
@@ -88,7 +88,7 @@ function ProgressChange (value) {
 }
 
 
-function TippyJS () {
+function TippyJS (router) {
   b4d.tippy('#avatar-container', {
 
     content: "I'm a Tippy tooltip!",
@@ -99,4 +99,28 @@ function TippyJS () {
     theme: 'b4ddark',
     arrow: false,
   });
+  // sidebar tooltips
+  for (let key in router) {
+    if (router.hasOwnProperty(key)) {
+        const entry = router[key];
+        if (entry.tooltip) {
+            const icon = entry.icon;
+            const tooltip = entry.tooltip;
+
+            console.log("Icon:", icon, "Tooltip:", tooltip);
+            b4d.tippy('#' + icon, {
+
+              content: tooltip,
+              placement: 'right',
+              animation:'perspective',
+              allowHTML: true,
+              interactive: true,
+              theme: 'b4ddark',
+              arrow: false,
+            });
+        }
+    }
 }
+}
+
+window.TippyJS = TippyJS;
