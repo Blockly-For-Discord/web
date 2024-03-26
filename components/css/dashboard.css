@@ -172,12 +172,17 @@
   fill: var(--grad-10);
   transform: scale(0.95);
 }
-
+.action-item:focus {
+  outline: none;
+}
 .action-item-active {
   fill: var(--grad-10) !important;
 }
 .action-item-settings {
   fill: var(--accent-6) !important;
+}
+.action-item-settings:focus {
+  outline: none;
 }
 .setting-action:hover {
   fill: var(--accent-6) !important;
