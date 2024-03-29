@@ -168,3 +168,9 @@ function SidebarHighlight(page) {
 
 
 
+function GlobalSetPage(html) {
+    const container = document.getElementById("content");
+    container.innerHTML = html;
+}
+
+window.GlobalSetPage = GlobalSetPage;

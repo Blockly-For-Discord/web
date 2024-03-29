@@ -222,3 +222,16 @@
 .avatar-container:active {
   transform: scale(0.9);
 }
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.project-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

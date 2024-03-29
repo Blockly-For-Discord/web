@@ -2,11 +2,23 @@
 
 export function ProjectsInit (query) {
 
-    window.showLoading(new Promise(r => setTimeout(r, 1000)));
-    console.log("My Projects Page Loaded");
-    const container = document.getElementById("content");
-    container.innerHTML = "My Projects Site should load here";
-
+    const page = `
+    <div class="project-container">
+        <div class="project-top">
+            <div class="project-header">
+                <div class="project-title"></div>
+                <div class="project-desc"></div>
+            </div>
+            <div class="project-searchbar">
+                <div class="project-search"></div>
+                <div class="project-filter"></div>
+            </div>
+        </div>
+        <div class="project-list"></div>
+    </div>
+    `;
+    
+    GlobalSetPage(page);
     document.title = "B4D - My Projects";
 }
 
