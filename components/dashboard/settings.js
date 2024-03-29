@@ -1,21 +1,34 @@
+const settings = {
+    "general": `<div></div>`,
+    "appearance": `<div></div>`,
+    "other": `div`,
+}
 
 
 export function SettingsInit (query) {
 
-    window.showLoading(new Promise(r => setTimeout(r, 1000)));
-    const settings = {
-        "general": `<div></div>`,
-        "appearance": `<div></div>`,
-        "other": `div`,
-    }
 
 
-    
     console.log("Settings Page Loaded");
     history.pushState({}, "", "/dashboard/settings");
     document.title = "B4D - Settings";
 
-    injectHTML();
+    const page = `
+    <div class="settings-container">
+        <div class="settings-sidebar">
+            <div class="settings-title">Settings</div>
+            <div class="setting-items" id="setting-items">
+                <div class="setting-item" id="general">General</div>
+                <div class="setting-item" id="appearance">Appearance</div>
+                <div class="setting-item" id="other">Other</div>
+            </div>
+        </div>
+    </div>
+    `;
+    
+    GlobalSetPage(page);
+
+    // for loop
     const sidebar = document.getElementById("settings-sidebar");
 
     for (var key in settings) {
@@ -49,26 +62,4 @@ function LoadSettings(){
     // default will load /settings/general
 
 
-}
-
-function injectHTML() {
-    
-    
-    const inject = `
-    <div class="settings-container">
-        <div class="settings-sidebar">
-            <div class="settings-title">Settings</div>
-            <div class="setting-items" id="setting-items">
-                <div class="setting-item" id="general">General</div>
-                <div class="setting-item" id="appearance">Appearance</div>
-                <div class="setting-item" id="other">Other</div>
-            </div>
-        </div>
-    </div>
-    `
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-    container.innerHTML = inject;
-
-    
 }
