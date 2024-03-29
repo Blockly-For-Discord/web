@@ -20,7 +20,12 @@ export function ProjectsInit (query) {
                 </div>
             </div>
         </div>
-        <div class="project-list"></div>
+        <div class="project-list" id="prokect-list">
+            <div class="project-item">
+                <div class="project-card"></div>
+                <div class="project-card-info"></div>
+            </div>
+        </div>
     </div>
     `;
     

@@ -256,6 +256,8 @@
   flex-direction: column;
   height: 100%;
   margin: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .project-top {
@@ -279,3 +281,18 @@
   display: flex;
   flex-direction: row;
 }
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 64px; 
+}
+
+.project-item {
+  border-radius: 15px;
+  
+  height: 325px;
+
+}
+
+/* background-color: #0E0F12; */
