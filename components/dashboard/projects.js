@@ -6,11 +6,11 @@ export function ProjectsInit (query) {
     <div class="project-container">
         <div class="project-top">
             <div class="project-header">
-                <div class="project-title"></div>
-                <div class="project-desc"></div>
+                <div class="project-title">My Projects</div>
+                <div class="project-desc">All the projects you make will appear here...</div>
             </div>
             <div class="project-searchbar">
-                <div class="project-search"></div>
+                <div class="project-search"><input type="text" class="nav-search" placeholder="Search my projects..."></div>
                 <div class="project-filter"></div>
             </div>
         </div>
