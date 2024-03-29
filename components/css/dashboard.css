@@ -263,3 +263,19 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.project-title {
+  color: #b5b5b5;
+  font-weight: 600;
+  font-size: 23px;
+}
+.project-desc {
+  color: #40434d;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.project-searchbar {
+  display: flex;
+  flex-direction: row;
+}
