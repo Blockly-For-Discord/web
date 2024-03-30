@@ -6,7 +6,6 @@
 .project-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
     margin: 40px;
     margin-left: 60px;
     margin-right: 60px;
@@ -38,6 +37,7 @@
 .project-list {
     display: grid;
     gap: 35px; 
+    margin-top: 50px;
 }
   
 .project-item {
