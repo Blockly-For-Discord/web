@@ -28,6 +28,34 @@ export function ProjectsInit (query) {
                     <div class="project-card-info-desc">DiscordJS - 923 Blocks - 2 Extensions</div>
                 </div>
             </div>
+            <div class="project-item">
+                <div class="project-card"></div>
+                <div class="project-card-info">
+                    <div class="project-card-info-title">My project</div>
+                    <div class="project-card-info-desc">DiscordJS - 923 Blocks - 2 Extensions</div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-card"></div>
+                <div class="project-card-info">
+                    <div class="project-card-info-title">My project</div>
+                    <div class="project-card-info-desc">DiscordJS - 923 Blocks - 2 Extensions</div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-card"></div>
+                <div class="project-card-info">
+                    <div class="project-card-info-title">My project</div>
+                    <div class="project-card-info-desc">DiscordJS - 923 Blocks - 2 Extensions</div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-card"></div>
+                <div class="project-card-info">
+                    <div class="project-card-info-title">My project</div>
+                    <div class="project-card-info-desc">DiscordJS - 923 Blocks - 2 Extensions</div>
+                </div>
+            </div>
         </div>
     </div>
     `;
