@@ -3,6 +3,7 @@
 
 @import url('./pages/home.css');
 @import url('./pages/settings.css');
+@import url('./pages/projects.css');
 
 * {
     margin: 0px;
@@ -112,8 +113,6 @@
   align-items: center;
   gap: 15px;
 }
-
-
 
 .LoadScreen {
   display: flex;
@@ -251,49 +250,6 @@
   transform: scale(0.9);
 }
 
-.project-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 40px;
-  margin-left: 60px;
-  margin-right: 60px;
-}
 
-.project-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project-title {
-  color: #b5b5b5;
-  font-weight: 600;
-  font-size: 23px;
-}
-.project-desc {
-  color: #40434d;
-  margin-top: 6px;
-  font-size: 16px;
-}
-
-.project-searchbar {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 64px; 
-}
-
-.project-item {
-  border-radius: 15px;
-  
-  height: 325px;
-
-}
 
 /* background-color: #0E0F12; */
