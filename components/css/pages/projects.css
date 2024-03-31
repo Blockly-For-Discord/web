@@ -40,12 +40,7 @@
 
 @media screen and (max-width: 1920px) {
     .project-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-@media screen and (max-width: 1920px) {
-    .project-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width: 1485px) {
