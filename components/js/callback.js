@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var searchParams = new URLSearchParams(callback);
         var codeValue = searchParams.get('code');
 
-        fetch("https://api.blockly-for-discord.xyz/token", {
+        fetch("https://35370d3d-f9e9-47ce-8393-fa047461f3b7-00-2m334wy2a1r3z.spock.replit.dev/client/auth", {
             method: "GET",
             headers: {
                 "type": "code_grant",
