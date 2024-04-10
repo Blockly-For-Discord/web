@@ -174,3 +174,26 @@ function GlobalSetPage(html) {
 }
 
 window.GlobalSetPage = GlobalSetPage;
+
+
+/*
+
+Functions in charge of all data communication - DO NOT TOUCH
+
+*/
+
+function httpGetProjectList() {
+    let object;
+
+
+
+    return object;
+}
+
+function httpWriteNewProject() {
+
+}
+
+function httpDeleteProject() {
+    
+}

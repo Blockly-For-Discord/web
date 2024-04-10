@@ -126,3 +126,71 @@ function TippyJS (router) {
 }
 
 window.TippyJS = TippyJS;
+
+function DeployWindow(options) {
+
+  const {
+    title = "Default Title",
+    content = `<p>Default content</p>`,
+    closable = false,
+    width,
+    height,
+    showInfoIcon = false,
+    info = "",
+    showIcon = false,
+    icon = "",
+    buttons = '',
+    callback = null,
+    animationOnAppear = "",
+    animationOnDissapear = "",
+    animationDuration = 0,
+    duration = 0,
+    id,
+  } = options;
+
+  const preset = `
+  <div id="WindowContainer">
+  <div id="WindowTop">
+      <div id="WindowTitleBar">
+          <div id="WindowTitle"></div>
+          <div id="CloseButton"></div>
+      </div>
+      <div id="WindowContent"></div>
+  </div>
+  <div id="WindowBottom">
+      <div id="info-section">
+          <div id="info-icon"></div>
+          <div id="info-text"></div>
+      </div>
+      <div id="button-section"></div>
+  </div>
+</div>
+  `;
+
+  const PContainer = document.createElement('div');
+  PContainer.classList.add("ParentContainerCover");
+  PContainer.innerHTML = preset;
+  PContainer.getElementById("WindowTitle").innerHTML = title;
+  PContainer.getElementById("WindowContent").innerHTML = content;
+  //closable
+  if (!closable) {
+    PContainer.getElementById("CloseButton").style.display = "none";
+  } else {
+    PContainer.getElementById("CloseButton").addEventListener('click', function() {
+      // CloseWindow method goes here
+    });
+  }
+
+  // width, height
+  PContainer.getElementById("WindowContainer").style.width = width;
+  PContainer.getElementById("WindowContainer").style.height = height;
+
+  // Show Info icon
+  if (!showInfoIcon) {
+    PContainer.getElementById("info-icon").style.display = "none";
+  }
+};
+
+function DeployWindowExists () {
+
+}
