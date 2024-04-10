@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch("https://api.blockly-for-discord.xyz/token", {
             method: "GET",
             headers: {
-                "code": codeValue
+                "type": "code_grant",
+                "code_grant": codeValue
             }
         })
         .then(response => {
@@ -18,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(data => {
-            if (data.response === "ok") {
-                const tokenHeaderValue = response.headers.get('token');
-                Cookies.set('token', tokenHeaderValue, { expires: 7 });
+            if (data.client === "httpTokenCallback") {
+                Cookies.set('token', data.access_token, { expires: 7 });
+                Cookies.set('refresh', data.refresh_token, { expires: 7 });
                 window.location.href = "https://blockly-for-discord.xyz/dashboard/";
             } else {
                 window.location.href = "https://blockly-for-discord.xyz?error=request_denied";
