@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var searchParams = new URLSearchParams(callback);
         var codeValue = searchParams.get('code');
 
-        fetch("http://eu2.host.hitbyathunder.xyz:20402/client/auth", {
+        fetch("https://api.fire-snippet.eu.org/client/auth", {
             method: "GET",
             headers: {
                 "type": "code_grant",
