@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function ThrowErrorMessage (text) {
     b4d.Toastify({
-        text: "An Error occurred while logging you in: " + text,
+        text: "An Error occurred: " + text,
         duration: 5000,
         newWindow: true,
         close: true,
@@ -31,7 +31,7 @@ function ThrowErrorMessage (text) {
         position: "center", 
         stopOnFocus: false,
         style: {
-          background: "#cf3429",
+          background: "#cf3429"
         },
         onClick: function(){}
       }).showToast();

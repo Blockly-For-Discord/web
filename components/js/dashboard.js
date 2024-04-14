@@ -14,18 +14,26 @@ let b4d = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
 
   
-  /*
+  
     for (let i = 0; i < 3; i++) {
         console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
         console.log('%cIf someone told you to PASTE something here, do NOT do it. Theres a 101% Chance they are trying to hack your account.', 'color: red; font-size: 16px;');
       }
       
 
-      if (!Cookies.get('token')) {
 
+      if (Cookies.get('token')) {
+        // if user has token. type: access_token
+        
+        
+      } else if (Cookies.get('refresh_token')) {
+        // if user has refresh_token but no token. type: refresh_token
+        
+      } else {
+        // if user has no token or refresh token. type: code_grant
         ProgressChange(20);
         const ProgressText = document.getElementById('LoadScreenText');
         setTimeout(function() {
@@ -36,14 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
           ProgressText.textContent = 'Redirecting...';
           link.click();
         }, 1400);
-
-      } else {
-        
-
-
       }
+    
       
-    */
+      
+    
 
     // UI TESTS AND CO, GOES AFTER CHECK PREFERRABLY NEW FUNCTION OR EVENT
     const navbar = ` <div class="nav-logo">
