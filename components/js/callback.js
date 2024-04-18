@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
-            Cookies.set('token', data.access_token, { expires: 7 });
-            Cookies.set('refresh_token', data.refresh_token, { expires: 7 });
             window.location.href = "https://blockly-for-discord.xyz/dashboard/";
           } else {
             window.location.href = "https://blockly-for-discord.xyz?error=" 
