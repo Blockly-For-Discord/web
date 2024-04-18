@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       fetch("https://api.blockly-for-discord.xyz/client/auth", {
           method: "GET",
+          credentials: 'include',
           headers: {
               "type": "code_grant",
               "code_grant": codeValue
