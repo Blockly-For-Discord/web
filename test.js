@@ -13,6 +13,10 @@ const toolbox = {
           kind: 'block',
         },
         {
+          text: 'test',
+          kind: 'label',
+        },
+        {
           type: 'controls_if',
           kind: 'block',
         },
@@ -787,7 +791,24 @@ const toolbox = {
     },
   ]
 }
+
+b4d.register = function(Name, Data, kind, category) {
+  if (kind == 'block') {
+    b4d.Blockly.Blocks[Name] = {
+      init: function() {
+        this.jsonInit(Data);
+      }
+    }
+  }
+
+  let data = `{
+    ${kind == 'block' ? 'type' : 'text'}: ${name},
+    kind: ${kind},
+  }`
   
+  let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name==category)[0];
+  toolbox.contents[toolbox.contents.indexOf(cat)].contents = (cat.contents || []).push(JSON.parse(data))
+}
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: toolbox,
