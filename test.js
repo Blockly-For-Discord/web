@@ -806,7 +806,7 @@ b4d.register = function(Name, Data, kind, category) {
     kind: ${kind},
   }`
   
-  let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name==category)[0];
+  let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name.toLowerCase()==category.toLowerCase())[0];
   toolbox.contents[toolbox.contents.indexOf(cat)].contents = (cat.contents || []).push(JSON.parse(data))
 }
 
