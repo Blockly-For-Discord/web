@@ -15,7 +15,7 @@ const ExampleBlockData = {
     "helpUrl": ""
 };
 
-Blockly.Blocks[ExampleBlock] = {
+b4d.Blockly.Blocks[ExampleBlock] = {
     init: function() {
         this.jsonInit(ExampleBlockData);
     }
