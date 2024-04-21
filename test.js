@@ -807,7 +807,9 @@ b4d.register = function(Name, Data, kind, category) {
   }`;
     
   let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name.toLowerCase()==category.toLowerCase())[0];
-  toolbox.contents[toolbox.contents.indexOf(cat)].contents = []//(cat.contents || []).push(JSON.parse(data));
+  cat = (cat.contents || []).push(JSON.parse(data));
+    console.log(cat)
+  toolbox.contents[toolbox.contents.indexOf(cat)].contents = cat;
   b4d.workspace.updateToolbox(toolbox)
   b4d.toolbox = toolbox;
 }
