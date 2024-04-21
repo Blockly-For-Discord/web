@@ -9,6 +9,10 @@ const toolbox = {
       categorystyle: 'logic_category',
       contents: [
         {
+          type: 'aw_block',
+          kind: 'block',
+        },
+        {
           type: 'controls_if',
           kind: 'block',
         },
