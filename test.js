@@ -803,7 +803,7 @@ b4d.register = function(Name, Data, kind, category) {
 
   let data = `{
     "${kind == 'block' ? 'type' : 'text'}": "${name}",
-    "kind": "${kind}",
+    "kind": "${kind}"
   }`;
 
   console.log(data)
