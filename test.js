@@ -802,13 +802,13 @@ b4d.register = function(Name, Data, kind, category) {
   }
 
   let data = `{
-    "${kind == 'block' ? 'type' : 'text'}": "${name}",
+    "${kind == 'block' ? 'type' : 'text'}": "${Name}",
     "kind": "${kind}"
   }`;
-
-  console.log(data)
     
   let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name.toLowerCase()==category.toLowerCase())[0];
+  console.log(cat.contents)
+  console.log(toolbox.contents[toolbox.contents.indexOf(cat)].contents)
   toolbox.contents[toolbox.contents.indexOf(cat)].contents = (cat.contents || []).push(JSON.parse(data));
   b4d.workspace.updateToolbox(toolbox)
   b4d.toolbox = toolbox;
