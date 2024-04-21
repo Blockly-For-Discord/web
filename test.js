@@ -1,5 +1,5 @@
 import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
-import './components/b4d-blockly/libraries/discordjs/blocks/test.js';
+// import './components/b4d-blockly/libraries/discordjs/blocks/test.js';
 const toolbox = {
     "kind": "categoryToolbox",
     contents: [
