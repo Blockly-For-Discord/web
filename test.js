@@ -785,7 +785,10 @@ const toolbox = {
 }
   
 
-const workspace = b4d.Blockly.inject('blocklyDiv', {toolbox: toolbox});
+const workspace = b4d.Blockly.inject('blocklyDiv', {
+  toolbox: toolbox,
+  renderer: 'zelos'
+});
   
 b4d.Blockly.setLocale(b4d.En);
 
