@@ -802,8 +802,8 @@ b4d.register = function(Name, Data, kind, category) {
   }
 
   let data = `{
-    ${kind == 'block' ? 'type' : 'text'}: ${name},
-    kind: ${kind},
+    "${kind == 'block' ? 'type' : 'text'}": "${name}",
+    "kind": "${kind}",
   }`
   
   let cat = toolbox.contents.filter(e => e.kind=="category"&&e.name.toLowerCase()==category.toLowerCase())[0];
