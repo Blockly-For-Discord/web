@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       
 
 
-      if (Cookies.get('token')) {
+      if (Cookies.get('access_token')) {
         // if user has token. type: access_token
         
         
