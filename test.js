@@ -12,3 +12,14 @@ b4d.toolbox = DiscordJStooblox;
 b4d.workspace = workspace;
 
 b4d.Blockly.setLocale(b4d.En);
+
+let b4d = {};
+
+b4d.register = function(Name, Data) {
+  
+  b4d.Blockly.Blocks[Name] = {
+    init: function() {
+      this.jsonInit(Data);
+    }
+  }
+}  
