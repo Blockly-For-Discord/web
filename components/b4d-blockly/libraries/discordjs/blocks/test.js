@@ -19,7 +19,7 @@ const ExampleBlockData = {
 
 
 
-b4d.resgister(ExampleBlock, ExampleBlockData, 'block', 'logic');
+b4d.register(ExampleBlock, ExampleBlockData, 'block', 'logic');
 
 b4d.javascriptGenerator.forBlock['aw_block'] = function(block, generator) {
     var value_name = generator.valueToCode(block, 'STRING', javascript.Order.ATOMIC);
