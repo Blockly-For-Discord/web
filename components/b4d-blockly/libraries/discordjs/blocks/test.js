@@ -1,4 +1,5 @@
 
+import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 
 const ExampleBlock = "aw_block";
 
