@@ -2,7 +2,7 @@ import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 export const ExampleBlock = "aw_block";
 
-export const ExampleBlockData = {
+const ExampleBlockData = {
     "message0": "%1 aw",
     "args0": [
     {
