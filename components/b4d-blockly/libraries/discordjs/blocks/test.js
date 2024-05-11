@@ -1,9 +1,9 @@
 
 import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 
-const ExampleBlock = "aw_block";
+export const ExampleBlock = "aw_block";
 
-const ExampleBlockData = {
+export const ExampleBlockData = {
     "message0": "%1 aw",
     "args0": [
     {
@@ -25,7 +25,7 @@ const ExampleBlockData = {
     }
 };*/
 
-b4d.register(ExampleBlock, ExampleBlockData);
+// b4d.register(ExampleBlock, ExampleBlockData);
 
 b4d.javascriptGenerator.forBlock['aw_block'] = function(block, generator) {
     var value_name = generator.valueToCode(block, 'STRING', javascript.Order.ATOMIC);

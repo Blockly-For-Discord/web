@@ -4,6 +4,7 @@ import { DiscordJStooblox } from './components/b4d-blockly/libraries/discordjs/i
 import * as DiscordJS from './components/b4d-blockly/libraries/discordjs/blocks.js';
 
 
+b4d.register(DiscordJS.ExampleBlock, DiscordJS.ExampleBlockData);
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
