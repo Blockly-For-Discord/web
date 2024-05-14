@@ -1,3 +1,10 @@
+import * as Blockly from 'blockly/core';
+// Import the default blocks.
+import * as libraryBlocks from 'blockly/blocks';
+// Import a generator.
+import {javascriptGenerator} from 'blockly/javascript';
+// Import a message file.
+import * as En from 'blockly/msg/en';
 import { Block } from '/b4d-blockly/index.js';
 
 const MyBlock = new Block('discordjs', 'aw_block', {
@@ -17,8 +24,8 @@ const MyBlock = new Block('discordjs', 'aw_block', {
 MyBlock.attach();
 
 
-b4d.javascriptGenerator.forBlock['discordjs:aw_block'] = function(block, generator) {
-    var value_name = generator.valueToCode(block, 'STRING', b4d.javascript.Order.ATOMIC);
+javascriptGenerator.forBlock['discordjs:aw_block'] = function(block, generator) {
+    var value_name = generator.valueToCode(block, 'STRING', javascript.Order.ATOMIC);
     var code = `awwwwwwwww ${value_name}`;
     return code;
 };
