@@ -21,6 +21,8 @@ export class Block {
         }
     }
 
+    
+
     constructor(namespace, block_name, data) {
         this.namespace = namespace;
         this.block_name = block_name;
