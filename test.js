@@ -5,7 +5,8 @@ import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
 
 
 
-register('discordjs', 'aw_block');
+
+Block.register('discordjs', 'aw_block');
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
   renderer: 'zelos'
