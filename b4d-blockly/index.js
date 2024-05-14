@@ -1,4 +1,10 @@
 export class Block {
+    
+    constructor(namespace, block_name, data) {
+        this.namespace = namespace;
+        this.block_name = block_name;
+        this.data = data;
+    }
 
     static namespaces = [];
     static blocks = {};
@@ -21,14 +27,6 @@ export class Block {
         }
     }
 
-    
-
-    constructor(namespace, block_name, data) {
-        this.namespace = namespace;
-        this.block_name = block_name;
-        this.data = data;
-    }
-
     attach() {
         if (!Block.blocks[this.namespace]) Block.blocks[this.namespace] = {};
         Block.blocks[this.namespace][this.block_name] = this.data;
@@ -37,8 +35,27 @@ export class Block {
             Block.namespaces.push(this.namespace);
         }
 
+    }
+
+    dispose() {
+        b4d.workspace.getBlockById(this.namespace + ":" + this.block_name).dispose();
+    }
+}
+
+export class Extension {
+    constructor(namespace, blocks) {
         
     }
 
+    Attach() {
 
+    }
+    static Register() {
+
+    }
+
+    static Dispose() {
+
+    }
 }
+
