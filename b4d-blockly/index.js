@@ -1,4 +1,4 @@
-class Block {
+export class Block {
 
     static namespaces = [];
     static blocks = {};
@@ -21,17 +21,16 @@ class Block {
     }
 
     register(namespace, block) {
-        b4d.Blockly.Blocks[block] = {
+        b4d.Blockly.Blocks[namespace + ":" + block] = {
             init: function() {
                 this.jsonInit(Block.blocks[namespace][block]);
             }
         };
     }
     registerAllOf(namespace) {
-        Block.blocks[namespace]
 
         for (const Item in Block.blocks[namespace]) {
-            b4d.Blockly.Blocks[Item] = {
+            b4d.Blockly.Blocks[namespace + ":" + Item] = {
                 init: function() {
                     this.jsonInit(Block.blocks[namespace][Item]);
                 }
