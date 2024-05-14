@@ -17,7 +17,7 @@ export const DiscordJStooblox = {
       categorystyle: 'logic_category',
       contents: [
         {
-          type: 'aw_block',
+          type: 'discordjs:aw_block',
           kind: 'block',
         },
         {
