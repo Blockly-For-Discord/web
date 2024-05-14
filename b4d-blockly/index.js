@@ -1,4 +1,4 @@
-export class Block {
+export default class Block {
 
     static namespaces = [];
     static blocks = {};
