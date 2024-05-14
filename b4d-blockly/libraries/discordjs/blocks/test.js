@@ -27,7 +27,7 @@ const ExampleBlockData = {
 // b4d.register(ExampleBlock, ExampleBlockData);
 
 b4d.javascriptGenerator.forBlock['aw_block'] = function(block, generator) {
-    var value_name = generator.valueToCode(block, 'STRING', javascript.Order.ATOMIC);
+    var value_name = generator.valueToCode(block, 'STRING', ORDER_ATOMIC);
     // TODO: Assemble javascript into code variable.
     var code = `awwwwwwwww ${value_name}`;
     return code;
