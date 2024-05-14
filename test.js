@@ -1,11 +1,15 @@
-import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
-import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
-//import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
+//import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 import { Block } from '/b4d-blockly/index.js';
 
+// DiscordJS
+import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
+import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
 
 
-Block.register('discordjs', 'aw_block');
+
+//Block.register('discordjs', 'aw_block');
+registerAllOf('discordjs');
+
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
   renderer: 'zelos'
