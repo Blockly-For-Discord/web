@@ -1,4 +1,4 @@
-import { Block } from './b4d-blockly/index.js';
+import { Block } from '/b4d-blockly/index.js';
 
 const MyBlock = new Block('discordjs', 'aw_block', {
     "message0": "%1 aw",
