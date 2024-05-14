@@ -1,6 +1,6 @@
 
 import { Block } from '/b4d-blockly/index.js';
-
+import * as b4d from './components/webpack/blocklycompressed.bundle.js';
 const MyBlock = new Block('discordjs', 'aw_block', {
     "message0": "%1 aw",
     "args0": [
