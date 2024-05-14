@@ -2,7 +2,7 @@ import * as Blockly from './components/webpack/blocklycompressed.bundle.js';
 // import './components/b4d-blockly/libraries/discordjs/blocks/test.js';
 import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
 import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
-
+import { Block } from '/b4d-blockly/index.js';
 
 
 
