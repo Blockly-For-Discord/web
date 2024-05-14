@@ -17,7 +17,7 @@ const MyBlock = new Block('discordjs', 'aw_block', {
 MyBlock.attach();
 
 
-b4d.javascriptGenerator.forBlock['aw_block'] = function(block, generator) {
+b4d.javascriptGenerator.forBlock['discordjs:aw_block'] = function(block, generator) {
     var value_name = generator.valueToCode(block, 'STRING', javascript.Order.ATOMIC);
     var code = `awwwwwwwww ${value_name}`;
     return code;
