@@ -1,6 +1,6 @@
-import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
+/*import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-export const ExampleBlock = "aw_block";
+const ExampleBlock = "aw_block";
 
 const ExampleBlockData = {
     "message0": "%1 aw",
@@ -16,7 +16,7 @@ const ExampleBlockData = {
     "tooltip": "",
     "helpUrl": ""
 };
-
+*/
 
 /*b4d.Blockly.Blocks[ExampleBlock] = {
     init: function() {
