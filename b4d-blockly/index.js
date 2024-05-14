@@ -40,3 +40,6 @@ export class Block {
 
 
 }
+
+
+b4d.blockly.block = Block;
