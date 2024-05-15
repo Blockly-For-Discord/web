@@ -24,3 +24,5 @@ b4d.javascriptGenerator.forBlock['discordjs:aw_block'] = function(block, generat
     var code = `awwwwwwwww ${value_name}`;
     return code;
 };
+
+

@@ -16,7 +16,7 @@ export class Block {
             }
         };
     }
-    static registerAllOf(namespace) {
+    static registerAllOf(namespace) {  
 
         for (const Item in Block.blocks[namespace]) {
             b4d.Blockly.Blocks[namespace + ":" + Item] = {
