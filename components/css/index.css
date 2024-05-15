@@ -245,6 +245,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 50px;
 }
 
 .showcase-2 {
@@ -255,6 +256,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    gap: 50px;
 }
 
 .showcase-1-title {
