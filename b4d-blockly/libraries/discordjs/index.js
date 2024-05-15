@@ -793,5 +793,19 @@ export const DiscordJStooblox = {
       custom: 'PROCEDURE',
       categorystyle: 'procedure_category',
     },
+    {
+      kind: 'sep',
+    },
+    {
+      kind: 'category',
+      name: 'Base',
+      color: '#009dff',
+      contents: [
+        {
+          type: 'discordjs:base_login',
+          kind: 'block',
+        },
+      ]
+    }
   ]
 }
