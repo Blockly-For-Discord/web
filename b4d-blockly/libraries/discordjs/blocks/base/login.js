@@ -10,8 +10,6 @@ const base_login = new Block('discordjs', 'base_login', {
         "check": "String"
       }
     ],
-    "previousStatement": null,
-    "nextStatement": null,
     "colour": "#009dff",
     "tooltip": "Start your discord bot with a token",
     "helpUrl": ""
