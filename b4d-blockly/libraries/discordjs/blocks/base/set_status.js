@@ -75,10 +75,10 @@ b4d.javascriptGenerator.forBlock['discordjs:base_set_status'] = function(block, 
   var dropdown_type = block.getFieldValue('type');
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `client.user.setPresence({
-  status: ${dropdown_status},
+  status: '${dropdown_status}',
   activities: [{
     name: ${value_text},
-    type: ${dropdown_type}
+    type: '${dropdown_type}'
   }]
 });\n`;
     return code;
