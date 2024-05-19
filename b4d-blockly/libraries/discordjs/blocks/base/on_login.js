@@ -9,6 +9,7 @@ const base_on_login = new Block('discordjs', 'base_on_login', {
         "name": "in"
       }
     ],
+    "inputsInline": false,
     "colour": "#009dff",
     "tooltip": "Do something when the bot gets connected",
     "helpUrl": ""
