@@ -21,5 +21,5 @@ base_env.attach();
 b4d.javascriptGenerator.forBlock['discordjs:base_env'] = function(block, generator) {
   var value_var = generator.valueToCode(block, 'var', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `process.env[${value_var}]`;
-  return code;
+  return [code, b4d.javascriptGenerator.ORDER_NONE];
 };
