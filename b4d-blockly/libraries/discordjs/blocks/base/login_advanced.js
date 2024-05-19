@@ -20,6 +20,7 @@ const base_login_advanced = new Block('discordjs', 'base_login_advanced', {
         "checked": false
       }
     ],
+    "inputsInline": false,
     "colour": "#009dff",
     "tooltip": "Start your bot with more control",
     "helpUrl": ""
