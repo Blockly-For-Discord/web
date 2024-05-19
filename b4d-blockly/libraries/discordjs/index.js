@@ -802,7 +802,15 @@ export const DiscordJStooblox = {
       color: '#009dff',
       contents: [
         {
+          text: 'Login',
+          kind: 'label',
+        },
+        {
           type: 'discordjs:base_login',
+          kind: 'block',
+        },
+        {
+          type: 'discordjs:base_login_advanced',
           kind: 'block',
         },
       ]
