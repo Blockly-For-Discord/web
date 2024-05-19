@@ -818,7 +818,7 @@ export const DiscordJStooblox = {
           kind: 'label',
         },
         {
-          type: 'discordjs:env',
+          type: 'discordjs:base_env',
           kind: 'block',
         },
       ]
