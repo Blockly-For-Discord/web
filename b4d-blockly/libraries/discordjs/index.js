@@ -821,6 +821,14 @@ export const DiscordJStooblox = {
           type: 'discordjs:base_env',
           kind: 'block',
         },
+        {
+          text: 'Events',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_on_login',
+          kind: 'block',
+        },
       ]
     }
   ]
