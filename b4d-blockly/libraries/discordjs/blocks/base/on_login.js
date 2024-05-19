@@ -2,14 +2,16 @@ import { Block } from '/b4d-blockly/index.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 const base_on_login = new Block('discordjs', 'base_on_login', {
-  "message0": "When bot connects %1",
+  "message0": "When bot connects %1 %2",
     "args0": [
+      {
+        "type": "input_dummy"
+      },
       {
         "type": "input_statement",
         "name": "in"
       }
     ],
-    "inputsInline": false,
     "colour": "#009dff",
     "tooltip": "Do something when the bot gets connected",
     "helpUrl": ""
