@@ -829,6 +829,18 @@ export const DiscordJStooblox = {
           type: 'discordjs:base_on_login',
           kind: 'block',
         },
+        {
+          text: 'Actions',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_set_status',
+          kind: 'block',
+        },
+        {
+          type: 'discordjs:base_shutdown',
+          kind: 'block',
+        },
       ]
     }
   ]
