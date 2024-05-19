@@ -34,20 +34,24 @@ const base_set_status = new Block('discordjs', 'base_set_status', {
       "name": "type",
       "options": [
         [
+          "Playing",
+          "Playing"
+        ],
+        [
           "Listening",
-          "listening"
+          "Listening"
         ],
         [
           "Watching",
-          "watching"
+          "Watching"
+        ],
+        [
+          "Custom",
+          "Custom"
         ],
         [
           "Competing",
           "Competing"
-        ],
-        [
-          "Playing",
-          "playing"
         ]
       ]
     },
@@ -78,7 +82,7 @@ b4d.javascriptGenerator.forBlock['discordjs:base_set_status'] = function(block, 
   status: '${dropdown_status}',
   activities: [{
     name: ${value_text},
-    type: '${dropdown_type}'
+    type: ActivityType.${dropdown_type}
   }]
 });\n`;
     return code;
