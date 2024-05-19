@@ -813,6 +813,14 @@ export const DiscordJStooblox = {
           type: 'discordjs:base_login_advanced',
           kind: 'block',
         },
+        {
+          text: 'Secrets',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:env',
+          kind: 'block',
+        },
       ]
     }
   ]
