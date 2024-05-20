@@ -853,7 +853,7 @@ export const DiscordJStooblox = {
           kind: 'label'
         },
         {
-          type: 'message_on_message',
+          type: 'discordjs:message_on_message',
           kind: 'block'
         },
         {
@@ -861,7 +861,7 @@ export const DiscordJStooblox = {
           kind: 'label'
         },
         {
-          type: 'message_content',
+          type: 'discordjs:message_content',
           kind: 'block'
         },
         {
@@ -869,7 +869,7 @@ export const DiscordJStooblox = {
           kind: 'label'
         },
         {
-          type: 'message_reply',
+          type: 'discordjs:message_reply',
           kind: 'block'
         }
       ]
