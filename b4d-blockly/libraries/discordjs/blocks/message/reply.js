@@ -1,7 +1,7 @@
 import { Block } from '/b4d-blockly/index.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_reply = new Block('discordjs', ‘message_reply’, {
+const message_reply = new Block('discordjs', 'message_reply', {
   "message0": "Reply %1 Mention %2",
   "args0": [
     {
