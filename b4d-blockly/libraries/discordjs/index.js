@@ -80,14 +80,6 @@ export const DiscordJStooblox = {
           },
         },
         {
-          type: 'controls_repeat',
-          kind: 'block',
-          enabled: false,
-          fields: {
-            TIMES: 10,
-          },
-        },
-        {
           type: 'controls_whileUntil',
           kind: 'block',
           fields: {
@@ -141,7 +133,6 @@ export const DiscordJStooblox = {
         {
           type: 'controls_flow_statements',
           kind: 'block',
-          enabled: false,
           fields: {
             FLOW: 'BREAK',
           },
