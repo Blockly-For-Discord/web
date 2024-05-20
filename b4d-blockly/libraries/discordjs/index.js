@@ -871,6 +871,10 @@ export const DiscordJStooblox = {
         {
           type: 'discordjs:message_reply',
           kind: 'block'
+        },
+        {
+          type: 'discordjs:message_reply_channel',
+          kind: 'block'
         }
       ]
     }
