@@ -842,6 +842,37 @@ export const DiscordJStooblox = {
           kind: 'block',
         },
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Messages',
+      color: '#0040ff',
+      contents: [
+        {
+          text: 'Events',
+          kind: 'label'
+        },
+        {
+          type: 'message_on_message',
+          kind: 'block'
+        },
+        {
+          text: 'Data',
+          kind: 'label'
+        },
+        {
+          type: 'message_content',
+          kind: 'block'
+        },
+        {
+          text: 'Actions',
+          kind: 'label'
+        },
+        {
+          type: 'message_reply',
+          kind: 'block'
+        }
+      ]
     }
   ]
 }
