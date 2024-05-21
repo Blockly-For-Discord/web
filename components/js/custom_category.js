@@ -1,5 +1,6 @@
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
+console.log(b4d?.Blockly, Blockly)
 class CustomCategory extends Blockly.ToolboxCategory {
     /**
      * Constructor for a custom category.
