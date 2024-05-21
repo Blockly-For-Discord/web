@@ -1,6 +1,6 @@
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-class CustomCategory extends b4d.Blockly.ToolboxCategory {
+class CustomCategory extends Blockly.ToolboxCategory {
     /**
      * Constructor for a custom category.
      * @override
@@ -30,8 +30,8 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
       this.iconDom_.style.color = 'white';
     }
     // This is used for accessibility purposes.
-    b4d.Blockly.utils.aria.setState(/** @type {!Element} */ (this.htmlDiv_), b4d.Blockly.utils.aria.State.SELECTED, isSelected);
+    Blockly.utils.aria.setState(/** @type {!Element} */ (this.htmlDiv_), Blockly.utils.aria.State.SELECTED, isSelected);
   }
 }
 
-b4d.Blockly.registry.register(b4d.Blockly.registry.Type.TOOLBOX_ITEM, b4d.Blockly.ToolboxCategory.registrationName, CustomCategory, true);
+Blockly.registry.register(Blockly.registry.Type.TOOLBOX_ITEM, Blockly.ToolboxCategory.registrationName, CustomCategory, true);
