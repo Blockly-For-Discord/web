@@ -12,7 +12,7 @@ const message_on_message = new Block('discordjs', 'message_on_message', {
       "name": "in"
     }
   ],
-  "colour": "#0040ff",
+  "colour": "#05b55a",
   "tooltip": "Do something when a message is received",
   "helpUrl": ""
 });
