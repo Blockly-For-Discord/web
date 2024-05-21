@@ -837,7 +837,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Messages',
-      color: '#0040ff',
+      color: '#05b55a',
       contents: [
         {
           text: 'Events',
