@@ -790,7 +790,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Base',
-      color: '#009dff',
+      colour: '#009dff',
       contents: [
         {
           text: 'Login',
@@ -837,7 +837,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Messages',
-      color: '#05b55a',
+      colour: '#05b55a',
       contents: [
         {
           text: 'Events',
