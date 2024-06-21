@@ -3,7 +3,7 @@
 Made and Maintained by Blockly For Discord. Any Modification is prohibited and could lead to faulty behaviour of the site - v0.5.6
 
 */
-import './new_router.js';
+import Router from './new_router.js';
 
 import { HomeInit } from '../dashboard/home.js';
 import { HomeSwitch } from '../dashboard/home.js';
