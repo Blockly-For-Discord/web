@@ -868,6 +868,25 @@ export const DiscordJStooblox = {
           kind: 'block'
         }
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Components',
+      colour: '#3da9ae',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Embeds',
+          colour: '#ee6a24',
+          contents: []
+        },
+        {
+          kind: 'category',
+          name: 'Polls',
+          colour: '#bf70e3',
+          contents: []
+        }
+      ]
     }
   ]
 }
