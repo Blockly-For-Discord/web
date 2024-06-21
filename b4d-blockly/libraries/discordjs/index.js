@@ -800,7 +800,7 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
+                  TEXT: 'Token here',
                 },
               },
             },
@@ -814,7 +814,7 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
+                  TEXT: 'Token here',
                 },
               },
             },
