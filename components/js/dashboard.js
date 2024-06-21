@@ -4,17 +4,8 @@
 This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
 
 */
-import branch from "/branch.json" with { type: "json" };
 
 
-let b4d = {
-  version: function() {
-      console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
-  }
-};
-
-window.b4d = b4d; 
-window.b4d.version = b4d.version;
 
 document.addEventListener("DOMContentLoaded", async function() {
 
