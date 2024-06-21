@@ -1,7 +1,7 @@
 
 
 
-  class Router {
+  export class Router {
     constructor() {
     }
 
