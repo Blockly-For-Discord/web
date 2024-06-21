@@ -1,5 +1,5 @@
 {
-    "version":"0.5.0/development",
+    "version":"0.5.0/production",
     "oauth" : {
         "redirect_uri":"https://discord.com/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fb4d-development--blockly-for-discord.netlify.app%2Fcallback&scope=identify+email"
     },
