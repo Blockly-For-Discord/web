@@ -13,6 +13,7 @@ let b4d = {
   }
 };
 
+window.b4d = b4d; 
 window.b4d.version = b4d.version;
 
 document.addEventListener("DOMContentLoaded", async function() {
