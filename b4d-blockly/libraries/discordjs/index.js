@@ -631,10 +631,6 @@ export const DiscordJStooblox = {
           kind: 'block',
         },
         {
-          type: 'lists_create_with',
-          kind: 'block',
-        },
-        {
           type: 'lists_repeat',
           kind: 'block',
           inputs: {
@@ -799,10 +795,35 @@ export const DiscordJStooblox = {
         {
           type: 'discordjs:base_login',
           kind: 'block',
+          inputs: {
+            token: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: '',
+                },
+              },
+            },
+          },
         },
         {
           type: 'discordjs:base_login_advanced',
           kind: 'block',
+          inputs: {
+            token: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: '',
+                },
+              },
+            },
+            intents: {
+              shadow: {
+                type: 'lists_create_with',
+              }
+            }
+          },
         },
         {
           text: 'Secrets',
@@ -811,6 +832,16 @@ export const DiscordJStooblox = {
         {
           type: 'discordjs:base_env',
           kind: 'block',
+          inputs: {
+            var: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'variable_name',
+                },
+              },
+            },
+          },
         },
         {
           text: 'Events',
@@ -827,6 +858,16 @@ export const DiscordJStooblox = {
         {
           type: 'discordjs:base_set_status',
           kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Made in b4d!',
+                },
+              },
+            },
+          },
         },
         {
           type: 'discordjs:base_shutdown',
@@ -841,31 +882,59 @@ export const DiscordJStooblox = {
       contents: [
         {
           text: 'Events',
-          kind: 'label'
+          kind: 'label',
         },
         {
           type: 'discordjs:message_on_message',
-          kind: 'block'
+          kind: 'block',
         },
         {
           text: 'Data',
-          kind: 'label'
+          kind: 'label',
         },
         {
           type: 'discordjs:message_content',
-          kind: 'block'
+          kind: 'block',
         },
         {
           text: 'Actions',
-          kind: 'label'
+          kind: 'label',
         },
         {
           type: 'discordjs:message_reply',
-          kind: 'block'
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Hey!',
+                },
+              },
+            },
+            mention: {
+              shadow: {
+                type: 'logic_boolean',
+                fields: {
+                  BOOL: 'TRUE',
+                },
+              },
+            },
+          },
         },
         {
           type: 'discordjs:message_reply_channel',
-          kind: 'block'
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Hello!',
+                },
+              },
+            },
+          },
         }
       ]
     },
