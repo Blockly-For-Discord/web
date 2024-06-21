@@ -30,6 +30,9 @@ body {
   background-color: #1e1e1e;
   border-radius: 5px;
 }
+.blocklyFlyoutLabelText {
+    fill: #cbced7 !important;
+}
 .blocklyFlyoutBackground{
   fill: #07090f;
 }
