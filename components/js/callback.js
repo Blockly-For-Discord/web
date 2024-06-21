@@ -16,26 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(response => {
           if (!response.ok) {
-              window.location.href = "https://blockly-for-discord.xyz?error=Something went wrong";
+              window.location.href = window.location.hostname + "?error=Something went wrong";
           }
           return response.json();
       })
       .then(data => {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
-            window.location.href = "https://blockly-for-discord.xyz/dashboard/";
+            window.location.href = window.location.hostname + "/dashboard/";
           } else {
-            window.location.href = "https://blockly-for-discord.xyz?error=" 
+            window.location.href = window.location.hostname + "?error=" 
           + ErrorHandler(data.client);
           }
         } else {
-          window.location.href = "https://blockly-for-discord.xyz?error=An unknown error occurred. Try again in a few minutes";
+          window.location.href = window.location.hostname + "?error=An unknown error occurred. Try again in a few minutes";
         }
           
       })
       .catch(error => {  
           console.error('Error during fetch:', error);
-          window.location.href = "https://blockly-for-discord.xyz?error=" + ErrorHandler(data.client);
+          window.location.href = window.location.hostname + "?error=" + ErrorHandler(data.client);
       });
       
     };

@@ -80,14 +80,6 @@ export const DiscordJStooblox = {
           },
         },
         {
-          type: 'controls_repeat',
-          kind: 'block',
-          enabled: false,
-          fields: {
-            TIMES: 10,
-          },
-        },
-        {
           type: 'controls_whileUntil',
           kind: 'block',
           fields: {
@@ -141,7 +133,6 @@ export const DiscordJStooblox = {
         {
           type: 'controls_flow_statements',
           kind: 'block',
-          enabled: false,
           fields: {
             FLOW: 'BREAK',
           },
@@ -640,10 +631,6 @@ export const DiscordJStooblox = {
           kind: 'block',
         },
         {
-          type: 'lists_create_with',
-          kind: 'block',
-        },
-        {
           type: 'lists_repeat',
           kind: 'block',
           inputs: {
@@ -793,5 +780,182 @@ export const DiscordJStooblox = {
       custom: 'PROCEDURE',
       categorystyle: 'procedure_category',
     },
+    {
+      kind: 'sep',
+    },
+    {
+      kind: 'category',
+      name: 'Base',
+      colour: '#009dff',
+      contents: [
+        {
+          text: 'Login',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_login',
+          kind: 'block',
+          inputs: {
+            token: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Token here',
+                },
+              },
+            },
+          },
+        },
+        {
+          type: 'discordjs:base_login_advanced',
+          kind: 'block',
+          inputs: {
+            token: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Token here',
+                },
+              },
+            },
+            intents: {
+              shadow: {
+                type: 'lists_create_with',
+              }
+            }
+          },
+        },
+        {
+          text: 'Secrets',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_env',
+          kind: 'block',
+          inputs: {
+            var: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'variable_name',
+                },
+              },
+            },
+          },
+        },
+        {
+          text: 'Events',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_on_login',
+          kind: 'block',
+        },
+        {
+          text: 'Actions',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:base_set_status',
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Made in b4d!',
+                },
+              },
+            },
+          },
+        },
+        {
+          type: 'discordjs:base_shutdown',
+          kind: 'block',
+        },
+      ]
+    },
+    {
+      kind: 'category',
+      name: 'Messages',
+      colour: '#05b55a',
+      contents: [
+        {
+          text: 'Events',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:message_on_message',
+          kind: 'block',
+        },
+        {
+          text: 'Data',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:message_content',
+          kind: 'block',
+        },
+        {
+          text: 'Actions',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:message_reply',
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Hey!',
+                },
+              },
+            },
+            mention: {
+              shadow: {
+                type: 'logic_boolean',
+                fields: {
+                  BOOL: 'TRUE',
+                },
+              },
+            },
+          },
+        },
+        {
+          type: 'discordjs:message_reply_channel',
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Hello!',
+                },
+              },
+            },
+          },
+        }
+      ]
+    },
+    {
+      kind: 'category',
+      name: 'Components',
+      colour: '#3da9ae',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Embeds',
+          colour: '#ee6a24',
+          contents: []
+        },
+        {
+          kind: 'category',
+          name: 'Polls',
+          colour: '#bf70e3',
+          contents: []
+        }
+      ]
+    }
   ]
 }

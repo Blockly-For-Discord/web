@@ -82,7 +82,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
@@ -242,9 +242,10 @@ a {
     display: flex;
     width: 70%;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 50px;
 }
 
 .showcase-2 {
@@ -252,9 +253,10 @@ a {
     display: flex;
     width: 70%;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    gap: 50px;
 }
 
 .showcase-1-title {

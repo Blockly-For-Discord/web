@@ -4,13 +4,12 @@
 This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
 
 */
+import branch from "/branch.json" with { type: "json" };
+
 
 let b4d = {
   version: function() {
-      console.log("B4D - " + "v0.0.0/production");
-      console.log("Blockly - " + b4d.Blockly.VERSION);
-      console.log("CSS - " + "v0.0.0");
-      console.log("JS - " + "v0.0.0");
+      console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
   }
 };
 
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const ProgressText = document.getElementById('LoadScreenText');
         setTimeout(function() {
           const link = document.createElement('a');
-          link.href = 'https://discord.com/api/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fblockly-for-discord.xyz%2Fcallback&scope=identify+email';
+          link.href = branch.oauth.redirect_uri;
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
           ProgressText.textContent = 'Redirecting...';

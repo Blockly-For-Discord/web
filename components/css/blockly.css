@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  background-color: #212529;
+}
+#blocklyDiv {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.blocklyTreeRow {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+.blocklyToolboxDiv {
+  width: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  background-color: #333333;
+  min-width: max-content;
+  outline: 0.5px solid #555a5f;
+}
+.blocklySvg {
+  background-color: #1e1e1e;
+  border-radius: 5px;
+}
+.blocklyFlyoutLabelText {
+    fill: #cbced7 !important;
+}
+.blocklyFlyoutBackground{
+  fill: #07090f;
+}
+.blocklyFlyoutButton {
+  fill: #080a10;
+}
+.blocklyFlyoutButton:hover {
+  fill: #232530;
+  padding-bottom: 5px;
+}
+.blocklyFlyoutButtonShadow {
+  fill: transparent;
+}
