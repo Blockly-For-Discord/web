@@ -7,6 +7,11 @@ fetch('/branch.json')
   })
  .then(data => {
     const branch = data;
+    let b4d = {
+      version: function() {
+          console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
+      }
+    };
   })
  .catch(error => {
     console.error('[Error] An error ocurred fetching branch information. Error: ' + error);
@@ -14,8 +19,3 @@ fetch('/branch.json')
 
 
 
-let b4d = {
-  version: function() {
-      console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
-  }
-};
