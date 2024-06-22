@@ -6,6 +6,25 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 */
 
 
+fetch('/branch.json')
+ .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+ .then(data => {
+    const branch = data;
+    let b4d = {
+      version: function() {
+          console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
+      }
+    };
+  })
+ .catch(error => {
+    console.error('[Error] An error ocurred fetching branch information. Error: ' + error);
+  });
+
 
 document.addEventListener("DOMContentLoaded", async function() {
 
