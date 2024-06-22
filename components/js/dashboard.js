@@ -18,7 +18,7 @@ fetch('/branch.json')
     }
     let branch = await response.json();
     b4d.version = function() {
-      console.log("B4D: " + branch.version + " / Blockly: " + b4d.Blockly.VERSION);
+      console.log("B4D: " + branch.version + "\nBlockly: " + b4d.Blockly.VERSION);
     }
     b4d.live = function() {
       window.location.href = branch.live + window.location.pathname + window.location.search
