@@ -8,7 +8,8 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 let b4d = {
   version: function(){return ''},
   live: function(){return ''},
-  dev: function(){return ''}
+  dev: function(){return ''},
+  branch: function(){return ''}
 };
 
 fetch('/branch.json')
@@ -25,6 +26,9 @@ fetch('/branch.json')
     }
     b4d.dev = function() {
       window.location.href = branch.dev + window.location.pathname + window.location.search
+    }
+    b4d.branch = function(selector) {
+      return branch[selector]
     }
   })
  .catch(error => {
@@ -56,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const ProgressText = document.getElementById('LoadScreenText');
         setTimeout(function() {
           const link = document.createElement('a');
-          link.href = branch.oauth.redirect_uri;
+          link.href = b4d.branch.oauth.redirect_uri;
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
           ProgressText.textContent = 'Redirecting...';
