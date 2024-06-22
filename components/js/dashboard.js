@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const ProgressText = document.getElementById('LoadScreenText');
         setTimeout(function() {
           const link = document.createElement('a');
-          link.href = b4d.branch.oauth.redirect_uri;
+          link.href = b4d.branch("oauth.redirect_uri");
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
           ProgressText.textContent = 'Redirecting...';
