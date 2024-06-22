@@ -16,7 +16,7 @@ fetch('/branch.json')
     }
     let branch = await response.json();
     b4d.version = function() {
-      console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
+      console.log("B4D: " + branch.version + " / Blockly: " + b4d.Blockly.VERSION);
     }
   })
  .catch(error => {
