@@ -28,7 +28,18 @@ fetch('/branch.json')
       window.location.href = branch.dev + window.location.pathname + window.location.search
     }
     b4d.branch = function(selector) {
-      return branch[selector]
+      
+        let result = branch;
+        const keys = selector.split('.');
+        for (let key of keys) {
+            if (result.hasOwnProperty(key)) {
+                result = result[key];
+            } else {
+                throw new Error(`Property ${key} not found`);
+            }
+        }
+        return result;
+    
     }
   })
  .catch(error => {
