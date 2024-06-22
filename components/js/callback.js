@@ -25,17 +25,17 @@ document.addEventListener('DOMContentLoaded', function () {
           if (data.client === "httpTokenCallback") {
             window.location.href = window.location.hostname + "/dashboard/";
           } else {
-            window.location.href = window.location.hostname + "?error=" 
+            window.location.href = "https://" + window.location.hostname + "?error=" 
           + ErrorHandler(data.client);
           }
         } else {
-          window.location.href = window.location.hostname + "?error=An unknown error occurred. Try again in a few minutes";
+          window.location.href = "https://" + window.location.hostname + "?error=An unknown error occurred. Try again in a few minutes";
         }
           
       })
       .catch(error => {  
           console.error('Error during fetch:', error);
-          window.location.href = window.location.hostname + "?error=" + ErrorHandler(data.client);
+          window.location.href = "https://" + window.location.hostname + "?error=" + ErrorHandler(data.client);
       });
       
     };
