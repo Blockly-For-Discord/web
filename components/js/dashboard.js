@@ -6,7 +6,9 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 */
 
 let b4d = {
-  version: function(){return ''}
+  version: function(){return ''},
+  live: function(){return ''},
+  dev: function(){return ''}
 };
 
 fetch('/branch.json')
@@ -17,6 +19,12 @@ fetch('/branch.json')
     let branch = await response.json();
     b4d.version = function() {
       console.log("B4D: " + branch.version + " / Blockly: " + b4d.Blockly.VERSION);
+    }
+    b4d.live = function() {
+      window.location.href = branch.live + window.location.pathname + window.location.search
+    }
+    b4d.dev = function() {
+      window.location.href = branch.dev + window.location.pathname + window.location.search
     }
   })
  .catch(error => {
