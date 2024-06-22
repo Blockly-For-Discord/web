@@ -5,26 +5,24 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 */
 
+let b4d = {
+  version: function(){return ''}
+};
 
 fetch('/branch.json')
- .then(response => {
+ .then(async response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    return response.json();
-  })
- .then(data => {
-    const branch = data;
-
+    let branch = await response.json();
+    b4d.version = function() {
+      console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
+    }
   })
  .catch(error => {
     console.error('[Error] An error ocurred fetching branch information. Error: ' + error);
   });
-  let b4d = {
-    version: function() {
-        console.log(branch.version + " / Google's Blockly" + b4d.Blockly.VERSION);
-    }
-  };
+
 
 document.addEventListener("DOMContentLoaded", async function() {
 
