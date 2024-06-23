@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
           credentials: 'include',
           headers: {
               "type": "code_grant",
-              "code_grant": codeValue
+              "code_grant": codeValue,
+              "redirect_uri": `${window.location.protocol}//${window.location.hostname}/callback`
           }
       })
       .then(response => {
