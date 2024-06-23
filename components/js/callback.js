@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
+            if (!Cookies.get('access_token') && !Cookies.get('refresh_token')) {
+              Cookies.set('access_token', data.access_token);
+              Cookies.set('refresh_token', data.refresh_token);
+            }
             window.location.href = "https://" + window.location.hostname + "/dashboard/";
           } else {
             window.location.href = "https://" + window.location.hostname + "?error=" 
