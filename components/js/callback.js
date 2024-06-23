@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
-            window.location.href = window.location.hostname + "/dashboard/";
+            window.location.href = "https://" + window.location.hostname + "/dashboard/";
           } else {
             window.location.href = "https://" + window.location.hostname + "?error=" 
           + ErrorHandler(data.client);
