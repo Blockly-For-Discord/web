@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
               "type": "code_grant",
               "code_grant": codeValue,
               "redirect_uri": `${window.location.protocol}//${window.location.hostname}/callback`,
-              "host": window.location.hostname
+              "cookie_host": window.location.hostname
           }
       })
       .then(response => {
