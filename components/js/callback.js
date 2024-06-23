@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
           headers: {
               "type": "code_grant",
               "code_grant": codeValue,
-              "redirect_uri": `${window.location.protocol}//${window.location.hostname}/callback`
+              "redirect_uri": `${window.location.protocol}//${window.location.hostname}/callback`,
+              "host": window.location.hostname
           }
       })
       .then(response => {
