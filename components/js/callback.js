@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       
     } else {
-      window.location.href = window.location.protocol + window.location.hostname 
+      window.location.href = "https://" + window.location.hostname 
     }
     
   });
