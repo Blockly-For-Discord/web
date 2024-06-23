@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
           credentials: 'include',
           headers: {
               "type": "code_grant",
-              "code_grant": codeValue
+              "code_grant": codeValue,
+              "redirect_uri": `${window.location.protocol}//${window.location.hostname}/callback`,
+              "cookie_host": window.location.hostname
           }
       })
       .then(response => {
@@ -23,7 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
-            window.location.href = window.location.hostname + "/dashboard/";
+            if (!Cookies.get('access_token') && !Cookies.get('refresh_token')) {
+              Cookies.set('access_token', data.access_token);
+              Cookies.set('refresh_token', data.refresh_token);
+            }
+            window.location.href = "https://" + window.location.hostname + "/dashboard/";
           } else {
             window.location.href = "https://" + window.location.hostname + "?error=" 
           + ErrorHandler(data.client);
