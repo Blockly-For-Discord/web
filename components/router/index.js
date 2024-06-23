@@ -26,3 +26,5 @@ window.ProjectsSwitch = ProjectsSwitch;
 const app = new Router();
 
 app.add('Home', '', 's-home', 'Home', HomeInit, HomeSwitch);
+
+Router.LoadCurrent();
