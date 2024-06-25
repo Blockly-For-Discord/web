@@ -65,13 +65,14 @@ document.addEventListener("DOMContentLoaded", async function() {
         // verified that server is online
         pt.textContent = 'Fetching user data...';
         // get user data (profile, username)
+        ProgressChange(100);
+          AuthEvent()
         setTimeout(function() {
-          ProgressChange(100);
-          AuthEvent();
+          const ls = this.getElementById('loadscreen');
+          ls.style.display = 'none';
         }, 3000);
 
-        const ls = this.getElementById('loadscreen');
-        ls.style.display = 'none';
+        
 
       } else if (Cookies.get('refresh_token')) {
         // if user has refresh_token but no token. type: refresh_token
