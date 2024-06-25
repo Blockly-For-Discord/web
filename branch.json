@@ -3,10 +3,10 @@
     "live":"https://blockly-for-discord.xyz",
     "dev":"https://b4d-development--blockly-for-discord.netlify.app",
     "oauth" : {
-        "redirect_uri":"https://discord.com/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fblockly-for-discord.xyz%2Fcallback&scope=identify+email"
+        "redirect_uri":"https://discord.com/oauth2/authorize?client_id=1163198844599808254&response_type=code&redirect_uri=https%3A%2F%2Fb4d-development--blockly-for-discord.netlify.app%2Fcallback&scope=identify+email"
     },
     "homepage" : {
-        "get_started":"tettst"
+        "get_started":"tette"
         
     }
 }
