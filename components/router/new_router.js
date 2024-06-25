@@ -41,7 +41,10 @@
 
         if (!Router.loaded) {
             Router.loaded = true;
-            const currentPath = window.location.pathname;
+            const currentPath = window.location.pathname.replace('/','');
+            if (currentPath.endsWith('/')) {
+                currentPath = currentPath.slice(0, currentPath.length-1)
+            }
 
             // searches through the list of registered pages to see if the path matches
             Object.keys(Router.paths).forEach((pathKey) => {
