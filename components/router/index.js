@@ -28,3 +28,10 @@ const app = new Router();
 app.add('Home', '', 's-home', 'Home', HomeInit, HomeSwitch);
 
 Router.LoadCurrent();
+
+function GlobalSetPage(html) {
+    const container = document.getElementById("content");
+    container.innerHTML = html;
+}
+
+window.GlobalSetPage = GlobalSetPage;
