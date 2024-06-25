@@ -41,7 +41,10 @@
 
         if (!Router.loaded) {
             Router.loaded = true;
-            const currentPath = window.location.pathname.replace('/','');
+            const currentPath = window.location.pathname.replace('/dashboard','');
+            if (currentPath.startsWith('/')) {
+                currentPath = currentPath.slice(1, currentPath.length)
+            }
             if (currentPath.endsWith('/')) {
                 currentPath = currentPath.slice(0, currentPath.length-1)
             }
