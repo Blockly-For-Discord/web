@@ -79,8 +79,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         setTimeout(function() {
           ProgressChange(100);
           setTimeout( function() {
-            anime(fadeInAnimation)
+            anime(fadeInAnimation);
+            setTimeout( function() {
               ls.style.display = 'none';
+            }, 1200);
+              
           }, 1000);
           
         }, 2500);
