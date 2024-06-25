@@ -65,10 +65,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         // verified that server is online
         pt.textContent = 'Fetching user data...';
         // get user data (profile, username)
-        ProgressChange(100);
+        ;
           AuthEvent()
         setTimeout(function() {
-          const ls = this.getElementById('loadscreen');
+          ProgressChange(100)
+          const ls = document.getElementById('loadscreen');
           ls.style.display = 'none';
         }, 3000);
 
