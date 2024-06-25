@@ -78,11 +78,9 @@ document.addEventListener("DOMContentLoaded", async function() {
           AuthEvent()
         setTimeout(function() {
           ProgressChange(100);
-          setTimeout( async function() {
-            anime(fadeInAnimation).then(() => {
-              // After the animation ends, hide the element
+          setTimeout( function() {
+            anime(fadeInAnimation)
               ls.style.display = 'none';
-            });
           }, 1000);
           
         }, 2500);
