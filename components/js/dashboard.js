@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async function() {
           AuthEvent()
         setTimeout(function() {
           ProgressChange(100);
-          setTimeout(function() {
+          setTimeout( async function() {
             const ls = document.getElementById('loadscreen');
             anime(fadeInAnimation);
             ls.style.display = 'none';

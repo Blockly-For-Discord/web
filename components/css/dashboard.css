@@ -124,7 +124,7 @@
   background: var(--grad-4);
   position: absolute;
   z-index: 5;
-  
+  opacity: 1;
 }
 
 .loadbar {
