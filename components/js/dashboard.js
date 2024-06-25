@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             ls.style.display = 'none';
           }, 1000);
           
-        }, 3000);
+        }, 2500);
 
         
 
