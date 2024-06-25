@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function() {
           setTimeout( async function() {
             const ls = document.getElementById('loadscreen');
             anime(fadeInAnimation);
-            ls.style.display = 'none';
+            // ls.style.display = 'none';
           }, 1000);
           
         }, 2500);
