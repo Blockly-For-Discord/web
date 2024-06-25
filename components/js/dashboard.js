@@ -61,8 +61,9 @@ document.addEventListener("DOMContentLoaded", async function() {
       if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
         // if user has token. type: access_token
         const pt = document.getElementById('LoadScreenText');
+        const ls = document.getElementById('loadscreen');
         const fadeInAnimation = {
-          targets: pt,
+          targets: ls,
           opacity: [1, 0],
           duration: 1200,
           easing: 'easeInOutSine'
@@ -78,9 +79,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         setTimeout(function() {
           ProgressChange(100);
           setTimeout( async function() {
-            const ls = document.getElementById('loadscreen');
             anime(fadeInAnimation);
-            // ls.style.display = 'none';
+            ls.style.display = 'none';
           }, 1000);
           
         }, 2500);
