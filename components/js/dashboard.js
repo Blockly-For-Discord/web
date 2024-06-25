@@ -79,8 +79,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         setTimeout(function() {
           ProgressChange(100);
           setTimeout( async function() {
-            anime(fadeInAnimation);
-            ls.style.display = 'none';
+            anime(fadeInAnimation).then(() => {
+              // After the animation ends, hide the element
+              ls.style.display = 'none';
+            });
           }, 1000);
           
         }, 2500);
