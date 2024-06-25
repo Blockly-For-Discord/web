@@ -16,7 +16,7 @@ export function HomeInit (query) {
         <p class=\"info-tour\">Don't know what to do? <span class=\"tour\">Start the tour<span></p>
     </div>
     `;
-    GlobalSetPage(page);
+    window.GlobalSetPage(page);
 }
 
 
