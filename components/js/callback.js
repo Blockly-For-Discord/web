@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (data.client) {
           if (data.client === "httpTokenCallback") {
             if (!Cookies.get('access_token') && !Cookies.get('refresh_token')) {
-              Cookies.set('access_token', data.access_token);
-              Cookies.set('refresh_token', data.refresh_token);
+              Cookies.set('access_token', data.access_token, { expires: 7 , secure: true });
+              Cookies.set('refresh_token', data.refresh_token, { expires: 7 , secure: true });
             }
             window.location.href = "https://" + window.location.hostname + "/dashboard/";
           } else {
@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
           window.location.href = "https://" + window.location.hostname + "?error=" + ErrorHandler(data.client);
       });
       
-    };
+    } else {
+      window.location.href = "https://" + window.location.hostname 
+    }
     
   });
   

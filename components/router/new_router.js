@@ -64,7 +64,7 @@
 
             // If the website loads for the first time, run the start function from 'name'
 
-            currentPage = name;
+            Router.currentPage = name;
 
             const InitFunction = Router.pages[name];
             if (typeof InitFunction.init === 'function') {
@@ -76,7 +76,7 @@
         } else {
 
              // If the website does NOT loads for the first time, run the switch function from the previous page, and then the new function
-            currentPage = name;
+             Router.currentPage = name;
 
             const SwitchFunction = Router.pages[Router.currentPage];
             const InitFunction = Router.pages[name];
