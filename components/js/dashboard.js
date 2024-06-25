@@ -68,9 +68,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         ;
           AuthEvent()
         setTimeout(function() {
-          ProgressChange(100)
-          const ls = document.getElementById('loadscreen');
-          ls.style.display = 'none';
+          ProgressChange(100);
+          setTimeout(function() {
+            const ls = document.getElementById('loadscreen');
+            ls.style.display = 'none';
+          }, 1000);
+          
         }, 3000);
 
         
