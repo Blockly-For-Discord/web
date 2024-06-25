@@ -58,23 +58,31 @@ document.addEventListener("DOMContentLoaded", async function() {
       
 
 
-      if (Cookies.get('access_token')) {
+      if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
         // if user has token. type: access_token
-        
-        
+        const pt = document.getElementById('LoadScreenText');
+        ProgressChange(20);
+        // verified that server is online
+        pt.textContent = 'Fetching user data...';
+        // get user data (profile, username)
+        ProgressChange(100);
+
+        const ls = this.getElementById('loadscreen');
+        ls.style.display = 'none';
+
       } else if (Cookies.get('refresh_token')) {
         // if user has refresh_token but no token. type: refresh_token
         
       } else {
         // if user has no token or refresh token. type: code_grant
         ProgressChange(20);
-        const ProgressText = document.getElementById('LoadScreenText');
+        const pt = document.getElementById('LoadScreenText');
         setTimeout(function() {
           const link = document.createElement('a');
           link.href = b4d.branch("oauth.redirect_uri");
           link.rel = 'noopener noreferrer';
           document.body.appendChild(link);
-          ProgressText.textContent = 'Redirecting...';
+          pt.textContent = 'Redirecting...';
           link.click();
         }, 1400);
       }
