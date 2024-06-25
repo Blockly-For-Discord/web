@@ -61,6 +61,14 @@ document.addEventListener("DOMContentLoaded", async function() {
       if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
         // if user has token. type: access_token
         const pt = document.getElementById('LoadScreenText');
+        const fadeInAnimation = {
+          targets: pt,
+          opacity: [1, 0],
+          duration: 1200,
+          easing: 'easeInOutSine'
+      };
+
+        
         ProgressChange(20);
         // verified that server is online
         pt.textContent = 'Fetching user data...';
@@ -71,6 +79,7 @@ document.addEventListener("DOMContentLoaded", async function() {
           ProgressChange(100);
           setTimeout(function() {
             const ls = document.getElementById('loadscreen');
+            anime(fadeInAnimation);
             ls.style.display = 'none';
           }, 1000);
           
