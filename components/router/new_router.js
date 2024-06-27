@@ -81,18 +81,18 @@
             }
         } else {
 
-             // If the website does NOT loads for the first time, run the switch function from the previous page, and then the new function
+             // If the website does NOT load for the first time, run the switch function from the previous page, and then the new function
              Router.currentPage = name;
 
             const SwitchFunction = Router.pages[Router.currentPage];
             const InitFunction = Router.pages[name];
 
-            if (typeof SwitchFunction.switch === 'function' || typeof InitFunction.switch === 'function') {
-                await SwitchFunction.switch();
+            if (typeof SwitchFunction.change === 'function' && typeof InitFunction.init === 'function') {
+                await SwitchFunction.change();
                 InitFunction.init();
                 
             } else {
-                console.warn(`The switch function for page "${name}" is not a function.`);
+                console.warn(`Either the switch or the init function provided is not a function.`);
             }
         }
     }
