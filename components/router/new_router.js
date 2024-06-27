@@ -2,9 +2,11 @@
 
 
   export default class Router {
-    constructor() {
-    }
+    constructor(trigger_container) {
 
+        this.trig_cont = trigger_container;
+    }
+    
     static pages = {};
     static paths = {};
     static loaded = false;
@@ -28,12 +30,24 @@
         }
 
         // we add a click event for the icon
-
+        
         document.getElementById(trigger).addEventListener('click', function() {
             Router.call(name);
+
+            const children = document.getElementById(trigger).childNodes;
+            for (var i = 0; i < children.length; i++) {
+                if (children[i] === document.getElementById(trigger)) {
+                    document.getElementById(trigger).classList.add('action-item-active');
+                } else {
+                    children[i].classList.remove('action-item-active');
+                }
+            }
         });
 
-
+        tippy('#' + trigger, {
+            content: tooltip,
+            placement: 'right'
+          });
         
     }
 
