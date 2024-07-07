@@ -7,6 +7,8 @@
     --text-subheader: #949494;
     --button-getstarted: #318FE7;
     --button-getstarted-border: #5AAFFF;
+    --button-getstarted-norel: #b83b3b;
+    --button-getstarted-border-norel: #cd6969;
     --button-color: #FBFBFB;
     --button-explore: #d9d9d917;
 
@@ -63,7 +65,7 @@ body {
     color: var(--text-logo);
     padding-left: 15px;
     font-weight: 565;
-    font-size: 28px;
+    font-size: 175%;
 }
 
 .navbar-item {
@@ -77,12 +79,13 @@ body {
     align-items: center;
     padding: 5rem 0;
     background-image: url(./Group\ 2\ \(1\).png);
+    min-height: 50vh;
 }
 
 .header {
     color: var(--text-logo);
     font-weight: 565;
-    font-size: 70px;
+    font-size: 437.5%;
     text-align: center;
 }
 
@@ -119,6 +122,11 @@ body {
     font-weight: 500;
     background: var(--button-explore);
     border: none;
+}
+
+.hero-button-norel {
+    background: var(--button-getstarted-norel) !important;
+    border: 1px solid var(--button-getstarted-border-norel) !important;
 }
 
 .button {
