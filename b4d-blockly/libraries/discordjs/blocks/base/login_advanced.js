@@ -33,7 +33,7 @@ b4d.javascriptGenerator.forBlock['discordjs:base_login_advanced'] = function(blo
   var value_token = generator.valueToCode(block, 'token', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_intents = generator.valueToCode(block, 'intents', javascript.Order.ATOMIC);
   var value_mobile = block.getFieldValue('mobile') === 'TRUE';
-  var code = `const { Client, Events, GatewayIntentBits, ActivityType } = require('discord.js');
+  var code = `const { ActivityType, Client, Events, EmbedBuilder, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
   intents: ${value_intents}${value_mobile ? ',\n  ws: { properties: { browser: "Discord iOS" }}':''}
