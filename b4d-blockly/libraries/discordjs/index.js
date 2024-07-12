@@ -949,6 +949,10 @@ export const DiscordJStooblox = {
           colour: '#ee6a24',
           contents: [
             {
+              text: 'Main block',
+              kind: 'label',
+            },
+            {
               type: 'discordjs:embed_create',
               kind: 'block',
               inputs: {
@@ -961,6 +965,14 @@ export const DiscordJStooblox = {
                   },
                 },
               },
+            },  
+            {
+              text: 'Embed parts',
+              kind: 'label',
+            },
+            {
+              text: 'Component',
+              kind: 'label',
             }
           ]
         },
