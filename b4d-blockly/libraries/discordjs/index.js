@@ -947,7 +947,22 @@ export const DiscordJStooblox = {
           kind: 'category',
           name: 'Embeds',
           colour: '#ee6a24',
-          contents: []
+          contents: [
+            {
+              type: 'discordjs:embed_create',
+              kind: 'block',
+              inputs: {
+                name: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'embed1',
+                    },
+                  },
+                },
+              },
+            }
+          ]
         },
         {
           kind: 'category',
