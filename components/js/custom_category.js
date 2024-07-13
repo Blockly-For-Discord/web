@@ -5,7 +5,6 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
    */
   constructor(categoryDef, toolbox, opt_parent) {
     super(categoryDef, toolbox, opt_parent);
-    this.changePaddingToMargin_();
   }
 
   /** @override */
@@ -31,14 +30,6 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
     }
     // This is used for accessibility purposes.
     b4d.Blockly.utils.aria.setState(/** @type {!Element} */ (this.htmlDiv_), b4d.Blockly.utils.aria.State.SELECTED, isSelected);
-  }
-
-  changePaddingToMargin_() {
-    var treeRowElements = document.getElementsByClassName('blocklyTreeRow');
-    for (var i = 0; i < treeRowElements.length; i++) {
-      treeRowElements[i].style.marginLeft = window.getComputedStyle(treeRowElements[i]).paddingLeft;
-      treeRowElements[i].style.paddingLeft = '0';
-    }
   }
 }
 
