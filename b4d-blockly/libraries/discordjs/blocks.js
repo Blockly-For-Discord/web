@@ -2,6 +2,9 @@
 /* Test */
 export * from '/b4d-blockly/libraries/discordjs/blocks/class_test.js';
 
+/* Extra blockly */
+export * from '/b4d-blockly/libraries/discordjs/blocks/console/log.js';
+
 /* Main */
 // Base
 export * from '/b4d-blockly/libraries/discordjs/blocks/base/login.js';
