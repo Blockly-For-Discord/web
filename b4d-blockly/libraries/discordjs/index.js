@@ -916,11 +916,11 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'logic_boolean',
                 fields: {
-                  BOOL: 'TRUE',
-                },
-              },
-            },
-          },
+                  BOOL: 'TRUE'
+                }
+              }
+            }
+          }
         },
         {
           type: 'discordjs:message_reply_channel',
@@ -974,12 +974,12 @@ export const DiscordJStooblox = {
                   shadow: {
                     type: 'text',
                     fields: {
-                      TEXT: 'embed1',
-                    },
-                  },
-                },
-              },
-            },  
+                      TEXT: 'embed1'
+                    }
+                  }
+                }
+              }
+            },
             {
               text: 'Embed parts',
               kind: 'label',
@@ -994,7 +994,50 @@ export const DiscordJStooblox = {
           kind: 'category',
           name: 'Polls',
           colour: '#bf70e3',
-          contents: []
+          contents: [
+            {
+              text: 'Create polls',
+              kind: 'label',
+            },
+            {
+              type: 'discordjs:poll_create',
+              kind: 'block',
+              inputs: {
+                name: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'poll1'
+                    }
+                  }
+                },
+                time: {
+                  shadow: {
+                    type: 'math_number',
+                    fields: {
+                      NUM: 24
+                    }
+                  }
+                },
+                multi: {
+                  shadow: {
+                    type: 'logic_boolean',
+                    fields: {
+                      BOOL: 'FALSE'
+                    }
+                  }
+                }
+              }
+            },
+            {
+              text: 'Component',
+              kind: 'label',
+            },
+            {
+              text: 'Actions',
+              kind: 'label',
+            }
+          ]
         }
       ]
     }
