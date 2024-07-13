@@ -1,7 +1,8 @@
-// Exports
-// Test
+/* -- Exports -- */
+/* Test */
 export * from '/b4d-blockly/libraries/discordjs/blocks/class_test.js';
 
+/* Main */
 // Base
 export * from '/b4d-blockly/libraries/discordjs/blocks/base/login.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/base/login_advanced.js';
@@ -17,6 +18,10 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/message/reply.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/reply_channel.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/react.js';
 
-// Component
+/* Component */
 // Embed
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/create.js';
+
+// Poll
+export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/create.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/answer.js';
