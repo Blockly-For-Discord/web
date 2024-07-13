@@ -1043,7 +1043,7 @@ export const DiscordJStooblox = {
                 },
                 emoji: {
                   shadow: {
-                    type: 'emoji',
+                    type: 'text',
                     fields: {
                       TEXT: ''
                     }
