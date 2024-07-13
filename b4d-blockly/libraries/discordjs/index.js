@@ -1030,6 +1030,28 @@ export const DiscordJStooblox = {
               }
             },
             {
+              type: 'discordjs:poll_answer',
+              kind: 'block',
+              inputs: {
+                text: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'answer'
+                    }
+                  }
+                },
+                emoji: {
+                  shadow: {
+                    type: 'emoji',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                }
+              }
+            },
+            {
               text: 'Component',
               kind: 'label',
             },
