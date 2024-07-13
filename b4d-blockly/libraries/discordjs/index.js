@@ -407,6 +407,28 @@ export const DiscordJStooblox = {
           },
         },
         {
+          type: 'discordjs:text_has',
+          kind: 'block',
+          inputs: {
+            in: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'hello world',
+                },
+              },
+            },
+            out: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'world',
+                },
+              },
+            },
+          },
+        },
+        {
           type: 'text_isEmpty',
           kind: 'block',
           inputs: {
