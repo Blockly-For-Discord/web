@@ -1,17 +1,19 @@
 class CustomCategory extends b4d.Blockly.ToolboxCategory {
-    /**
-     * Constructor for a custom category.
-     * @override
-     */
-    constructor(categoryDef, toolbox, opt_parent) {
-      super(categoryDef, toolbox, opt_parent);
-    }
+  /**
+   * Constructor for a custom category.
+   * @override
+   */
+  constructor(categoryDef, toolbox, opt_parent) {
+    super(categoryDef, toolbox, opt_parent);
+    this.changePaddingToMargin_();
+  }
 
-    /** @override */
-    addColourBorder_(colour){
+  /** @override */
+  addColourBorder_(colour) {
     this.rowDiv_.style.backgroundColor = colour;
   }
-  setSelected(isSelected){
+
+  setSelected(isSelected) {
     // We do not store the label span on the category, so use getElementsByClassName.
     var labelDom = this.rowDiv_.getElementsByClassName('BlocklyTreeLabel')[0];
     if (isSelected) {
@@ -29,6 +31,14 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
     }
     // This is used for accessibility purposes.
     b4d.Blockly.utils.aria.setState(/** @type {!Element} */ (this.htmlDiv_), b4d.Blockly.utils.aria.State.SELECTED, isSelected);
+  }
+
+  changePaddingToMargin_() {
+    var treeRowElements = this.rowDiv_.getElementsByClassName('blocklyTreeRow');
+    for (var i = 0; i < treeRowElements.length; i++) {
+      treeRowElements[i].style.marginLeft = window.getComputedStyle(treeRowElements[i]).paddingLeft;
+      treeRowElements[i].style.paddingLeft = '0';
+    }
   }
 }
 
