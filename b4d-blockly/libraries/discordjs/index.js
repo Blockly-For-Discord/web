@@ -999,6 +999,14 @@ export const DiscordJStooblox = {
                     }
                   }
                 },
+                question: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'question'
+                    }
+                  }
+                },
                 time: {
                   shadow: {
                     type: 'math_number',
