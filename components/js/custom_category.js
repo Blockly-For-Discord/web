@@ -34,7 +34,7 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
   }
 
   changePaddingToMargin_() {
-    var treeRowElements = this.rowDiv_.getElementsByClassName('blocklyTreeRow');
+    var treeRowElements = document.getElementsByClassName('blocklyTreeRow');
     for (var i = 0; i < treeRowElements.length; i++) {
       treeRowElements[i].style.marginLeft = window.getComputedStyle(treeRowElements[i]).paddingLeft;
       treeRowElements[i].style.paddingLeft = '0';
