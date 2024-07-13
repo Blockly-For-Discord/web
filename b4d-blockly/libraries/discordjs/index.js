@@ -52,7 +52,6 @@ export const DiscordJStooblox = {
         {
           type: 'logic_null',
           kind: 'block',
-          enabled: false,
         },
         {
           type: 'logic_ternary',
@@ -587,38 +586,6 @@ export const DiscordJStooblox = {
             },
           },
         },
-
-        {
-          type: 'text_print',
-          kind: 'block',
-          inputs: {
-            TEXT: {
-              shadow: {
-                type: 'text',
-                fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
-        },
-        {
-          type: 'text_prompt_ext',
-          kind: 'block',
-          fields: {
-            TYPE: 'TEXT',
-          },
-          inputs: {
-            TEXT: {
-              shadow: {
-                type: 'text',
-                fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
-        },
       ],
     },
     {
@@ -779,6 +746,27 @@ export const DiscordJStooblox = {
       name: 'Functions',
       custom: 'PROCEDURE',
       categorystyle: 'procedure_category',
+    },
+    {
+      kind: 'category',
+      name: 'Console',
+      colour: '#8D5BCA',
+      contents: [
+        {
+          type: 'discordjs:console_log',
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Log'
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       kind: 'sep',
