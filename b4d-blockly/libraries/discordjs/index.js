@@ -935,6 +935,20 @@ export const DiscordJStooblox = {
               },
             },
           },
+        },
+        {
+          type: 'discordjs:message_react',
+          kind: 'block',
+          inputs: {
+            emoji: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: '👍',
+                },
+              },
+            },
+          },
         }
       ]
     },
