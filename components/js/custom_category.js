@@ -1,4 +1,3 @@
-console.log(b4d?.Blockly, Blockly)
 class CustomCategory extends b4d.Blockly.ToolboxCategory {
     /**
      * Constructor for a custom category.
@@ -21,11 +20,17 @@ class CustomCategory extends b4d.Blockly.ToolboxCategory {
       // Set the colour of the text to the colour of the category.
       labelDom.style.color = this.colour_;
       this.iconDom_.style.color = this.colour_;
+      // Set margin not padding
+      this.style.marginLeft = this.style.paddingLeft;
+      this.style.paddingLeft = '';
     } else {
       // Set the background back to the original colour.
       this.rowDiv_.style.backgroundColor = this.colour_;
       // Set the text back to white.
       labelDom.style.color = 'white';
+      // Set margin not padding
+      this.style.marginLeft = this.style.paddingLeft;
+      this.style.paddingLeft = '';
       this.iconDom_.style.color = 'white';
     }
     // This is used for accessibility purposes.
