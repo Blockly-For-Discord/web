@@ -19,4 +19,9 @@ b4d.workspace = workspace;
 
 b4d.Blockly.setLocale(b4d.En);
 
-// comment
+// Make toolbox look slightly better
+var treeRowElements = document.getElementsByClassName('blocklyTreeRow');
+for (var i = 0; i < treeRowElements.length; i++) {
+  treeRowElements[i].style.marginLeft = window.getComputedStyle(treeRowElements[i]).paddingLeft;
+  treeRowElements[i].style.paddingLeft = '0';
+}
