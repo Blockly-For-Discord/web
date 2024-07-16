@@ -110,3 +110,8 @@ html, body, .page {
     align-items: center;
     justify-content: center;
 }
+
+.preloader-icon {
+    width: 85px;
+    color: #222628;
+}
