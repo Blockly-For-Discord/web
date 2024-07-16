@@ -4,7 +4,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    //img_svg_handler();
+    img_svg_handler();
 
     const observer = new MutationObserver(handleAddedImages);
 
