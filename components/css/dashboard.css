@@ -17,6 +17,9 @@
     --fill-icon-inactive: #51595d;
     --fill-icon-disabled: #404649;
     --bg-preloader: #0E1011;
+    --bg-preloader-bar: #191C1E;
+    --color-preloader-details: #3D3F40;
+    --bg-preloader-progress: #ADADAD;
 }
 
 html, body, .page {
@@ -114,4 +117,31 @@ html, body, .page {
 .preloader-icon {
     width: 85px;
     color: #222628;
+}
+
+.preloader-bar {
+    width: 300px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: var(--bg-preloader-bar);
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.preloader-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    color: var(--color-preloader-details);
+    overflow: hidden;
+}
+
+.preloader-progress {
+    background: var(--bg-preloader-progress);
+    width: 0px;
+    height: 8px;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
 }

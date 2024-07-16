@@ -1,3 +1,10 @@
+
+/*
+
+This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
+
+*/
+
 export class Block {
     
     constructor(namespace, block_name, data) {

@@ -1,3 +1,10 @@
+
+/*
+
+This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
+
+*/
+
 class CustomCategory extends b4d.Blockly.ToolboxCategory {
   /**
    * Constructor for a custom category.
