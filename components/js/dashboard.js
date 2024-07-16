@@ -47,28 +47,46 @@ fetch('/branch.json')
   });
 
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
 
   
+  // Console warning
+  for (let i = 0; i < 3; i++) {
+    console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
+    console.log('%cIf someone told you to PASTE something here, do NOT do it. Theres a 101% Chance they are trying to hack your account.', 'color: red; font-size: 16px;');
+  }
   
-    for (let i = 0; i < 3; i++) {
-        console.log('%cWAIT!', 'color: white; font-weight: bolder; font-size 50px;')
-        console.log('%cIf someone told you to PASTE something here, do NOT do it. Theres a 101% Chance they are trying to hack your account.', 'color: red; font-size: 16px;');
-      }
-      
+  
+  const authSessionEvent = new CustomEvent('AuthSession', {
+    detail: {
+      type: 'success',
+      params: {},
+      event: {}
+    },
+    bubbles: true,
+    cancelable: true
+  });
 
-    // IMPORTANT: ENTRY POINT
-      if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
- 
-      } else if (Cookies.get('refresh_token')) {
-        // if user has refresh_token but no token. type: refresh_token
-        
-      } else {
-        // if user has no token or refresh token. type: code_grant
- 
-      }
-    
+  window.dispatchEvent(authSessionEvent);
 
 });
 
 
+window.addEventListener('AuthSession', function() {
+
+  // "Authenticating"
+  if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
+ 
+    // "Connecting to Server"
+    // "Fetching user data..."
+  } else if (Cookies.get('refresh_token')) {
+
+    // "Connecting to Server"
+    // "Fetching neccesary data..."
+  } else {
+
+    // "Redirecting"
+
+  }
+
+});
