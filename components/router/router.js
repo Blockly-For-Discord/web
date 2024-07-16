@@ -4,7 +4,7 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 
 */
 
-export class Router {
+export default class Router {
     constructor (sidebar_top, sidebar_bottom) {
         
         this.sidebar_top = document.getElementById(sidebar_top);
