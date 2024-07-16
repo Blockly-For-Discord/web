@@ -16,6 +16,7 @@
     --color-area-header: #CACACA;
     --fill-icon-inactive: #51595d;
     --fill-icon-disabled: #404649;
+    --bg-preloader: #0E1011;
 }
 
 html, body, .page {
@@ -97,4 +98,15 @@ html, body, .page {
 
 .sidebar-icon-disabled {
     fill: var(--fill-icon-disabled);
+}
+
+.preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-preloader);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
