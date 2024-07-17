@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('AuthSession', async function() {
 
   const server_available = srv.isAvailable();
-  if (server_available == 1) {
+  if (server_available === 1) {
 
     preloader.setProgress(0.1);
     preloader.setTextDetail("Checking Cookies...");
