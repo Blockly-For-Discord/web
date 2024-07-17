@@ -17,6 +17,7 @@ srv.isAvailable = async function () {
         const response = await fetch('https://api.blockly-for-discord.xyz/ping');
         const data = await response.json();
 
+        console.log(data);
         if (data.client === 'httpPingServer') {
 
             return 1;
