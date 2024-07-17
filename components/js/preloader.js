@@ -5,8 +5,9 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 */
 
+let preloader = {};
 
-const setProgress = function (e) {
+preloader.setProgress = function (e) {
     
     var percent = e;
     if (percent > 1) {
@@ -22,7 +23,10 @@ const setProgress = function (e) {
 
 }
 
-
+preloader.setTextDetail = function (text) {
+    
+    document.getElementById('preloader-description').innerText = text;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 

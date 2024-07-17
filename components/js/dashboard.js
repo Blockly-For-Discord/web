@@ -74,9 +74,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('AuthSession', function() {
 
+  preloader.setProgress(0.1);
+  preloader.setTextDetail("Checking Cookies...");
   // "Authenticating"
   if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
  
+    preloader.setProgress(0.3);
+  preloader.setTextDetail("Connecting to Server...");
+
+    setTimeout(() => {
+      preloader.setTextDetail("Authenticating...");
+    }, 1000);
+
     // "Connecting to Server"
     // "Fetching user data..."
   } else if (Cookies.get('refresh_token')) {
