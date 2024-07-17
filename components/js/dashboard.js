@@ -72,30 +72,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-window.addEventListener('AuthSession', function() {
+window.addEventListener('AuthSession', async function() {
 
-  preloader.setProgress(0.1);
-  preloader.setTextDetail("Checking Cookies...");
-  // "Authenticating"
-  if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
- 
-    preloader.setProgress(0.3);
-  preloader.setTextDetail("Connecting to Server...");
+  if (srv.isAvailable() === 1) {
 
-    setTimeout(() => {
-      preloader.setTextDetail("Authenticating...");
-    }, 1000);
+    preloader.setProgress(0.1);
+    preloader.setTextDetail("Checking Cookies...");
+    
 
-    // "Connecting to Server"
-    // "Fetching user data..."
-  } else if (Cookies.get('refresh_token')) {
+    if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
+   
+      preloader.setProgress(0.3);
+      preloader.setTextDetail("Connecting to Server...");
+  
+      
+  
+        setTimeout(() => {
+          preloader.setTextDetail("Authenticating...");
+        }, 1000);
+  
+      
+  
+      
+  
+      
+    
+      // "Connecting to Server"
+      // "Fetching user data..."
+    } else if (Cookies.get('refresh_token')) {
+  
+      // "Connecting to Server"
+      // "Fetching neccesary data..."
+    } else {
+  
+      // "Redirecting"
+  
+    }
 
-    // "Connecting to Server"
-    // "Fetching neccesary data..."
+  } else if (srv.isAvailable() === 2) {
+
+    // server isnt available
+
   } else {
-
-    // "Redirecting"
-
+    
   }
+ 
 
 });
