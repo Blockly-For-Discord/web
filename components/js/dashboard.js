@@ -74,47 +74,59 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('AuthSession', async function() {
 
+  preloader.setTextDetail("Connecting to Server...");
+
   const server_available = await srv.isAvailable();
+
   if (server_available === 1) {
 
     preloader.setProgress(0.1);
+
+    setTimeout(() => {
     preloader.setTextDetail("Checking Cookies...");
-    
+  }, 500);
 
     if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
    
       preloader.setProgress(0.3);
-      preloader.setTextDetail("Connecting to Server...");
   
-      
-  
-        setTimeout(() => {
+      setTimeout(() => {
           preloader.setTextDetail("Authenticating...");
-        }, 1000);
+      }, 1000);
   
+      //
       
   
-      
-  
-      
-    
-      // "Connecting to Server"
-      // "Fetching user data..."
+
     } else if (Cookies.get('refresh_token')) {
   
-      // "Connecting to Server"
-      // "Fetching neccesary data..."
+      preloader.setProgress(0.3);
+  
+      setTimeout(() => {
+          preloader.setTextDetail("Fetching neccesary data...");
+      }, 1000);
+
+      // Get the new access token
     } else {
   
-      // "Redirecting"
+      setTimeout(() => {
+        preloader.setTextDetail("Redirecting");
+    }, 1000);
   
     }
 
   } else if (server_available === 2) {
 
-    // server isnt available
+    preloader.setProgress(0);
+    setTimeout(() => {
+      preloader.setTextDetail("Server is under maintenance...");
+  }, 1000);
 
   } else {
+
+    setTimeout(() => {
+      preloader.setTextDetail("Server is unavailable...");
+  }, 1000);
 
   }
  
