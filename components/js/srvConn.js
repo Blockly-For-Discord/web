@@ -7,11 +7,14 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 let srv = {};
 
-srv.fetchUserData = function (token) {
+    // 0 -> cant access server
+    // 1 -> server data successfully returned
+    // 2 -> server maintenance
+    // 3 -> server error
 
-};
-
+// checks if server is there
 srv.isAvailable = async function () {
+
 
     try {
         const response = await fetch('https://api.blockly-for-discord.xyz/ping');
@@ -32,4 +35,11 @@ srv.isAvailable = async function () {
         return 0;
     }
     
+};
+
+// gets basic user data
+srv.getBasicUserData = function (access_token) {
+
+    
+
 };

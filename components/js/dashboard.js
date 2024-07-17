@@ -74,8 +74,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('AuthSession', async function() {
 
+  // set descpription for user to see
   preloader.setTextDetail("Connecting to Server...");
 
+  // check if server is available
   const server_available = await srv.isAvailable();
 
   if (server_available === 1) {
@@ -83,20 +85,23 @@ window.addEventListener('AuthSession', async function() {
     preloader.setProgress(0.1);
 
     setTimeout(() => {
-      
+    
+    // update status
     preloader.setTextDetail("Checking Cookies...");
   }, 500);
 
+    // check if both access_token and refresh_token are present
     if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
    
       
-  
+      // update status
       setTimeout(() => {
         preloader.setProgress(0.3);
         preloader.setTextDetail("Authenticating...");
       }, 1000);
   
-      //
+      // get user profile picture, 
+      const response = srv.getBasicUserData();
       
   
 
