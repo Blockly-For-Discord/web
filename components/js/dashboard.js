@@ -83,15 +83,17 @@ window.addEventListener('AuthSession', async function() {
     preloader.setProgress(0.1);
 
     setTimeout(() => {
+      
     preloader.setTextDetail("Checking Cookies...");
   }, 500);
 
     if (Cookies.get('access_token') && Cookies.get('refresh_token')) {
    
-      preloader.setProgress(0.3);
+      
   
       setTimeout(() => {
-          preloader.setTextDetail("Authenticating...");
+        preloader.setProgress(0.3);
+        preloader.setTextDetail("Authenticating...");
       }, 1000);
   
       //
