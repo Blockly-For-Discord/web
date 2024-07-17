@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener('AuthSession', async function() {
 
-  const server_available = srv.isAvailable();
+  const server_available = await srv.isAvailable();
   if (server_available === 1) {
 
     preloader.setProgress(0.1);
