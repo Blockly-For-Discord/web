@@ -19,7 +19,7 @@ srv.isAvailable = async function () {
 
         console.log(data);
         if (data.client === 'httpPingServer') {
-
+            console.log("success");
             return 1;
 
         } else if (data.client === 'maintenance') {
