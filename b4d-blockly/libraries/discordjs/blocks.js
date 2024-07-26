@@ -7,6 +7,8 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/class_test.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/text/has.js';
 // Console
 export * from '/b4d-blockly/libraries/discordjs/blocks/console/send.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/console/on_error.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/console/error.js';
 
 /* Main */
 // Base
