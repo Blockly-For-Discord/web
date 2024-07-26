@@ -918,6 +918,10 @@ export const DiscordJStooblox = {
           kind: 'label',
         },
         {
+          type: 'discordjs:message_reference',
+          kind: 'block',
+        },
+        {
           type: 'discordjs:message_content',
           kind: 'block',
         },
