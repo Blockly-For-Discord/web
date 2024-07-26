@@ -26,6 +26,7 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/message/content.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/reply.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/reply_channel.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/react.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/message/remove_reactions.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/delete.js';
 
 /* Component */
