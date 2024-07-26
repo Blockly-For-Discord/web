@@ -22,7 +22,6 @@ message_on_message.attach();
 b4d.javascriptGenerator.forBlock['discordjs:message_on_message'] = function(block, generator) {
   var statement_in = generator.statementToCode(block, 'in');
   var code = `client.on(Events.MessageCreate, async(message) => {
-  ${statement_in}
-});\n`;
+${statement_in}});\n`;
   return code;
 };
