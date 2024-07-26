@@ -3,8 +3,10 @@
 export * from '/b4d-blockly/libraries/discordjs/blocks/class_test.js';
 
 /* Extra blockly */
+// Text
 export * from '/b4d-blockly/libraries/discordjs/blocks/text/has.js';
-export * from '/b4d-blockly/libraries/discordjs/blocks/console/log.js';
+// Console
+export * from '/b4d-blockly/libraries/discordjs/blocks/console/send.js';
 
 /* Main */
 // Base
