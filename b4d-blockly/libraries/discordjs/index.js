@@ -1,15 +1,15 @@
 import discordjs_tree from './file-tree.js';
 
 const LibInfo = {
-    "name":"DiscordJS",
-    "id":"discordjs",
-    "version":"v0.0.0",
-    "description": "discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily.",
+  "name": "DiscordJS",
+  "id": "discordjs",
+  "version": "v0.0.0",
+  "description": "discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily.",
 }
 
 export const DiscordJStooblox = {
-    "kind": "categoryToolbox",
-    contents: [
+  kind: 'categoryToolbox',
+  contents: [
     {
       kind: 'category',
       name: 'Logic',
@@ -774,14 +774,14 @@ export const DiscordJStooblox = {
       colour: '#8D5BCA',
       contents: [
         {
-          type: 'discordjs:console_log',
+          type: 'discordjs:console_send',
           kind: 'block',
           inputs: {
             text: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Log'
+                  TEXT: 'message'
                 }
               }
             }
