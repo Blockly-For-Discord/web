@@ -774,6 +774,10 @@ export const DiscordJStooblox = {
       colour: '#8D5BCA',
       contents: [
         {
+          text: 'Console',
+          kind: 'label',
+        },
+        {
           type: 'discordjs:console_send',
           kind: 'block',
           inputs: {
@@ -786,6 +790,18 @@ export const DiscordJStooblox = {
               }
             }
           }
+        },
+        {
+          text: 'Events',
+          kind: 'label',
+        },
+        {
+          type: 'discordjs:console_on_error',
+          kind: 'block'
+        },
+        {
+          type: 'discordjs:console_error',
+          kind: 'block'
         }
       ]
     },
