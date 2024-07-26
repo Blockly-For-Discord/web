@@ -12,8 +12,6 @@ const console_on_error = new Block('discordjs', 'console_on_error', {
       "name": "inner"
     }
   ],
-  "previousStatement": null,
-  "nextStatement": null,
   "colour": "#8D5BCA",
   "tooltip": "When a error occurs run some code (Only use one)",
   "helpUrl": ""
