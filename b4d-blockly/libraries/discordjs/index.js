@@ -1,4 +1,3 @@
-
 import discordjs_tree from './file-tree.js';
 
 const LibInfo = {
@@ -940,11 +939,11 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Hello!',
-                },
-              },
-            },
-          },
+                  TEXT: 'Hello!'
+                }
+              }
+            }
+          }
         },
         {
           type: 'discordjs:message_react',
@@ -954,11 +953,15 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '👍',
-                },
-              },
-            },
-          },
+                  TEXT: '👍'
+                }
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:message_delete',
+          kind: 'block'
         }
       ]
     },
