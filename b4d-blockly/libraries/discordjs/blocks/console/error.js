@@ -1,0 +1,25 @@
+import { Block } from '/b4d-blockly/index.js';
+import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
+
+const console_error = new Block('discordjs', 'console_error', {
+  "message0": "error",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "inner"
+    }
+  ],
+  "output": "String",
+  "colour": "#8D5BCA",
+  "tooltip": "The error that occured",
+  "helpUrl": ""
+});
+
+console_error.attach();
+
+b4d.javascriptGenerator.forBlock['discordjs:console_error'] = function(block, generator) {
+  return [`_ERROR`, b4d.javascriptGenerator.ORDER_NONE];
+};
