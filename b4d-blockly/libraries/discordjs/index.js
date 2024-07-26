@@ -4,7 +4,7 @@ const LibInfo = {
   "name": "DiscordJS",
   "id": "discordjs",
   "version": "v0.0.0",
-  "description": "discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily.",
+  "description": "discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily."
 }
 
 export const DiscordJStooblox = {
@@ -978,6 +978,10 @@ export const DiscordJStooblox = {
               }
             }
           }
+        },
+        {
+          type: 'discordjs:remove_reactions',
+          kind: 'block'
         },
         {
           type: 'discordjs:message_delete',
