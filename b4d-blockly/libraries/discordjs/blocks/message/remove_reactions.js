@@ -1,7 +1,7 @@
 import { Block } from '/b4d-blockly/index.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const delete_reactions = new Block('discordjs', 'delete_reactions', {
+const remove_reactions = new Block('discordjs', 'remove_reactions', {
   "message0": "Remove all reactions on %1",
   "args0": [
     {
@@ -18,9 +18,9 @@ const delete_reactions = new Block('discordjs', 'delete_reactions', {
   "helpUrl": ""
 });
 
-delete_reactions.attach();
+remove_reactions.attach();
 
-b4d.javascriptGenerator.forBlock['discordjs:delete_reactions'] = function(block, generator) {
+b4d.javascriptGenerator.forBlock['discordjs:remove_reactions'] = function(block, generator) {
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `${value_message}.reactions.removeAll();\n`;
   return code;
