@@ -18,7 +18,7 @@ const message_remove_reaction = new Block('discordjs', 'message_remove_reaction'
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Remove a specific reaction in a message",
   "helpUrl": ""
 });
