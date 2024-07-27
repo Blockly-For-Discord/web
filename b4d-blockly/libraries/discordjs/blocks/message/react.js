@@ -18,7 +18,7 @@ const message_react = new Block('discordjs', 'message_react', {
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "React to a message (with a unicode character or custom emoji id)",
   "helpUrl": ""
 });
