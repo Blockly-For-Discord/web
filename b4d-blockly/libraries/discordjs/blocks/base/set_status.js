@@ -66,7 +66,7 @@ const base_set_status = new Block('discordjs', 'base_set_status', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#009dff",
+  "colour": b4d.color.base,
   "tooltip": "Set the status of the bot",
   "helpUrl": ""
 });
