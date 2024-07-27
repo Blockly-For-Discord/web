@@ -4,7 +4,7 @@ import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 const message_content = new Block('discordjs', 'message_content', {
   "message0": "message content",
   "output": "String",
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Content of message",
   "helpUrl": ""
 });
