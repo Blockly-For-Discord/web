@@ -13,7 +13,7 @@ const message_reply_channel = new Block('discordjs', 'message_reply_channel', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Respond to a message (sends message on channel)",
   "helpUrl": ""
 });
