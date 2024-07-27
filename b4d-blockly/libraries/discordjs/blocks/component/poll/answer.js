@@ -28,7 +28,7 @@ poll_answer.attach();
 b4d.javascriptGenerator.forBlock['discordjs:poll_answer'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_emoji = generator.valueToCode(block, 'emoji', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var code = `{
+  var code = `  {
     text: ${value_text}${value_emoji.length > 2 ? `,\n  emoji: ${value_emoji}` : ''}
   },\n`;
   return code;
