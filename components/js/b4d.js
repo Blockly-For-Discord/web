@@ -11,6 +11,7 @@ let b4d = {
     message: '#05b55a',
     component: '#3da9ae',
     embed: '#ee6a24',
-    poll: '#bf70e3'
+    poll: '#bf70e3',
+    channel: '#ec4132'
   }
 };
