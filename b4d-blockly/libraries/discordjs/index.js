@@ -951,7 +951,7 @@ export const DiscordJStooblox = {
             },
             message: {
               shadow: {
-                type: 'message_reference'
+                type: 'discordjs:message_reference'
               }
             }
           }
@@ -984,7 +984,7 @@ export const DiscordJStooblox = {
             },
             message: {
               shadow: {
-                type: 'message_reference'
+                type: 'discordjs:message_reference'
               }
             }
           }
@@ -1003,7 +1003,7 @@ export const DiscordJStooblox = {
             },
             message: {
               shadow: {
-                type: 'message_reference'
+                type: 'discordjs:message_reference'
               }
             }
           }
@@ -1014,7 +1014,7 @@ export const DiscordJStooblox = {
           inputs: {
             message: {
               shadow: {
-                type: 'message_reference'
+                type: 'discordjs:message_reference'
               }
             }
           }
@@ -1025,7 +1025,7 @@ export const DiscordJStooblox = {
           inputs: {
             message: {
               shadow: {
-                type: 'message_reference'
+                type: 'discordjs:message_reference'
               }
             }
           }
