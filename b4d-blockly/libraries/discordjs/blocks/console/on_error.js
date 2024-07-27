@@ -12,7 +12,7 @@ const console_on_error = new Block('discordjs', 'console_on_error', {
       "name": "inner"
     }
   ],
-  "colour": "#8D5BCA",
+  "colour": b4d.color.console,
   "tooltip": "When a error occurs run some code (Only use one)",
   "helpUrl": ""
 });
