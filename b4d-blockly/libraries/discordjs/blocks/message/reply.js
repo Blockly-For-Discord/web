@@ -23,7 +23,7 @@ const message_reply = new Block('discordjs', 'message_reply', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Reply to a message",
   "helpUrl": ""
 });
