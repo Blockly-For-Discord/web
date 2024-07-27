@@ -36,7 +36,7 @@ const poll_create = new Block('discordjs', 'poll_create', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#bf70e3",
+  "colour": b4d.color.poll,
   "tooltip": "Create a poll",
   "helpUrl": ""
 });
