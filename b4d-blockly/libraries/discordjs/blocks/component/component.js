@@ -24,6 +24,6 @@ component.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:component'] = function(block, generator) {
   var value_poll = generator.valueToCode(block, 'poll', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var code = `${value_poll.length > 2 ? `poll: poll_${value_poll.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'')}` : ''}\n`;
+  var code = `${value_poll.length > 2 ? `poll: poll_${value_poll.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'')},\n` : ''}`;
   return [code, b4d.javascriptGenerator.ORDER_NONE];
 };
