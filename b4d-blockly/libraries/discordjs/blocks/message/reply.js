@@ -38,7 +38,7 @@ message_reply.attach();
 b4d.javascriptGenerator.forBlock['discordjs:message_reply'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_mention = generator.valueToCode(block, 'mention', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var value_component = generator.valueToCode(block, 'component', b4d.javascriptGenerator.ORDER_ATOMIC);
+  var value_component = generator.valueToCode(block, 'component', b4d.javascriptGenerator.ORDER_NONE);
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `${value_message}.reply({
   content: ${value_text},
