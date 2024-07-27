@@ -54,7 +54,7 @@ b4d.javascriptGenerator.forBlock['discordjs:poll_create'] = function(block, gene
   duration: ${value_time},
   allow_multiselect: ${value_multi},
   answers: [
-  ${statement_answers}  ]
+${statement_answers}  ]
 };\n`;
   return code;
 };
