@@ -2,7 +2,7 @@ import { Block } from '/b4d-blockly/index.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 const remove_reactions = new Block('discordjs', 'remove_reactions', {
-  "message0": "Remove all reactions on %1",
+  "message0": "Remove all reactions from %1",
   "args0": [
     {
       "type": "input_value",
