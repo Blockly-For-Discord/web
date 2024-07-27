@@ -23,6 +23,7 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/base/shutdown.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/on_message.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/reference.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/content.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/message/channel.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/reply.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/send.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/edit.js';
