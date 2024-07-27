@@ -1,7 +1,5 @@
 //import discordjs_tree from './file-tree.js';
 
-console.log(b4d)
-
 const LibInfo = {
   "name": "DiscordJS",
   "id": "discordjs",
@@ -773,7 +771,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Console',
-      colour: '#8D5BCA',
+      colour: b4d.color.console,
       contents: [
         {
           text: 'Console',
@@ -813,7 +811,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Base',
-      colour: '#009dff',
+      colour: b4d.color.base,
       contents: [
         {
           text: 'Login',
@@ -905,7 +903,7 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Messages',
-      colour: '#05b55a',
+      colour: b4d.color.message,
       contents: [
         {
           text: 'Events',
@@ -967,6 +965,25 @@ export const DiscordJStooblox = {
                 type: 'text',
                 fields: {
                   TEXT: 'Hello!'
+                }
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:message_edit',
+          kind: 'block',
+          inputs: {
+            message: {
+              shadow: {
+                type: 'discordjs:message_reference'
+              }
+            },
+            content: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Edit'
                 }
               }
             }
@@ -1037,12 +1054,12 @@ export const DiscordJStooblox = {
     {
       kind: 'category',
       name: 'Components',
-      colour: '#3da9ae',
+      colour: b4d.color.component,
       contents: [
         {
           kind: 'category',
           name: 'Embeds',
-          colour: '#ee6a24',
+          colour: b4d.color.embed,
           contents: [
             {
               text: 'Main block',
@@ -1075,7 +1092,7 @@ export const DiscordJStooblox = {
         {
           kind: 'category',
           name: 'Polls',
-          colour: '#bf70e3',
+          colour: b4d.color.poll,
           contents: [
             {
               text: 'Create polls',
