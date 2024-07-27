@@ -4,7 +4,7 @@ import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 const message_reference = new Block('discordjs', 'message_reference', {
   "message0": "message",
   "output": "Message",
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Reference of message",
   "helpUrl": ""
 });
