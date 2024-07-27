@@ -12,7 +12,7 @@ const message_delete = new Block('discordjs', 'message_delete', {
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Delete the message",
   "helpUrl": ""
 });
