@@ -35,7 +35,7 @@ const console_send = new Block('discordjs', 'console_send', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#8D5BCA",
+  "colour": b4d.color.console,
   "tooltip": "Send a message to the console / terminal",
   "helpUrl": ""
 });
