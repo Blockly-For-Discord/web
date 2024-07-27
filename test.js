@@ -1,8 +1,3 @@
-// Colors
-b4d.color = {
-  console: '#8D5BCA'
-}
-
 import { Block } from '/b4d-blockly/index.js';
 
 // DiscordJS
