@@ -4,14 +4,28 @@ import { Block } from '/b4d-blockly/index.js';
 import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
 import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
 
-
-
-
 Block.registerAllOf('discordjs');
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
-  renderer: 'zelos'
+  renderer: 'zelos',
+  move: {
+    scrollbars: {
+      horizontal: true,
+      vertical: true
+    },
+    drag: true,
+    wheel: true
+  },
+  zoom: {
+    controls: true,
+    wheel: false,
+    pinch: true,
+    startScale: 1.0,
+    maxScale: 3,
+    minScale: 0.5,
+    scaleSpeed: 0.5
+  }
 });
 
 b4d.toolbox = DiscordJStooblox;
