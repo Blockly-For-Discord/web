@@ -1,4 +1,6 @@
-import discordjs_tree from './file-tree.js';
+//import discordjs_tree from './file-tree.js';
+
+console.log(b4d)
 
 const LibInfo = {
   "name": "DiscordJS",
