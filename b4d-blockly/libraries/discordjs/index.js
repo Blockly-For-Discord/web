@@ -957,7 +957,7 @@ export const DiscordJStooblox = {
           }
         },
         {
-          type: 'discordjs:message_reply_channel',
+          type: 'discordjs:message_send',
           kind: 'block',
           inputs: {
             text: {
