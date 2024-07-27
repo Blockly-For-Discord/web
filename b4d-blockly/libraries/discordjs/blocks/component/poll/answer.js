@@ -16,8 +16,8 @@ const poll_answer = new Block('discordjs', 'poll_answer', {
     }
   ],
   "inputsInline": false,
-  "previousStatement": null,
-  "nextStatement": null,
+  "previousStatement": "Answers",
+  "nextStatement": "Answers",
   "colour": "#bf70e3",
   "tooltip": "Add an answer to a poll (emoji is optional)",
   "helpUrl": ""
