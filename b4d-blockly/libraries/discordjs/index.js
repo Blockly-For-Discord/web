@@ -1,11 +1,11 @@
 //import discordjs_tree from './file-tree.js';
 
 const LibInfo = {
-  "name": "DiscordJS",
-  "id": "discordjs",
-  "version": "v0.0.0",
-  "description": "discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily."
-}
+  name: 'DiscordJS',
+  id: 'discordjs',
+  version: 'v0.0.0',
+  description: 'discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily.'
+};
 
 export const DiscordJStooblox = {
   kind: 'categoryToolbox',
@@ -17,46 +17,46 @@ export const DiscordJStooblox = {
       contents: [
         {
           type: 'discordjs:aw_block',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'controls_if',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'logic_compare',
           kind: 'block',
           fields: {
-            OP: 'EQ',
-          },
+            OP: 'EQ'
+          }
         },
         {
           type: 'logic_operation',
           kind: 'block',
           fields: {
-            OP: 'AND',
-          },
+            OP: 'AND'
+          }
         },
         {
           type: 'logic_negate',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'logic_boolean',
           kind: 'block',
           fields: {
-            BOOL: 'TRUE',
-          },
+            BOOL: 'TRUE'
+          }
         },
         {
           type: 'logic_null',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'logic_ternary',
-          kind: 'block',
-        },
-      ],
+          kind: 'block'
+        }
+      ]
     },
     {
       kind: 'category',
@@ -71,71 +71,71 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 10,
-                },
-              },
-            },
-          },
+                  NUM: 10
+                }
+              }
+            }
+          }
         },
         {
           type: 'controls_whileUntil',
           kind: 'block',
           fields: {
-            MODE: 'WHILE',
-          },
+            MODE: 'WHILE'
+          }
         },
         {
           type: 'controls_for',
           kind: 'block',
           fields: {
             VAR: {
-              name: 'i',
-            },
+              name: 'i'
+            }
           },
           inputs: {
             FROM: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
+                  NUM: 1
+                }
+              }
             },
             TO: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 10,
-                },
-              },
+                  NUM: 10
+                }
+              }
             },
             BY: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
-            },
-          },
+                  NUM: 1
+                }
+              }
+            }
+          }
         },
         {
           type: 'controls_forEach',
           kind: 'block',
           fields: {
             VAR: {
-              name: 'j',
-            },
-          },
+              name: 'j'
+            }
+          }
         },
         {
           type: 'controls_flow_statements',
           kind: 'block',
           fields: {
-            FLOW: 'BREAK',
-          },
-        },
-      ],
+            FLOW: 'BREAK'
+          }
+        }
+      ]
     },
     {
       kind: 'category',
@@ -146,115 +146,115 @@ export const DiscordJStooblox = {
           type: 'math_number',
           kind: 'block',
           fields: {
-            NUM: 123,
-          },
+            NUM: 123
+          }
         },
         {
           type: 'math_arithmetic',
           kind: 'block',
           fields: {
-            OP: 'ADD',
+            OP: 'ADD'
           },
           inputs: {
             A: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
+                  NUM: 1
+                }
+              }
             },
             B: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
-            },
-          },
+                  NUM: 1
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_single',
           kind: 'block',
           fields: {
-            OP: 'ROOT',
+            OP: 'ROOT'
           },
           inputs: {
             NUM: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 9,
-                },
-              },
-            },
-          },
+                  NUM: 9
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_trig',
           kind: 'block',
           fields: {
-            OP: 'SIN',
+            OP: 'SIN'
           },
           inputs: {
             NUM: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 45,
-                },
-              },
-            },
-          },
+                  NUM: 45
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_constant',
           kind: 'block',
           fields: {
-            CONSTANT: 'PI',
-          },
+            CONSTANT: 'PI'
+          }
         },
         {
           type: 'math_number_property',
           kind: 'block',
           fields: {
-            PROPERTY: 'EVEN',
+            PROPERTY: 'EVEN'
           },
           inputs: {
             NUMBER_TO_CHECK: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 0,
-                },
-              },
-            },
-          },
+                  NUM: 0
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_round',
           kind: 'block',
           fields: {
-            OP: 'ROUND',
+            OP: 'ROUND'
           },
           inputs: {
             NUM: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 3.1,
-                },
-              },
-            },
-          },
+                  NUM: 3.1
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_on_list',
           kind: 'block',
           fields: {
-            OP: 'SUM',
-          },
+            OP: 'SUM'
+          }
         },
         {
           type: 'math_modulo',
@@ -264,19 +264,19 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 64,
-                },
-              },
+                  NUM: 64
+                }
+              }
             },
             DIVISOR: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 10,
-                },
-              },
-            },
-          },
+                  NUM: 10
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_constrain',
@@ -286,27 +286,27 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 50,
-                },
-              },
+                  NUM: 50
+                }
+              }
             },
             LOW: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
+                  NUM: 1
+                }
+              }
             },
             HIGH: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 100,
-                },
-              },
-            },
-          },
+                  NUM: 100
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_random_int',
@@ -316,23 +316,23 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
+                  NUM: 1
+                }
+              }
             },
             TO: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 100,
-                },
-              },
-            },
-          },
+                  NUM: 100
+                }
+              }
+            }
+          }
         },
         {
           type: 'math_random_float',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'math_atan2',
@@ -342,21 +342,21 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
+                  NUM: 1
+                }
+              }
             },
             Y: {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 1,
-                },
-              },
-            },
-          },
-        },
-      ],
+                  NUM: 1
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       kind: 'category',
@@ -367,29 +367,29 @@ export const DiscordJStooblox = {
           type: 'text',
           kind: 'block',
           fields: {
-            TEXT: '',
-          },
+            TEXT: ''
+          }
         },
         {
           type: 'text_join',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'text_append',
           kind: 'block',
           fields: {
-            name: 'item',
+            name: 'item'
           },
           inputs: {
             TEXT: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
-            },
-          },
+                  TEXT: ''
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_length',
@@ -399,11 +399,11 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
+                  TEXT: 'abc'
+                }
+              }
+            }
+          }
         },
         {
           type: 'discordjs:text_has',
@@ -413,19 +413,19 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'hello world',
-                },
-              },
+                  TEXT: 'hello world'
+                }
+              }
             },
             out: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'world',
-                },
-              },
-            },
-          },
+                  TEXT: 'world'
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_isEmpty',
@@ -435,17 +435,17 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
-            },
-          },
+                  TEXT: ''
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_indexOf',
           kind: 'block',
           fields: {
-            END: 'FIRST',
+            END: 'FIRST'
           },
           inputs: {
             VALUE: {
@@ -453,26 +453,26 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'text',
-                  },
-                },
-              },
+                    name: 'text'
+                  }
+                }
+              }
             },
             FIND: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
+                  TEXT: 'abc'
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_charAt',
           kind: 'block',
           fields: {
-            WHERE: 'FROM_START',
+            WHERE: 'FROM_START'
           },
           inputs: {
             VALUE: {
@@ -480,19 +480,19 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'text',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'text'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_getSubstring',
           kind: 'block',
           fields: {
             WHERE1: 'FROM_START',
-            WHERE2: 'FROM_START',
+            WHERE2: 'FROM_START'
           },
           inputs: {
             STRING: {
@@ -500,46 +500,46 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'text',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'text'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_changeCase',
           kind: 'block',
           fields: {
-            CASE: 'UPPERCASE',
+            CASE: 'UPPERCASE'
           },
           inputs: {
             TEXT: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
+                  TEXT: 'abc'
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_trim',
           kind: 'block',
           fields: {
-            MODE: 'BOTH',
+            MODE: 'BOTH'
           },
           inputs: {
             TEXT: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
+                  TEXT: 'abc'
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_count',
@@ -549,19 +549,19 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
+                  TEXT: ''
+                }
+              }
             },
             TEXT: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
-            },
-          },
+                  TEXT: ''
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_replace',
@@ -571,27 +571,27 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
+                  TEXT: ''
+                }
+              }
             },
             TO: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
+                  TEXT: ''
+                }
+              }
             },
             TEXT: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
-            },
-          },
+                  TEXT: ''
+                }
+              }
+            }
+          }
         },
         {
           type: 'text_reverse',
@@ -601,13 +601,13 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: '',
-                },
-              },
-            },
-          },
-        },
-      ],
+                  TEXT: ''
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       kind: 'category',
@@ -616,7 +616,7 @@ export const DiscordJStooblox = {
       contents: [
         {
           type: 'lists_create_with',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'lists_repeat',
@@ -626,26 +626,26 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'math_number',
                 fields: {
-                  NUM: 5,
-                },
-              },
-            },
-          },
+                  NUM: 5
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_length',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'lists_isEmpty',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'lists_indexOf',
           kind: 'block',
 
           fields: {
-            END: 'FIRST',
+            END: 'FIRST'
           },
           inputs: {
             VALUE: {
@@ -653,19 +653,19 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'list',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'list'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_getIndex',
           kind: 'block',
           fields: {
             MODE: 'GET',
-            WHERE: 'FROM_START',
+            WHERE: 'FROM_START'
           },
           inputs: {
             VALUE: {
@@ -673,19 +673,19 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'list',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'list'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_setIndex',
           kind: 'block',
           fields: {
             MODE: 'SET',
-            WHERE: 'FROM_START',
+            WHERE: 'FROM_START'
           },
           inputs: {
             LIST: {
@@ -693,19 +693,19 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'list',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'list'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_getSublist',
           kind: 'block',
           fields: {
             WHERE1: 'FROM_START',
-            WHERE2: 'FROM_START',
+            WHERE2: 'FROM_START'
           },
           inputs: {
             LIST: {
@@ -713,30 +713,30 @@ export const DiscordJStooblox = {
                 type: 'variables_get',
                 fields: {
                   VAR: {
-                    name: 'list',
-                  },
-                },
-              },
-            },
-          },
+                    name: 'list'
+                  }
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_split',
           kind: 'block',
 
           fields: {
-            MODE: 'SPLIT',
+            MODE: 'SPLIT'
           },
           inputs: {
             DELIM: {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: ',',
-                },
-              },
-            },
-          },
+                  TEXT: ','
+                }
+              }
+            }
+          }
         },
         {
           type: 'lists_sort',
@@ -744,29 +744,29 @@ export const DiscordJStooblox = {
 
           fields: {
             TYPE: 'NUMERIC',
-            DIRECTION: '1',
-          },
+            DIRECTION: '1'
+          }
         },
         {
           type: 'lists_reverse',
-          kind: 'block',
-        },
-      ],
+          kind: 'block'
+        }
+      ]
     },
     {
-      kind: 'sep',
+      kind: 'sep'
     },
     {
       kind: 'category',
       name: 'Variables',
       custom: 'VARIABLE',
-      categorystyle: 'variable_category',
+      categorystyle: 'variable_category'
     },
     {
       kind: 'category',
       name: 'Functions',
       custom: 'PROCEDURE',
-      categorystyle: 'procedure_category',
+      categorystyle: 'procedure_category'
     },
     {
       kind: 'category',
@@ -775,7 +775,7 @@ export const DiscordJStooblox = {
       contents: [
         {
           text: 'Console',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:console_send',
@@ -793,7 +793,7 @@ export const DiscordJStooblox = {
         },
         {
           text: 'Events',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:console_on_error',
@@ -806,7 +806,7 @@ export const DiscordJStooblox = {
       ]
     },
     {
-      kind: 'sep',
+      kind: 'sep'
     },
     {
       kind: 'category',
@@ -897,7 +897,7 @@ export const DiscordJStooblox = {
         {
           type: 'discordjs:base_shutdown',
           kind: 'block'
-        },
+        }
       ]
     },
     {
@@ -937,9 +937,9 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Hey!',
-                },
-              },
+                  TEXT: 'Hey!'
+                }
+              }
             },
             mention: {
               shadow: {
@@ -1063,7 +1063,7 @@ export const DiscordJStooblox = {
           contents: [
             {
               text: 'Main block',
-              kind: 'label',
+              kind: 'label'
             },
             {
               type: 'discordjs:embed_create',
@@ -1081,11 +1081,11 @@ export const DiscordJStooblox = {
             },
             {
               text: 'Embed parts',
-              kind: 'label',
+              kind: 'label'
             },
             {
               text: 'Component',
-              kind: 'label',
+              kind: 'label'
             }
           ]
         },
@@ -1096,7 +1096,7 @@ export const DiscordJStooblox = {
           contents: [
             {
               text: 'Create polls',
-              kind: 'label',
+              kind: 'label'
             },
             {
               type: 'discordjs:poll_create',
@@ -1160,11 +1160,11 @@ export const DiscordJStooblox = {
             },
             {
               text: 'Component',
-              kind: 'label',
+              kind: 'label'
             },
             {
               text: 'Actions',
-              kind: 'label',
+              kind: 'label'
             },
             {
               type: 'discordjs:poll_end',
@@ -1183,9 +1183,9 @@ export const DiscordJStooblox = {
     },
     {
       kind: 'category',
-      name: 'Base',
+      name: 'Channels',
       colour: b4d.color.channel,
       contents: []
     }
   ]
-}
+};
