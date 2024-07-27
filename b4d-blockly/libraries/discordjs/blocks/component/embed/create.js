@@ -17,7 +17,7 @@ const embed_create = new Block('discordjs', 'embed_create', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#ee6a24",
+  "colour": b4d.color.embed,
   "tooltip": "Create an embed",
   "helpUrl": ""
 });
