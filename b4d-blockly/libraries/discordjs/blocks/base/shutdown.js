@@ -5,7 +5,7 @@ const base_shutdown = new Block('discordjs', 'base_shutdown', {
   "message0": "Shutdown bot",
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#009dff",
+  "colour": b4d.color.base,
   "tooltip": "Stop the bot",
   "helpUrl": ""
 });
