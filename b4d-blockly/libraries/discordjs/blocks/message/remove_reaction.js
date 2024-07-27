@@ -15,7 +15,7 @@ const message_remove_reaction = new Block('discordjs', 'message_remove_reaction'
       "check": "Message"
     }
   ],
-  "inputsInline": false,
+  "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
   "colour": "#05b55a",
