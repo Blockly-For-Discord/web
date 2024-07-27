@@ -12,7 +12,7 @@ const base_on_login = new Block('discordjs', 'base_on_login', {
         "name": "in"
       }
     ],
-    "colour": "#009dff",
+    "colour": b4d.color.base,
     "tooltip": "Do something when the bot gets connected",
     "helpUrl": ""
 });
