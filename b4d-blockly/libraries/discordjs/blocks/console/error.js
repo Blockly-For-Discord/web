@@ -4,7 +4,7 @@ import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 const console_error = new Block('discordjs', 'console_error', {
   "message0": "error",
   "output": "String",
-  "colour": "#8D5BCA",
+  "colour": b4d.color.console,
   "tooltip": "The error that occured",
   "helpUrl": ""
 });
