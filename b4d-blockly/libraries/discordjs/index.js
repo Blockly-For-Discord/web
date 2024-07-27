@@ -926,6 +926,10 @@ export const DiscordJStooblox = {
           kind: 'block'
         },
         {
+          type: 'discordjs:message_channel',
+          kind: 'block'
+        },
+        {
           text: 'Actions',
           kind: 'label'
         },
