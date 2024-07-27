@@ -971,6 +971,11 @@ export const DiscordJStooblox = {
                   TEXT: 'Hello!'
                 }
               }
+            },
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
             }
           }
         },
