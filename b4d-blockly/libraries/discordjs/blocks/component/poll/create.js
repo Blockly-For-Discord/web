@@ -29,7 +29,8 @@ const poll_create = new Block('discordjs', 'poll_create', {
     },
     {
       "type": "input_statement",
-      "name": "answers"
+      "name": "answers",
+      "Check": "Answers"
     }
   ],
   "inputsInline": false,
