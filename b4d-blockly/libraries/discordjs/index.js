@@ -948,6 +948,11 @@ export const DiscordJStooblox = {
                   BOOL: 'TRUE'
                 }
               }
+            },
+            message: {
+              shadow: {
+                type: 'message_reference'
+              }
             }
           }
         },
@@ -976,16 +981,54 @@ export const DiscordJStooblox = {
                   TEXT: '👍'
                 }
               }
+            },
+            message: {
+              shadow: {
+                type: 'message_reference'
+              }
             }
           }
         },
         {
-          type: 'discordjs:remove_reactions',
-          kind: 'block'
+          type: 'discordjs:message_remove_reaction',
+          kind: 'block',
+          inputs: {
+            emoji: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: '👍'
+                }
+              }
+            },
+            message: {
+              shadow: {
+                type: 'message_reference'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:message_remove_reactions',
+          kind: 'block',
+          inputs: {
+            message: {
+              shadow: {
+                type: 'message_reference'
+              }
+            }
+          }
         },
         {
           type: 'discordjs:message_delete',
-          kind: 'block'
+          kind: 'block',
+          inputs: {
+            message: {
+              shadow: {
+                type: 'message_reference'
+              }
+            }
+          }
         }
       ]
     },
