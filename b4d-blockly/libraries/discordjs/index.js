@@ -1146,6 +1146,17 @@ export const DiscordJStooblox = {
             {
               text: 'Actions',
               kind: 'label',
+            },
+            {
+              type: 'discordjs:poll_end',
+              kind: 'block',
+              inputs: {
+                message: {
+                  shadow: {
+                    type: 'discordjs:message_reference'
+                  }
+                }
+              }
             }
           ]
         }
