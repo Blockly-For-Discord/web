@@ -815,7 +815,7 @@ export const DiscordJStooblox = {
       contents: [
         {
           text: 'Login',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:base_login',
@@ -825,11 +825,11 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Token here',
-                },
-              },
-            },
-          },
+                  TEXT: 'Token here'
+                }
+              }
+            }
+          }
         },
         {
           type: 'discordjs:base_login_advanced',
@@ -839,20 +839,20 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Token here',
-                },
-              },
+                  TEXT: 'Token here'
+                }
+              }
             },
             intents: {
               shadow: {
-                type: 'lists_create_with',
+                type: 'lists_create_with'
               }
             }
-          },
+          }
         },
         {
           text: 'Secrets',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:base_env',
@@ -862,23 +862,23 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'variable_name',
-                },
-              },
-            },
-          },
+                  TEXT: 'variable_name'
+                }
+              }
+            }
+          }
         },
         {
           text: 'Events',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:base_on_login',
-          kind: 'block',
+          kind: 'block'
         },
         {
           text: 'Actions',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:base_set_status',
@@ -888,15 +888,15 @@ export const DiscordJStooblox = {
               shadow: {
                 type: 'text',
                 fields: {
-                  TEXT: 'Made in b4d!',
-                },
-              },
-            },
-          },
+                  TEXT: 'Made in b4d!'
+                }
+              }
+            }
+          }
         },
         {
           type: 'discordjs:base_shutdown',
-          kind: 'block',
+          kind: 'block'
         },
       ]
     },
@@ -907,27 +907,27 @@ export const DiscordJStooblox = {
       contents: [
         {
           text: 'Events',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:message_on_message',
-          kind: 'block',
+          kind: 'block'
         },
         {
           text: 'Data',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:message_reference',
-          kind: 'block',
+          kind: 'block'
         },
         {
           type: 'discordjs:message_content',
-          kind: 'block',
+          kind: 'block'
         },
         {
           text: 'Actions',
-          kind: 'label',
+          kind: 'label'
         },
         {
           type: 'discordjs:message_reply',
@@ -1180,6 +1180,12 @@ export const DiscordJStooblox = {
           ]
         }
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Base',
+      colour: b4d.color.channel,
+      contents: []
     }
   ]
 }
