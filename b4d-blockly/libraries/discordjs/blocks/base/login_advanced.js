@@ -21,7 +21,7 @@ const base_login_advanced = new Block('discordjs', 'base_login_advanced', {
       }
     ],
     "inputsInline": false,
-    "colour": "#009dff",
+    "colour": b4d.color.base,
     "tooltip": "Start your bot with more control",
     "helpUrl": ""
 });
