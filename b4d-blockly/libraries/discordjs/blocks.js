@@ -33,6 +33,8 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/message/remove_reactions.
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/delete.js';
 
 /* Component */
+export * from '/b4d-blockly/libraries/discordjs/blocks/component/component.js';
+
 // Embed
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/create.js';
 
