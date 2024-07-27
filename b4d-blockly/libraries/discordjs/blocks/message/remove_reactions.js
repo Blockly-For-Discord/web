@@ -13,7 +13,7 @@ const message_remove_reactions = new Block('discordjs', 'message_remove_reaction
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#05b55a",
+  "colour": b4d.color.message,
   "tooltip": "Remove all reactions in a message",
   "helpUrl": ""
 });
