@@ -11,7 +11,7 @@ const base_env = new Block('discordjs', 'base_env', {
     }
   ],
   "output": "String",
-  "colour": "#009dff",
+  "colour": b4d.color.base,
   "tooltip": "Get a environmental variable",
   "helpUrl": ""
 });
