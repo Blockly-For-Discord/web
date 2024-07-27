@@ -32,7 +32,7 @@ message_send.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_send'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var value_component = generator.valueToCode(block, 'component', b4d.javascriptGenerator.ORDER_ATOMIC);
+  var value_component = generator.valueToCode(block, 'component', b4d.javascriptGenerator.ORDER_NONE);
   var value_channel = generator.valueToCode(block, 'channel', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `${value_channel}.send({
   content: ${value_text},
