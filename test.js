@@ -1,3 +1,8 @@
+// Colors
+b4d.color = {
+  console: '#8D5BCA'
+}
+
 import { Block } from '/b4d-blockly/index.js';
 
 // DiscordJS
@@ -23,8 +28,8 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
     pinch: true,
     startScale: 1.0,
     maxScale: 3,
-    minScale: 0.5,
-    scaleSpeed: 0.5
+    minScale: 0.4,
+    scaleSpeed: 0.2
   }
 });
 
