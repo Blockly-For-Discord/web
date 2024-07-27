@@ -12,7 +12,7 @@ const poll_end = new Block('discordjs', 'poll_end', {
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#bf70e3",
+  "colour": b4d.color.poll,
   "tooltip": "End the poll on a message",
   "helpUrl": ""
 });
