@@ -19,7 +19,7 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
   },
   zoom: {
     controls: true,
-    wheel: false,
+    wheel: true,
     pinch: true,
     startScale: 1.0,
     maxScale: 3,
