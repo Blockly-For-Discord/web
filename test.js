@@ -6,30 +6,9 @@ import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
 
 Block.registerAllOf('discordjs');
 
-class CustomRenderInfo extends b4d.Blockly.zelos.RenderInfo {
+class CustomRenderer extends b4d.Blockly.blockRendering.Renderer {
   constructor() {
     super();
-  }
-  /**
-   * @override
-   */
-  measure() {
-    console.log(this)
-    this.superClass_.measure.call(this);
-    if (this.block_.outputConnection) {
-      this.block_.setColour('#ff0000');
-    }
-  }
-}
-class CustomRenderer extends b4d.Blockly.zelos.Renderer {
-  constructor() {
-    super();
-  }
-  /**
-   * @override
-   */
-  makeRenderInfo_() {
-    return new CustomRenderInfo();
   }
 }
 b4d.Blockly.blockRendering.register('custom_renderer', CustomRenderer);
