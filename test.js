@@ -39,7 +39,10 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
     scaleSpeed: 0.2
   }
 });
-workspace.getRenderer().getConstants().disabledPatternId = 'b4dDisabledPatern';
+let pattern = document.getElementById(workspace.getRenderer().getConstants().disabledPatternId);
+pattern.setAttribute('width', '100');
+pattern.setAttribute('height', '100');
+pattern.innerHTML = `<rect width="100" height="100" fill="#888"></rect><path d="M60 0H100L40 100H0L60 0Z" fill="white"></path>`;
 
 b4d.toolbox = DiscordJStooblox;
 b4d.workspace = workspace;
