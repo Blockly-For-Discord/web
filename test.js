@@ -42,7 +42,7 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
 let pattern = document.getElementById(workspace.getRenderer().getConstants().disabledPatternId);
 pattern.setAttribute('width', '20');
 pattern.setAttribute('height', '27.5');
-pattern.setAttribute('patternTransform', 'scale(5) rotate(135)');
+pattern.setAttribute('patternTransform', 'scale(3) rotate(125)');
 pattern.innerHTML = `<rect width="100%" height="100%" fill="#888"></rect><path d="M0 10h20z" stroke-width="9" stroke="#ffffff" fill="none"/>`;
 
 b4d.toolbox = DiscordJStooblox;
