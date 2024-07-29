@@ -18,7 +18,6 @@ class CustomRenderInfo extends b4d.Blockly.zelos.RenderInfo {
     this.width += 50;
   }
 }
-
 class CustomRenderer extends b4d.Blockly.zelos.Renderer {
   constructor(name) {
     super(name);
@@ -35,6 +34,11 @@ b4d.Blockly.blockRendering.register('custom_renderer', CustomRenderer);
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
   renderer: 'custom_renderer',
+  grid: {
+    spacing: 20,
+    length: 21,
+    colour: '#343434'
+  },
   move: {
     scrollbars: {
       horizontal: true,
