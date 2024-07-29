@@ -10,6 +10,9 @@ class CustomRenderInfo extends b4d.Blockly.zelos.RenderInfo {
   constructor(renderer, block) {
     super(renderer, block);
   }
+  /**
+   * @override
+   */
   measure() {
     super.measure();
     this.width += 50;
@@ -20,7 +23,10 @@ class CustomRenderer extends b4d.Blockly.zelos.Renderer {
   constructor(name) {
     super(name);
   }
-  makeRenderInfo(block) {
+  /**
+   * @override
+   */
+  makeRenderInfo_(block) {
     return new CustomRenderInfo(this, block);
   }
 }
