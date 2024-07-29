@@ -39,6 +39,7 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
     scaleSpeed: 0.2
   }
 });
+b4d.workspace.getRenderer().getConstants().disabledPatternId = 'b4dDisabledPatern';
 
 b4d.toolbox = DiscordJStooblox;
 b4d.workspace = workspace;
