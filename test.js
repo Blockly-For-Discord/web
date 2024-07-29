@@ -6,9 +6,17 @@ import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
 
 Block.registerAllOf('discordjs');
 
+class CustomRenderer extends Blockly.zelos.Renderer {
+  constructor() {
+    super();
+    console.log(this)
+  }
+}
+b4d.Blockly.blockRendering.register('custom_renderer', CustomRenderer);
+
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
-  renderer: 'zelos',
+  renderer: 'custom_renderer',
   move: {
     scrollbars: {
       horizontal: true,
