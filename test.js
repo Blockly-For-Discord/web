@@ -14,6 +14,7 @@ class CustomRenderInfo extends b4d.Blockly.zelos.RenderInfo {
    * @override
    */
   measure() {
+    console.log(this)
     this.superClass_.measure.call(this);
     if (this.block_.outputConnection) {
       this.block_.setColour('#ff0000');
@@ -27,7 +28,7 @@ class CustomRenderer extends b4d.Blockly.zelos.Renderer {
   /**
    * @override
    */
-  makeRenderInfo_ () {
+  makeRenderInfo_() {
     return new CustomRenderInfo();
   }
 }
