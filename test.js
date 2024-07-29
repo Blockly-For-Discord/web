@@ -37,7 +37,7 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
   grid: {
     spacing: 20,
     length: 21,
-    colour: '#343434'
+    colour: '#292929'
   },
   move: {
     scrollbars: {
