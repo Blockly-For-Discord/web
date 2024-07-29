@@ -17,8 +17,8 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJStooblox,
   renderer: 'custom_renderer',
   grid: {
-    spacing: 40,
-    length: 41,
+    spacing: 30,
+    length: 31,
     colour: '#292929'
   },
   move: {
