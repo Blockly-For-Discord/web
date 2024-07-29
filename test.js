@@ -40,9 +40,10 @@ const workspace = b4d.Blockly.inject('blocklyDiv', {
   }
 });
 let pattern = document.getElementById(workspace.getRenderer().getConstants().disabledPatternId);
-pattern.setAttribute('width', '100');
-pattern.setAttribute('height', '100');
-pattern.innerHTML = `<rect width="100" height="100" fill="#888"></rect><path d="M60 0H100L40 100H0L60 0Z" fill="white"></path>`;
+pattern.setAttribute('width', '20');
+pattern.setAttribute('height', '27.5');
+pattern.setAttribute('patternTransform', 'scale(5) rotate(135)');
+pattern.innerHTML = `<rect width="100%" height="100%" fill="#888"></rect><path d="M0 10h20z" stroke-width="9" stroke="#ffffff" fill="none"/>`;
 
 b4d.toolbox = DiscordJStooblox;
 b4d.workspace = workspace;
