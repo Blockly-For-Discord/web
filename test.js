@@ -10,7 +10,7 @@ class CustomRenderInfo extends b4d.Blockly.zelos.RenderInfo {
   constructor() {
     super();
   }
-  /*
+  /**
    * @override
    */
   measure() {
@@ -21,7 +21,7 @@ class CustomRenderer extends b4d.Blockly.zelos.Renderer {
   constructor() {
     super();
   }
-  /*
+  /**
    * @override
    */
   madeRenderInfo_() {
