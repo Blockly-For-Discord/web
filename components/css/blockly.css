@@ -46,3 +46,8 @@ body {
 .blocklyFlyoutButtonShadow {
   fill: transparent;
 }
+
+.blocklyEditableText:has(.blocklyCheckbox) rect {
+  height: 20px;
+  y: 8px;
+}
