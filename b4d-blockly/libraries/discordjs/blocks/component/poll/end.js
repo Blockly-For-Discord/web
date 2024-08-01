@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const poll_end = new Block('discordjs', 'poll_end', {
+discordjs.createBlock('poll_end', {
   "message0": "End poll on %1",
   "args0": [
     {
@@ -16,8 +16,6 @@ const poll_end = new Block('discordjs', 'poll_end', {
   "tooltip": "End the poll on a message",
   "helpUrl": ""
 });
-
-poll_end.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:poll_end'] = function(block, generator) {
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
