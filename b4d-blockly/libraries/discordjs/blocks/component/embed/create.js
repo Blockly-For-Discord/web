@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const embed_create = new Block('discordjs', 'embed_create', {
+discordjs.createBlock('embed_create', {
   "message0": "Create embed with name %1 %2",
   "args0": [
     {
@@ -21,8 +21,6 @@ const embed_create = new Block('discordjs', 'embed_create', {
   "tooltip": "Create an embed",
   "helpUrl": ""
 });
-
-embed_create.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:embed_create'] = function(block, generator) {
   var value_name = generator.valueToCode(block, 'name', b4d.javascriptGenerator.ORDER_ATOMIC);
