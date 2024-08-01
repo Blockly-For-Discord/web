@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const text_has = new Block('discordjs', 'text_has', {
+discordjs.createBlock('text_has', {
   "message0": "%1 %2 %3 %4",
   "args0": [
     {
@@ -41,8 +41,6 @@ const text_has = new Block('discordjs', 'text_has', {
   "tooltip": "Check a string if it contains, starts or ends with something",
   "helpUrl": ""
 });
-
-text_has.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:text_has'] = function(block, generator) {
   var value_in = generator.valueToCode(block, 'in', b4d.javascriptGenerator.ORDER_ATOMIC);
