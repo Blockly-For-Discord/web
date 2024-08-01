@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const poll_create = new Block('discordjs', 'poll_create', {
+discordjs.createBlock('poll_create', {
   "message0": "Create poll with name %1 question %2 duration (hours) %3 multi select %4 with answers %5 %6",
   "args0": [
     {
@@ -40,8 +40,6 @@ const poll_create = new Block('discordjs', 'poll_create', {
   "tooltip": "Create a poll",
   "helpUrl": ""
 });
-
-poll_create.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:poll_create'] = function(block, generator) {
   var value_name = generator.valueToCode(block, 'name', b4d.javascriptGenerator.ORDER_ATOMIC);
