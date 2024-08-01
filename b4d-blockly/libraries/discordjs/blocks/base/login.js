@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const base_login = new Block('discordjs', 'base_login', {
+discordjs.createBlock('base_login', {
   "message0": "Start bot with token %1",
   "args0": [
     {
@@ -14,8 +14,6 @@ const base_login = new Block('discordjs', 'base_login', {
   "tooltip": "Start your discord bot with a token",
   "helpUrl": ""
 });
-
-base_login.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:base_login'] = function(block, generator) {
   var value_token = generator.valueToCode(block, 'token', b4d.javascriptGenerator.ORDER_ATOMIC);
