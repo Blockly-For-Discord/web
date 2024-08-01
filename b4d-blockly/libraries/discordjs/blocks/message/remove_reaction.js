@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_remove_reaction = new Block('discordjs', 'message_remove_reaction', {
+discordjs.createBlock('message_remove_reaction', {
   "message0": "Remove %1 reactions from %2",
   "args0": [
     {
@@ -22,8 +22,6 @@ const message_remove_reaction = new Block('discordjs', 'message_remove_reaction'
   "tooltip": "Remove a specific reaction in a message",
   "helpUrl": ""
 });
-
-message_remove_reaction.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_remove_reaction'] = function(block, generator) {
   var value_emoji = generator.valueToCode(block, 'emoji', b4d.javascriptGenerator.ORDER_ATOMIC);
