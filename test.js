@@ -1,11 +1,15 @@
-import { Block } from '/b4d-blockly/index.js';
+import { Namespace } from '/b4d-blockly/namespaces.js';
+
+b4d.namespaces = {};
 
 // DiscordJS
-import * as DiscordJS from './b4d-blockly/libraries/discordjs/blocks.js';
-import { DiscordJStooblox } from './b4d-blockly/libraries/discordjs/index.js';
+b4d.namespaces.discordjs = new Namespace('discordjs');
+import * as DiscordJSBlocks from './b4d-blockly/libraries/discordjs/blocks.js';
+import { DiscordJSTooblox } from './b4d-blockly/libraries/discordjs/index.js';
 
-Block.registerAllOf('discordjs');
+Namespace.registerAllOf('discordjs');
 
+// Workspace & Toolbox
 class CustomRenderer extends b4d.Blockly.zelos.Renderer {
   constructor() {
     super();
@@ -14,7 +18,7 @@ class CustomRenderer extends b4d.Blockly.zelos.Renderer {
 b4d.Blockly.blockRendering.register('custom_renderer', CustomRenderer);
 
 const workspace = b4d.Blockly.inject('blocklyDiv', {
-  toolbox: DiscordJStooblox,
+  toolbox: DiscordJSTooblox,
   renderer: 'custom_renderer',
   grid: {
     spacing: 30,
@@ -46,7 +50,7 @@ pattern.setAttribute('patternTransform', 'scale(3) rotate(125)');
 pattern.innerHTML = `<rect width="100%" height="100%" fill="#888"></rect><path d="M0 10h20z" stroke-width="9" stroke="#ffffff" fill="none"/>`;
 b4d.Blockly.FieldCheckbox.CHECK_CHAR = '\u2714';
 
-b4d.toolbox = DiscordJStooblox;
+b4d.toolbox = DiscordJSTooblox;
 b4d.workspace = workspace;
 
 b4d.Blockly.setLocale(b4d.En);
