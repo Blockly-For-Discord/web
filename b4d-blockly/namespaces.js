@@ -25,8 +25,6 @@ export class Namespace {
         if(!Namespace.blocks[this.namespace][block_name]) {
             // If the block doesnt already exist insert the block info into the proper namespace
             Namespace.blocks[this.namespace][block_name] = { data }
-
-            console.log(Namespace.blocks);
         } else {
             // Log error if given block already exists.
             console.error("[Error]: The block '" + block_name + "' under the namespace '" + this.namespace + "' already exists. Avoid overwriting blocks and use <namespace>.updateBlock instead");
