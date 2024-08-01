@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_edit = new Block('discordjs', 'message_edit', {
+discordjs.createBlock('message_edit', {
   "message0": "Edit %1 to %2",
   "args0": [
     {
@@ -22,8 +22,6 @@ const message_edit = new Block('discordjs', 'message_edit', {
   "tooltip": "Edit a message (It must be sent by the bot)",
   "helpUrl": ""
 });
-
-message_edit.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_edit'] = function(block, generator) {
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
