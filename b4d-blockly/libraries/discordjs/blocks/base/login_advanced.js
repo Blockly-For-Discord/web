@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const base_login_advanced = new Block('discordjs', 'base_login_advanced', {
+discordjs.createBlock('base_login_advanced', {
     "message0": "Start bot with token %1 Listen to Events %2 Mobile? %3",
     "args0": [
       {
@@ -25,9 +25,6 @@ const base_login_advanced = new Block('discordjs', 'base_login_advanced', {
     "tooltip": "Start your bot with more control",
     "helpUrl": ""
 });
-
-base_login_advanced.attach();
-
 
 b4d.javascriptGenerator.forBlock['discordjs:base_login_advanced'] = function(block, generator) {
   var value_token = generator.valueToCode(block, 'token', b4d.javascriptGenerator.ORDER_ATOMIC);
