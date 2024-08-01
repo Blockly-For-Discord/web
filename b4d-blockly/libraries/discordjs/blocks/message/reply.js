@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_reply = new Block('discordjs', 'message_reply', {
+discordjs.createBlock('message_reply', {
   "message0": "Reply %1 Mention %2 component %3 to %4",
   "args0": [
     {
@@ -32,8 +32,6 @@ const message_reply = new Block('discordjs', 'message_reply', {
   "tooltip": "Reply to a message",
   "helpUrl": ""
 });
-
-message_reply.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_reply'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
