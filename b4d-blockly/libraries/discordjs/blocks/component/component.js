@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const component = new Block('discordjs', 'component', {
+discordjs.createBlock('component', {
   "message0": "Create component with %1 poll %2",
   "args0": [
     {
@@ -19,8 +19,6 @@ const component = new Block('discordjs', 'component', {
   "tooltip": "Create a component (All inputs optional)",
   "helpUrl": ""
 });
-
-component.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:component'] = function(block, generator) {
   var value_poll = generator.valueToCode(block, 'poll', b4d.javascriptGenerator.ORDER_ATOMIC);
