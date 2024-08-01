@@ -7,8 +7,7 @@ discordjs.createBlock('base_shutdown', {
   "nextStatement": null,
   "colour": b4d.color.base,
   "tooltip": "Stop the bot",
-  "helpUrl": "",
-  "test_data": "meow"
+  "helpUrl": ""
 });
 
 b4d.javascriptGenerator.forBlock['discordjs:base_shutdown'] = function(block, generator) {
