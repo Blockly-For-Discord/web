@@ -1,16 +1,15 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const base_shutdown = new Block('discordjs', 'base_shutdown', {
+discordjs.createBlock('base_shutdown', {
   "message0": "Shutdown bot",
   "previousStatement": null,
   "nextStatement": null,
   "colour": b4d.color.base,
   "tooltip": "Stop the bot",
-  "helpUrl": ""
+  "helpUrl": "",
+  "test_data": "meow"
 });
-
-base_shutdown.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:base_shutdown'] = function(block, generator) {
   var code = `client.destroy();\n`;
