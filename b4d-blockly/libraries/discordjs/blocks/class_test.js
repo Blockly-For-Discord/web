@@ -1,6 +1,7 @@
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-b4d.namespaces.discordjs.createBlock('aw_block', {
+discordjs.createBlock('aw_block', {
   "message0": "%1 aw",
   "args0": [
     {
