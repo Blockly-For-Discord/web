@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_delete = new Block('discordjs', 'message_delete', {
+discordjs.createBlock('message_delete', {
   "message0": "Delete message %1",
   "args0": [
     {
@@ -16,8 +16,6 @@ const message_delete = new Block('discordjs', 'message_delete', {
   "tooltip": "Delete the message",
   "helpUrl": ""
 });
-
-message_delete.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_delete'] = function(block, generator) {
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
