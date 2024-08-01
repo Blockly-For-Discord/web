@@ -6,7 +6,7 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 
 export class Namespace {
     // E.g. new Namespace('discordjs');
-    constructor (name) {
+    constructor(name) {
         if (Namespace.blocks[name]) {
             throw new Error("[Error]: Namespace with name '" + name + "' already exists");
         } else {
@@ -17,7 +17,7 @@ export class Namespace {
     static blocks = {}
 
     // Function to create a block for a namespace
-    createBlock (block_name, data, pre_blockly = undefine) {
+    createBlock(block_name, data, pre_blockly = undefined) {
         // If given namespace key hasnt been written into Namespace.blocks yet, put any empty one to avoid errors
         if (!Namespace.blocks[this.namespace]) {
             Namespace.blocks[this.namespace] = {};
