@@ -1,8 +1,9 @@
 import { Namespace } from '/b4d-blockly/namespaces.js';
 
 // DiscordJS
-import * as DiscordJSBlocks from './b4d-blockly/libraries/discordjs/blocks.js';
-import { DiscordJSTooblox } from './b4d-blockly/libraries/discordjs/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
+import * as DiscordJSBlocks from '/b4d-blockly/libraries/discordjs/blocks.js';
+import { DiscordJSTooblox } from '/b4d-blockly/libraries/discordjs/index.js';
 
 Namespace.registerAllOf('discordjs');
 
