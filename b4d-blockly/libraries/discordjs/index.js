@@ -1,5 +1,3 @@
-//import discordjs_tree from './file-tree.js';
-
 const LibInfo = {
   name: 'DiscordJS',
   id: 'discordjs',
@@ -7,7 +5,7 @@ const LibInfo = {
   description: 'discord.js is a powerful Node.js module that allows you to interact with the Discord API very easily.'
 };
 
-export const DiscordJStooblox = {
+export const DiscordJSTooblox = {
   kind: 'categoryToolbox',
   contents: [
     {
