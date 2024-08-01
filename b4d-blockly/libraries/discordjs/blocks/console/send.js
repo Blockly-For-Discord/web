@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const console_send = new Block('discordjs', 'console_send', {
+discordjs.createBlock('console_send', {
   "message0": "send %1 type %2 to console",
   "args0": [
     {
@@ -39,8 +39,6 @@ const console_send = new Block('discordjs', 'console_send', {
   "tooltip": "Send a message to the console / terminal",
   "helpUrl": ""
 });
-
-console_send.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:console_send'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
