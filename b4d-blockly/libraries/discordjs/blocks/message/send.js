@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const message_send = new Block('discordjs', 'message_send', {
+discordjs.createBlock('message_send', {
   "message0": "Send %1 component %2 in %3",
   "args0": [
     {
@@ -27,8 +27,6 @@ const message_send = new Block('discordjs', 'message_send', {
   "tooltip": "Respond to a message (sends message on channel)",
   "helpUrl": ""
 });
-
-message_send.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:message_send'] = function(block, generator) {
   var value_text = generator.valueToCode(block, 'text', b4d.javascriptGenerator.ORDER_ATOMIC);
