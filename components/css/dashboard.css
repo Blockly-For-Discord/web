@@ -103,7 +103,7 @@ html, body, .page {
     cursor: pointer;
 }
 .sidebar-icon:active {
-    fill: var(--fill-icon-active);
+    fill: var(--fill-icon-active) !important;
     scale: 0.8;
 }
 
