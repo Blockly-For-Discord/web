@@ -43,13 +43,12 @@ export class Router {
             document.getElementById(name).addEventListener('click', async function (event) {
                 // get the "destination" attribute
                 console.log("hello");
-                var iconID = name;
 
-                if (!Router.pages[iconID].disabled === true) {
+                if (!Router.pages[name].disabled === true) {
                     // if not disabled run load(name) # artificially loads any page provided it exists within the json
                     
-                    if (Router.pages[iconID]) {
-                        Router.load(iconID);
+                    if (Router.pages[name]) {
+                        Router.load(name);
                     } else {
                         Router.load("404");
                     }
@@ -61,7 +60,7 @@ export class Router {
 
 
     static async load (name) {
-        if (!Router.pages[name].disabled === true) {
+        if (Router.pages[name].disabled !== true) {
             document.getElementById(name).classList.add('sidebar-icon-active');
 
         if (Router.currentPage === 'none') {
