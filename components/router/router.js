@@ -101,7 +101,9 @@ export class Router {
     static loadByPath () {
         // Gets the current path of the site
         const currentPath = window.location.pathname.split('/');
-        currentPath[1];
+        if (!currentPath[1]) {
+            return '';
+        }
         for (const page in Router.pages) {
             if (page.path == currentPath) {
                 Router.load(page);
