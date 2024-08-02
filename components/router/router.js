@@ -42,6 +42,7 @@ export class Router {
         setTimeout(() => {
             document.getElementById(name).addEventListener('click', async function (event) {
                 // get the "destination" attribute
+                console.log("hello");
                 var iconID = name;
 
                 if (!Router.pages[iconID].disabled === true) {
