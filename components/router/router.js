@@ -24,10 +24,19 @@ export class Router {
         IconSvg.setAttribute('id', name);
 
         // apply class based on if its disabled or not
-        if (disabled === true) { IconSvg.setAttribute('class', 'sidebar-icon-disabled'); } else { IconSvg.setAttribute('class', 'sidebar-icon-active'); }
+        if (disabled === true) { 
+            IconSvg.setAttribute('class', 'sidebar-icon-disabled'); 
+        } else { 
+            IconSvg.setAttribute('class', 'sidebar-icon-active'); 
+
+        }
 
         // insert the img element
-        if (orientation === 'top') { this.sidebar_top.appendChild(IconSvg); } else { this.sidebar_bottom.appendChild(IconSvg); }
+        if (orientation === 'top') { 
+            this.sidebar_top.appendChild(IconSvg); 
+        } else { 
+            this.sidebar_bottom.appendChild(IconSvg); 
+        }
 
         // click event listener
         setTimeout(() => {
@@ -38,7 +47,11 @@ export class Router {
                 if (!Router.pages[iconID].disabled === true) {
                     // if not disabled run load(name) # artificially loads any page provided it exists within the json
                     
-                    Router.load(iconID);
+                    if (Router.pages[iconID]) {
+                        Router.load(iconID);
+                    } else {
+                        Router.load("404");
+                    }
                 }
             });
           }, 500);
@@ -47,7 +60,8 @@ export class Router {
 
 
     static async load (name) {
-        document.getElementById(name).classList.add('sidebar-icon-active');
+        if (!Router.pages[name].disabled === true) {
+            document.getElementById(name).classList.add('sidebar-icon-active');
 
         if (Router.currentPage === 'none') {
 
@@ -75,6 +89,22 @@ export class Router {
                 await initFunc();
             } else {
                 console.warn(`Either the change or the initialization function provided is not a function.`);
+            }
+        }
+        } else {
+            Router.load("home");
+        }
+        
+    }
+
+    static loadByPath () {
+        // Gets the current path of the site
+        const currentPath = window.location.pathname.split('/');
+        currentPath[1];
+        for (const page in Router.pages) {
+            if (page.path == currentPath) {
+                Router.load(page);
+                break;
             }
         }
     }
