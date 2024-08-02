@@ -103,8 +103,8 @@ export class Router {
         let currentPath = window.location.pathname.split('/');
         currentPath = currentPath.slice(2,currentPath.length).join('/');
         for (let page in Router.pages) {
-            page = Router.pages[page];
-            if (page.path === currentPath) {
+            let properties = Router.pages[page];
+            if (properties.path === currentPath) {
                 Router.load(page);
                 break;
             }
