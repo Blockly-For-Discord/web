@@ -9,6 +9,7 @@ export function HomeInit () {
 
 export async function HomeSwitch () {
 
+    console.log("bye from home")
     const response = `{"response":"success"}`;
     return response;
     
