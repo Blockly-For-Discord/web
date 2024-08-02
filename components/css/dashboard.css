@@ -91,14 +91,23 @@ html, body, .page {
 .sidebar-icons {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
 }
 
 .sidebar-icon {
     fill: var(--fill-icon);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.sidebar-icon:active {
+    scale: 0.8;
 }
 
 .sidebar-icon:hover {
     fill: var(--fill-icon-inactive);
+    scale: 1.1;
 }
 .sidebar-icon-active {
     fill: var(--fill-icon-inactive);
