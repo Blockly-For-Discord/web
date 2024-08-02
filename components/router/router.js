@@ -99,11 +99,8 @@ export class Router {
     }
 
     static loadByPath () {
-        // Gets the current path of the site
-        const currentPath = window.location.pathname.split('/');
-        if (!currentPath[1]) {
-            Router.load('home');
-        }
+        // Gets the current path of the site and remove the prefix /
+        const currentPath = window.location.pathname.replace('/','');
         for (const page in Router.pages) {
             if (page.path === currentPath) {
                 Router.load(page);
