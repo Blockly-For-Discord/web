@@ -61,6 +61,7 @@ export class Router {
 
     static async load (name) {
         if (Router.pages[name].disabled !== true) {
+            Array.from(document.querySelectorAll('#sidebar-icons > *')).forEach(e=>e.classList.remove('sidebar-icon-active'));
             document.getElementById(name).classList.add('sidebar-icon-active');
 
         if (Router.currentPage === 'none') {
