@@ -25,4 +25,4 @@ window.ProjectsSwitch = ProjectsSwitch;
 
 const Routes = new Router('sidebar-top-region', 'sidebar-bottom-region');
 
-Routes.register('home','','components/media/pages/home.svg','top','tooltip',false ,'HomeInit', 'HomeSwitch');
+Routes.register('home','','components/media/pages/home.svg','top','tooltip',false ,HomeInit, HomeSwitch);
