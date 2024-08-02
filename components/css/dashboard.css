@@ -93,6 +93,7 @@ html, body, .page {
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
+    flex-direction: column;
 }
 
 .sidebar-icon {
