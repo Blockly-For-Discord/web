@@ -23,6 +23,6 @@ import { ProjectsSwitch } from '../dashboard/projects.js';
 window.ProjectsInit = ProjectsInit;
 window.ProjectsSwitch = ProjectsSwitch;
 
-const Routes = new Router('sidebar-top-region', 'sidebar-bottom-region');
+const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
 Routes.register('home','','components/media/pages/home.svg','top','tooltip',false ,HomeInit, HomeSwitch);

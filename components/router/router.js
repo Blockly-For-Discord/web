@@ -27,7 +27,7 @@ export class Router {
         if (disabled === true) { 
             IconSvg.setAttribute('class', 'sidebar-icon-disabled'); 
         } else { 
-            IconSvg.setAttribute('class', 'sidebar-icon-active'); 
+            IconSvg.setAttribute('class', 'sidebar-icon'); 
 
         }
 

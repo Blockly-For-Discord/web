@@ -11,6 +11,7 @@
     --color-area-header: #CACACA;
     --fill-icon-inactive: #51595d;
     --fill-icon-disabled: #404649;
+    --fill-icon: #414649;
     --bg-preloader: #0E1011;
     --bg-preloader-bar: #191C1E;
     --color-preloader-details: #3D3F40;
@@ -92,6 +93,13 @@ html, body, .page {
     justify-content: center;
 }
 
+.sidebar-icon {
+    fill: var(--fill-icon);
+}
+
+.sidebar-icon:hover {
+    fill: var(--fill-icon-inactive);
+}
 .sidebar-icon-active {
     fill: var(--fill-icon-inactive);
 }
