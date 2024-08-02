@@ -102,7 +102,6 @@ html, body, .page {
     transition: 0.25s;
     cursor: pointer;
 }
-
 .sidebar-icon:active {
     fill: var(--fill-icon-active);
     scale: 0.8;
@@ -112,7 +111,11 @@ html, body, .page {
     fill: var(--fill-icon-inactive);
     scale: 1.1;
 }
+
 .sidebar-icon-active {
+    fill: var(--fill-icon-active);
+}
+.sidebar-icon-active:hover {
     fill: var(--fill-icon-active);
 }
 
