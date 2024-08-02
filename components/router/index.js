@@ -27,3 +27,5 @@ const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
 Routes.register('home','','components/media/pages/home.svg','top','tooltip',false ,HomeInit, HomeSwitch);
 Routes.register('projects','projects','components/media/pages/projects.svg','top','tooltip',false ,ProjectsInit, ProjectsSwitch);
+
+Router.loadByPath()
