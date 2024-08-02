@@ -102,7 +102,8 @@ export class Router {
         // Gets the current path of the site and remove the prefix /
         let currentPath = window.location.pathname.split('/');
         currentPath = currentPath.slice(2,currentPath.length).join('/');
-        for (const page of Router.pages) {
+        for (let page in Router.pages) {
+            page = Router.pages[page];
             if (page.path === currentPath) {
                 Router.load(page);
                 break;
