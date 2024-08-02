@@ -102,14 +102,13 @@ export class Router {
         // Gets the current path of the site
         const currentPath = window.location.pathname.split('/');
         if (!currentPath[1]) {
-            return '';
+            Router.load('home');
         }
         for (const page in Router.pages) {
-            if (page.path == currentPath) {
+            if (page.path === currentPath) {
                 Router.load(page);
                 break;
             }
         }
     }
-
 }
