@@ -61,6 +61,7 @@ export class Router {
 
     static async load (name) {
         if (Router.pages[name].disabled !== true) {
+            Array.from(document.querySelectorAll('#sidebar-icons > *')).forEach(e=>e.classList.remove('sidebar-icon-active'));
             document.getElementById(name).classList.add('sidebar-icon-active');
 
         if (Router.currentPage === 'none') {
@@ -98,15 +99,15 @@ export class Router {
     }
 
     static loadByPath () {
-        // Gets the current path of the site
-        const currentPath = window.location.pathname.split('/');
-        currentPath[1];
-        for (const page in Router.pages) {
-            if (page.path == currentPath) {
+        // Gets the current path of the site and remove the prefix /
+        let currentPath = window.location.pathname.split('/');
+        currentPath = currentPath.slice(2,currentPath.length).join('/').replace(/\/$/m, '');
+        for (let page in Router.pages) {
+            let properties = Router.pages[page];
+            if (properties.path === currentPath) {
                 Router.load(page);
                 break;
             }
         }
     }
-
 }

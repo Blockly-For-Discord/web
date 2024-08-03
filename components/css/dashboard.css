@@ -9,6 +9,7 @@
     --bg-main-area: #161819;
     --bg-toggle-area: #161819;
     --color-area-header: #CACACA;
+    --fill-icon-active: #D0D0D0;
     --fill-icon-inactive: #51595d;
     --fill-icon-disabled: #404649;
     --fill-icon: #414649;
@@ -102,8 +103,8 @@ html, body, .page {
     transition: 0.25s;
     cursor: pointer;
 }
-
 .sidebar-icon:active {
+    fill: var(--fill-icon-active) !important;
     scale: 0.8;
 }
 
@@ -111,8 +112,12 @@ html, body, .page {
     fill: var(--fill-icon-inactive);
     scale: 1.1;
 }
+
 .sidebar-icon-active {
-    fill: var(--fill-icon-inactive);
+    fill: var(--fill-icon-active);
+}
+.sidebar-icon-active:hover {
+    fill: var(--fill-icon-active);
 }
 
 .sidebar-icon-disabled {
