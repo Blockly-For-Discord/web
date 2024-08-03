@@ -105,7 +105,7 @@ html, body, .page {
 }
 .sidebar-icon:active {
     fill: var(--fill-icon-active) !important;
-    scale: 0.8;
+    scale: 0.8 !important;
 }
 
 .sidebar-icon:hover {
