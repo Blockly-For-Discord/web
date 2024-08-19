@@ -33,6 +33,6 @@ discordjs.createBlock('channel_get', {
 b4d.javascriptGenerator.forBlock['discordjs:channel_get'] = function(block, generator) {
   var dropdown_type = block.getFieldValue('type');
   var value_in = generator.valueToCode(block, 'in', b4d.javascriptGenerator.ORDER_ATOMIC);
-  let code = `client.channels.cache.${dropdown_type === 'id' ? 'get' : 'find'}(${dropdown_type === 'id' ? value_in : '(channel) => channel.name === '+value_in});`;
+  let code = `client.channels.cache.${dropdown_type === 'id' ? 'get' : 'find'}(${dropdown_type === 'id' ? value_in : '(channel) => channel.name === '+value_in})`;
   return [code, b4d.javascriptGenerator.ORDER_NONE];
 };
