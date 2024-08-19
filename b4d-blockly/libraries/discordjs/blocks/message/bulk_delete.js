@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('message_bulk_delete', {
-  "message0": "Bulk delete %1 message in %2",
+  "message0": "Bulk delete %1 messages in %2",
   "args0": [
     {
       "type": "input_value",

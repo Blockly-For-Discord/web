@@ -1060,6 +1060,14 @@ export const DiscordJSTooblox = {
           type: 'discordjs:message_bulk_delete',
           kind: 'block',
           inputs: {
+            amount: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 5
+                }
+              }
+            },
             channel: {
               shadow: {
                 type: 'discordjs:message_channel'
