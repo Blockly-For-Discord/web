@@ -1055,6 +1055,17 @@ export const DiscordJSTooblox = {
               }
             }
           }
+        },
+        {
+          type: 'discordjs:message_bulk_delete',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
         }
       ]
     },
@@ -1296,6 +1307,12 @@ export const DiscordJSTooblox = {
           }
         }
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Servers',
+      colour: b4d.color.server,
+      contents: []
     }
   ]
 };
