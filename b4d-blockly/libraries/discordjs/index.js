@@ -1241,7 +1241,51 @@ export const DiscordJSTooblox = {
           }
         },
         {
+          type: 'discordjs:channel_data_num',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
           type: 'discordjs:channel_data_bool',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_category',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_server',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_last_message',
           kind: 'block',
           inputs: {
             channel: {

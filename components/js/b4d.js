@@ -12,6 +12,7 @@ let b4d = {
     component: '#3da9ae',
     embed: '#ee6a24',
     poll: '#bf70e3',
-    channel: '#ec4132'
+    channel: '#ec4132',
+    server: '#f6d30a'
   }
 };
