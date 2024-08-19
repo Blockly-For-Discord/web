@@ -1206,7 +1206,52 @@ export const DiscordJSTooblox = {
       kind: 'category',
       name: 'Channels',
       colour: b4d.color.channel,
-      contents: []
+      contents: [
+        {
+          kind: 'label',
+          text: 'Get a channel/Category'
+        },
+        {
+          type: 'discordjs:channel_get',
+          kind: 'block',
+          inputs: {
+            in: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: ''
+                }
+              }
+            }
+          }
+        },
+        {
+          kind: 'label',
+          text: 'Data'
+        },
+        {
+          type: 'discordjs:channel_data',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_data_bool',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 };

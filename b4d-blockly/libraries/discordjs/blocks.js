@@ -42,3 +42,10 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/create.js
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/create.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/answer.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/end.js';
+
+/* DJS more */
+
+// Channel
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/get.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/data.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/data_bool.js';
