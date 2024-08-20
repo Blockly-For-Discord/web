@@ -31,7 +31,7 @@ discordjs.createBlock('channel_set_data', {
         [
           "thread auto archive (min)",
           "defaultAutoArchiveDuration"
-        ]
+        ],
         [
           "follow category permissions",
           "lockPermissions"
