@@ -28,6 +28,18 @@ discordjs.createBlock('channel_data_bool', {
         [
           "deletable",
           "deletable"
+        ],
+        [
+          "full (vc)",
+          "full"
+        ],
+        [
+          "joinable (vc)",
+          "joinable"
+        ],
+        [
+          "speakable (vc)",
+          "speakable"
         ]
       ]
     }

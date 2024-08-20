@@ -41,6 +41,9 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/channel/data_bool.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/channel/category.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/channel/server.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/channel/last_message.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/set_data.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/clone.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/channel/delete.js';
 
 /* Component */
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/component.js';

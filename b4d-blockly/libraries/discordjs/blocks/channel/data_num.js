@@ -23,6 +23,34 @@ discordjs.createBlock('channel_data_num', {
         [
           "thread archive duration (min)",
           "defaultAutoArchiveDuration"
+        ],
+        [
+          "default emoji (forum)",
+          "defaultReactionEmoji"
+        ],
+        [
+          "post slowmode (forum)",
+          "defaultThreadRateLimitPerUser"
+        ],
+        [
+          "default layout (forum, auto:0;list:1;gallery:2)",
+          "defaultForumLayout"
+        ],
+        [
+          "sort order (forum, activity:0;creation:1)",
+          "defaultSortOrder"
+        ],
+        [
+          "bitrate (vc)",
+          "bitrate"
+        ],
+        [
+          "user limit (vc)",
+          "userLimit"
+        ],
+        [
+          "video quality (vc, auto:1;full:2;)",
+          "videoQualityMode"
         ]
       ]
     },

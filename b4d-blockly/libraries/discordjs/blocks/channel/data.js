@@ -35,6 +35,10 @@ discordjs.createBlock('channel_data', {
         [
           "url",
           "url"
+        ],
+        [
+          "rtc region (vc)",
+          "rtcRegion"
         ]
       ]
     },

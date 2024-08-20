@@ -1313,6 +1313,43 @@ export const DiscordJSTooblox = {
               }
             }
           }
+        },
+        {
+          kind: 'label',
+          text: 'Actions'
+        },
+        {
+          type: 'discordjs:channel_set_data',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_clone',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_delete',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
         }
       ]
     },
