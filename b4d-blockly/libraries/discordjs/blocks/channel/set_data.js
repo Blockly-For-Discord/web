@@ -94,7 +94,7 @@ b4d.javascriptGenerator.forBlock['discordjs:channel_set_data'] = function(block,
   var value_in = generator.valueToCode(block, 'in', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_channel = generator.valueToCode(block, 'channel', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_reason = generator.valueToCode(block, 'reason', b4d.javascriptGenerator.ORDER_ATOMIC);
-  return [`${value_channel}.edit({
+  return `${value_channel}.edit({
   ${dropdown_type}: ${value_in}${value_reason.length > 2 ? ',\nreason: '+value_reason : ''}
-});\n`, b4d.javascriptGenerator.ORDER_NONE];
+});\n`;
 };

@@ -25,7 +25,7 @@ discordjs.createBlock('channel_clone', {
 b4d.javascriptGenerator.forBlock['discordjs:channel_clone'] = function(block, generator) {
   var value_channel = generator.valueToCode(block, 'channel', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_name = generator.valueToCode(block, 'name', b4d.javascriptGenerator.ORDER_ATOMIC);
-  return [`${value_channel}.clone({
+  return `${value_channel}.clone({
   name: ${value_name}
-});\n`, b4d.javascriptGenerator.ORDER_NONE];
+});\n`;
 };

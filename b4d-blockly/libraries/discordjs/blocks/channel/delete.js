@@ -25,5 +25,5 @@ discordjs.createBlock('channel_delete', {
 b4d.javascriptGenerator.forBlock['discordjs:channel_delete'] = function(block, generator) {
   var value_channel = generator.valueToCode(block, 'channel', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_reason = generator.valueToCode(block, 'reason', b4d.javascriptGenerator.ORDER_ATOMIC);
-  return [`${value_channel}.delete(${value_reason});\n`, b4d.javascriptGenerator.ORDER_NONE];
+  return `${value_channel}.delete(${value_reason});\n`;
 };
