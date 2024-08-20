@@ -1,7 +1,7 @@
 import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-discordjs.createBlock('channel_clone', {
+discordjs.createBlock('channel_delete', {
   "message0": "delete %1 with reason %2",
   "args0": [
     {
@@ -22,7 +22,7 @@ discordjs.createBlock('channel_clone', {
   "helpUrl": ""
 });
 
-b4d.javascriptGenerator.forBlock['discordjs:channel_clone'] = function(block, generator) {
+b4d.javascriptGenerator.forBlock['discordjs:channel_delete'] = function(block, generator) {
   var value_channel = generator.valueToCode(block, 'channel', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_reason = generator.valueToCode(block, 'reason', b4d.javascriptGenerator.ORDER_ATOMIC);
   return [`${value_channel}.delete(${value_reason});\n`, b4d.javascriptGenerator.ORDER_NONE];
