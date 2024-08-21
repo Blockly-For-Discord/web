@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('channel_set_data', {
-  "message0": "set %1 to %2 in %3 with reason %4",
+  "message0": "Set %1 to %2 in %3 with reason %4",
   "args0": [
     {
       "type": "field_dropdown",

@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('channel_clone', {
-  "message0": "clone %1 with name %2",
+  "message0": "Clone %1 with name %2",
   "args0": [
     {
       "type": "input_value",

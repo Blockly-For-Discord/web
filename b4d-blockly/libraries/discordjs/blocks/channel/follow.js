@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('channel_follow', {
-  "message0": "follow %1 to %2 with reason %3",
+  "message0": "Follow %1 to %2 with reason %3",
   "args0": [
     {
       "type": "input_value",

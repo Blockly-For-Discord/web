@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('channel_delete', {
-  "message0": "delete %1 with reason %2",
+  "message0": "Delete %1 with reason %2",
   "args0": [
     {
       "type": "input_value",

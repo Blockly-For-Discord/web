@@ -17,7 +17,7 @@ discordjs.createBlock('base_login', {
 
 b4d.javascriptGenerator.forBlock['discordjs:base_login'] = function(block, generator) {
   var value_token = generator.valueToCode(block, 'token', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var code = `const { ActivityType, Client, Events, EmbedBuilder, GatewayIntentBits } = require('discord.js');
+  var code = `const { ActivityType, ChannelType, Client, Events, EmbedBuilder, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
   intents: [ GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildPresences ]

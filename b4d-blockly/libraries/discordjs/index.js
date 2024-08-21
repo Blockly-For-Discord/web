@@ -928,6 +928,10 @@ export const DiscordJSTooblox = {
           kind: 'block'
         },
         {
+          type: 'discordjs:message_server',
+          kind: 'block'
+        },
+        {
           text: 'Actions',
           kind: 'label'
         },
@@ -1322,6 +1326,14 @@ export const DiscordJSTooblox = {
           type: 'discordjs:channel_set_data',
           kind: 'block',
           inputs: {
+            in: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Text, Number or Bolean'
+                }
+              }
+            },
             channel: {
               shadow: {
                 type: 'discordjs:message_channel'
@@ -1397,6 +1409,29 @@ export const DiscordJSTooblox = {
                 type: 'text',
                 fields: {
                   TEXT: 'Delete channel'
+                }
+              }
+            }
+          }
+        },
+        {
+          kind: 'label',
+          text: 'Create'
+        },
+        {
+          type: 'discordjs:channel_create',
+          kind: 'block',
+          inputs: {
+            server: {
+              shadow: {
+                type: 'discordjs:message_server'
+              }
+            },
+            name: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Channel'
                 }
               }
             }
