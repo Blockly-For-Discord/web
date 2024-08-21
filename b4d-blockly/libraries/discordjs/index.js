@@ -1326,6 +1326,14 @@ export const DiscordJSTooblox = {
               shadow: {
                 type: 'discordjs:message_channel'
               }
+            },
+            reason: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Change channel data'
+                }
+              }
             }
           }
         },
@@ -1337,6 +1345,41 @@ export const DiscordJSTooblox = {
               shadow: {
                 type: 'discordjs:message_channel'
               }
+            },
+            name: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'New name'
+                }
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:channel_follow',
+          kind: 'block',
+          inputs: {
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            },
+            to: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'id or channel'
+                }
+              }
+            },
+            reason: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Follow channel'
+                }
+              }
             }
           }
         },
@@ -1347,6 +1390,14 @@ export const DiscordJSTooblox = {
             channel: {
               shadow: {
                 type: 'discordjs:message_channel'
+              }
+            },
+            reason: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'Delete channel'
+                }
               }
             }
           }
