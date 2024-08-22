@@ -28,7 +28,7 @@ discordjs.createBlock('base_login_advanced', {
 
 b4d.javascriptGenerator.forBlock['discordjs:base_login_advanced'] = function(block, generator) {
   var value_token = generator.valueToCode(block, 'token', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var value_intents = generator.valueToCode(block, 'intents', b4d.javascriptGenerator.Order.ATOMIC);
+  var value_intents = generator.valueToCode(block, 'intents', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_mobile = block.getFieldValue('mobile') === 'TRUE';
   var code = `const { ActivityType, ChannelType, Client, Events, EmbedBuilder, GatewayIntentBits } = require('discord.js');
 
