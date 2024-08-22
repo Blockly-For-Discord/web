@@ -59,7 +59,9 @@ function tip() {
   })
 }
 function letool(a, b) {
-  if (!b.isInFlyout) {
+  if (b.isInFlyout) {
+    a.innerHTML = '<div>'+b4d.Blockly.Tooltip.getTooltipOfObject(b).split('\n').join('</div><div>')+'</div>'
+  } else {
     a.style.display = `none`;
     a.style.visibility = `hidden`;
     a.style.opacity = `0`;
