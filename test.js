@@ -56,14 +56,12 @@ function tip(event) {
     tippy(block, {
       content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
       delay: [1000, 0],
-      interactive: true,
       sticky: true,
       moveTransition: 'transform 25ms ease-in-out'
     })
   })
 }
 function letool(a, b) {
-  console.log(a, b)
   if (b.isInFlyout) {
     a.innerHTML = '<div>'+b4d.Blockly.Tooltip.getTooltipOfObject(b).split('\n').join('</div><div>')+'</div>'
   } else {
