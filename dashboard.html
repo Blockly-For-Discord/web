@@ -17,6 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://larsishere.github.io/CitronJS/src/v2-0-0/index.min.js"></script>
 
     <!-- Scripts -->
     <script src="./components/js/dashboard.js"></script>
@@ -27,6 +28,9 @@
     <script src="./components/router/index.js" type="module"></script>
     <script src="./components/js/preloader.js"></script>
     <script src="./components/js/srvConn.js"></script>
+
+    <!-- HTMS & CitronJS -->
+     <c-import src="components/dashboard/projects.xml"></c-import>
 
 </head>
 <body>
@@ -54,7 +58,9 @@
 
             <div class="select-area"></div>
 
-            <div class="main-area"></div>
+            <div class="main-area">
+                <sample name="projects_HelloWorld"></sample>
+            </div>
 
             <div class="toggle-area"></div>
 

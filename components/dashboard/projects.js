@@ -2,7 +2,7 @@
 
 export function ProjectsInit () {
 
-    console.log("hello world, from projects.")
+    console.log("hello world, from projects.");
 }
 
 export async function ProjectsSwitch () {

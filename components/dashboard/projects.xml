@@ -1,0 +1,7 @@
+<citron>
+    <export "projects_HelloWorld"></export>
+
+    <sample name="projects_HelloWorld">
+        <h1>Hello World Projects</h1>
+    </sample>
+</citron>
