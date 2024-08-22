@@ -51,15 +51,19 @@ b4d.Blockly.setLocale(b4d.En);
 /* Tooltips */
 function tip(event) {
   if (event.type !== 'create') return;
-  let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
-  blocks.forEach(block => {
-    tippy(block, {
-      content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
-      delay: [1000, 0]
+  setTimeout(()=>{
+    let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
+    blocks.forEach(block => {
+      tippy(block, {
+        content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
+        delay: [1000, 0],
+        sticky: true
+      })
     })
-  })
+  }, 0)
 }
 function letool(a, b) {
+  console.log(a, b)
   if (b.isInFlyout) {
     a.innerHTML = '<div>'+b4d.Blockly.Tooltip.getTooltipOfObject(b).split('\n').join('</div><div>')+'</div>'
   } else {
