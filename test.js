@@ -48,6 +48,26 @@ b4d.workspace = workspace;
 
 b4d.Blockly.setLocale(b4d.En);
 
+/* Tooltips */
+function tip() {
+  let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
+  blocks.forEach(block => {
+    tippy(block, {
+      content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
+      delay: [1000, 200]
+    })
+  })
+}
+function letool(a, b) {
+  if (!b.isInFlyout) {
+    a.style.display = `none`;
+    a.style.visibility = `hidden`;
+    a.style.opacity = `0`;
+  }
+}
+b4d.Blockly.Tooltip.setCustomTooltip(letool)
+b4d.workspace.addChangeListener(tip)
+
 // Make toolbox look slightly better
 var treeRowElements = document.getElementsByClassName('blocklyTreeRow');
 for (var i = 0; i < treeRowElements.length; i++) {
