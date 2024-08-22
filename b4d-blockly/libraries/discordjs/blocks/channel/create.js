@@ -31,7 +31,7 @@ discordjs.createBlock('channel_create', {
           "GuildVoice"
         ],
         [
-          "Stage",
+          "stage",
           "GuildStageVoice"
         ],
         [
@@ -49,6 +49,7 @@ discordjs.createBlock('channel_create', {
       ]
     }
   ],
+  "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
   "colour": b4d.color.channel,
