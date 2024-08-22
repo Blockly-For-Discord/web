@@ -1,5 +1,5 @@
 {
-    "version":"0.5.0/production",
+    "version":"0.5.0/development",
     "live":"https://blockly-for-discord.xyz",
     "dev":"https://b4d-development--blockly-for-discord.netlify.app",
     "oauth" : {

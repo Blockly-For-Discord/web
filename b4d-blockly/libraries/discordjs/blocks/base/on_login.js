@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const base_on_login = new Block('discordjs', 'base_on_login', {
+discordjs.createBlock('base_on_login', {
   "message0": "When bot connects %1 %2",
     "args0": [
       {
@@ -12,12 +12,10 @@ const base_on_login = new Block('discordjs', 'base_on_login', {
         "name": "in"
       }
     ],
-    "colour": "#009dff",
+    "colour": b4d.color.base,
     "tooltip": "Do something when the bot gets connected",
     "helpUrl": ""
 });
-
-base_on_login.attach();
 
 b4d.javascriptGenerator.forBlock['discordjs:base_on_login'] = function(block, generator) {
     var statement_in = generator.statementToCode(block, 'in');

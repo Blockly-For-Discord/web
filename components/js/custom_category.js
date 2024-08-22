@@ -1,18 +1,25 @@
-console.log(b4d?.Blockly, Blockly)
-class CustomCategory extends b4d.Blockly.ToolboxCategory {
-    /**
-     * Constructor for a custom category.
-     * @override
-     */
-    constructor(categoryDef, toolbox, opt_parent) {
-      super(categoryDef, toolbox, opt_parent);
-    }
 
-    /** @override */
-    addColourBorder_(colour){
+/*
+
+This file is being maintaned by Blockly For Discord. Do NOT Modify in the browser unless you know what you are doing!
+
+*/
+
+class CustomCategory extends b4d.Blockly.ToolboxCategory {
+  /**
+   * Constructor for a custom category.
+   * @override
+   */
+  constructor(categoryDef, toolbox, opt_parent) {
+    super(categoryDef, toolbox, opt_parent);
+  }
+
+  /** @override */
+  addColourBorder_(colour) {
     this.rowDiv_.style.backgroundColor = colour;
   }
-  setSelected(isSelected){
+
+  setSelected(isSelected) {
     // We do not store the label span on the category, so use getElementsByClassName.
     var labelDom = this.rowDiv_.getElementsByClassName('BlocklyTreeLabel')[0];
     if (isSelected) {

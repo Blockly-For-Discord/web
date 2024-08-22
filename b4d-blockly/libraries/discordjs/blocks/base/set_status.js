@@ -1,7 +1,7 @@
-import { Block } from '/b4d-blockly/index.js';
+import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
-const base_set_status = new Block('discordjs', 'base_set_status', {
+discordjs.createBlock('base_set_status', {
   "message0": "Set bot status to %1 %2 type %3 %4 text %5",
   "args0": [
     {
@@ -66,13 +66,10 @@ const base_set_status = new Block('discordjs', 'base_set_status', {
   "inputsInline": false,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "#009dff",
+  "colour": b4d.color.base,
   "tooltip": "Set the status of the bot",
   "helpUrl": ""
 });
-
-base_set_status.attach();
-
 
 b4d.javascriptGenerator.forBlock['discordjs:base_set_status'] = function(block, generator) {
   var dropdown_status = block.getFieldValue('status');

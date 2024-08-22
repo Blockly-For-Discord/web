@@ -4,191 +4,110 @@ Made and Maintained by Blockly For Discord. Any Modification is prohibited and c
 
 */
 
-import { HomeInit } from '../dashboard/home.js';
-import { HomeSwitch } from '../dashboard/home.js';
-window.HomeSwitch = HomeSwitch;
-window.HomeInit = HomeInit;
-import { Init404 } from '../dashboard/404.js';
-import { Switch404 } from '../dashboard/404.js';
-window.Switch404 = Switch404;
-window.Init404 = Init404;
-import { SettingsInit } from '../dashboard/settings.js';
-import { SettingsSwitch } from '../dashboard/settings.js';
-window.SettingsInit = SettingsInit;
-window.SettingsSwitch = SettingsSwitch;
-import { ProjectsInit } from '../dashboard/projects.js';
-import { ProjectsSwitch } from '../dashboard/projects.js';
-window.ProjectsInit = ProjectsInit;
-window.ProjectsSwitch = ProjectsSwitch;
-
-
-let CurrentPage = 'none';
-
-let items = ["s-home", "s-projects", "s-explore", "s-users", "s-extensions", "s-updates", "s-developer", "s-settings"];
-
-const router = {
-    "" : {
-        "function" : "HomeInit",
-        "switch" : "HomeSwitch",
-        "icon" : "s-home",
-        "class" : "action-item-active",
-        "tooltip" : "Home"
-    },
-    "settings" : {
-        "function" : "SettingsInit",
-        "switch" : "SettingsSwitch",
-        "icon" : "s-settings",
-        "class" : "action-item-settings",
-        "tooltip" : "Settings"
-    },
-    "my-projects" : {
-        "function" : "ProjectsInit",
-        "switch" : "ProjectsSwitch",
-        "icon" : "s-projects",
-        "class" : "action-item-active",
-        "tooltip" : "Projects"
-    },
-    // 404 - routes when no other match is found
-    "404" : {
-        "function" : "Init404",
-        "switch" : "End404",
-        "icon" : "",
-        "class" : ""
+export class Router {
+    constructor (sidebar_top, sidebar_bottom) {
+        
+        this.sidebar_top = document.getElementById(sidebar_top);
+        this.sidebar_bottom = document.getElementById(sidebar_bottom);
     }
-}
 
-function showLoading(promise) {
-    navigation.addEventListener('navigate', evt => {
-       evt.intercept({
-         scroll: 'manual',
-         handler: () => promise,
-       });
-    }, { once: true });
-    return navigation.navigate(location.href).finished;
-   }
-   
-   window.showLoading = showLoading;
-   
+    static pages = {};
+    static paths = {};
+    static currentPage = "none";
 
-document.addEventListener('DOMContentLoaded', function () {
-    AuthEvent();
-    window.TippyJS(router);
-    items.forEach(item => {
-        document.getElementById(item).addEventListener('click', function () {
+    register (name, path, svg, orientation, tooltip, disabled, init, change) {
+        Router.pages[name] = { path, init, change, disabled};
 
-            const destination = this.getAttribute('destination');
-            SidebarHighlight(destination);
-            LoadPage(destination);
-            
-        });
-    });
-});
+        // places the svg as an icon based on orientation. svg_img_handler.js turns <img> into <svg>. apply any properties on the image as one would on an svg.
+        const IconSvg = document.createElement('img');
+        IconSvg.setAttribute('src', svg);
+        IconSvg.setAttribute('id', name);
 
-document.addEventListener('AuthConfirmed', function() {
-    const pathArray = window.location.pathname.split('/');
-    const PathOnload = pathArray[2] ? pathArray[2].toLowerCase() : "";
+        // apply class based on if its disabled or not
+        if (disabled === true) { 
+            IconSvg.setAttribute('class', 'sidebar-icon-disabled'); 
+        } else { 
+            IconSvg.setAttribute('class', 'sidebar-icon'); 
 
-    if (PathOnload in router) {
-        LoadPage(PathOnload);
-    } else { 
-        LoadPage("404");
-     }
-    
-});
-
-
-async function LoadPage(page) {
-
-    const query = window.location.search;
-
-    if (CurrentPage === 'none') {
-
-        if (FunctionExists(router[page].function)) {
-
-            window[router[page].function](query);
-            SidebarHighlight(page);
-            CurrentPage = page;
-
-        } else {
-            console.error("[Router] No Function for " + page + " was found")
         }
 
+        // insert the img element
+        if (orientation === 'top') { 
+            this.sidebar_top.appendChild(IconSvg); 
+        } else { 
+            this.sidebar_bottom.appendChild(IconSvg); 
+        }
+
+        // click event listener
+        setTimeout(() => {
+            document.getElementById(name).addEventListener('click', async function (event) {
+                // get the "destination" attribute
+                console.log("hello");
+
+                if (!Router.pages[name].disabled === true) {
+                    // if not disabled run load(name) # artificially loads any page provided it exists within the json
+                    
+                    if (Router.pages[name]) {
+                        Router.load(name);
+                    } else {
+                        Router.load("404");
+                    }
+                }
+            });
+          }, 500);
+        
+    }
 
 
-    } else {
+    static async load (name) {
+        if (Router.pages[name].disabled !== true) {
+            Array.from(document.querySelectorAll('#sidebar-icons > *')).forEach(e=>e.classList.remove('sidebar-icon-active'));
+            document.getElementById(name).classList.add('sidebar-icon-active');
 
-        if (FunctionExists(router[page].switch)) {
+        if (Router.currentPage === 'none') {
 
-            const response = await window[router[page].function](query);
+           // theres no current page
+            const initFunc = Router.pages[name].init;
 
-            if (FunctionExists(router[page].function)) {
+            if (typeof initFunc === 'function') {
 
-                window[router[page].function](query);
-                SidebarHighlight(page);
+                Router.currentPage = name;
+
+                await initFunc();
+
 
             } else {
-                console.error("[Router] No Function for " + page + " was found")
+                console.warn("The provided initialization function for '" + name + "' is not a function");
             }
 
         } else {
-            console.error("[Router] No Switch Function for " + page + " was found")
+
+            const changeFunc = Router.pages[Router.currentPage].change;
+            const initFunc = Router.pages[name].init;
+
+            if (typeof changeFunc === 'function' && typeof initFunc === 'function') {
+                await changeFunc();
+                await initFunc();
+            } else {
+                console.warn(`Either the change or the initialization function provided is not a function.`);
+            }
         }
-    }   
-}
-
-window.LoadPage = LoadPage;
-
-function FunctionExists(func) {
-
-
-    let result = typeof window[func] === "function" ? true : false;
-
-    return result;
-}
-
-function SidebarHighlight(page) {
-
-    let IconElement = document.getElementById(router[page].icon);
-    let IconClass = router[page].class;
-
-    for (let key in router) {
-        let DisableClass = router[key].class;
-
-        let element = document.getElementById(router[key].icon);
-        if (element) {
-            element.classList.remove(DisableClass);
+        } else {
+            Router.load("home");
         }
+        
     }
 
-    if (IconElement) {
-        IconElement.classList.add(IconClass);
+    static loadByPath () {
+        // Gets the current path of the site and remove the prefix /
+        let currentPath = window.location.pathname.split('/');
+        currentPath = currentPath.slice(2,currentPath.length).join('/').replace(/\/$/m, '');
+        for (let page in Router.pages) {
+            let properties = Router.pages[page];
+            if (properties.path === currentPath) {
+                Router.load(page);
+                break;
+            }
+        }
     }
-    
-}
-
-
-
-
-
-
-/*
-
-Functions in charge of all data communication - DO NOT TOUCH
-
-*/
-
-function httpGetProjectList() {
-    let object;
-
-
-
-    return object;
-}
-
-function httpWriteNewProject() {
-
-}
-
-function httpDeleteProject() {
-    
 }

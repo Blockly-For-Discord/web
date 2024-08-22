@@ -2,110 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Blockly For Discord - Effortless Bot Creation Without Coding">
-    <title>B4D - Effortless Bot Creation Without Coding</title>
-    <meta name="description" content="Blockly For Discord allows you to make Discord Bots for free with no coding skills required. B4D can generate DiscordJS and Discord.py code  for free using Scratch like Blocks!">
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Blockly For Discord - Effortless Bot Creation Without Coding">
+    <meta name="description" content="Blockly For Discord allows you to make Discord Bots for free with no coding skills required. B4D can generate DiscordJS and Discord.py code  for free using Scratch like Blocks!">
     <link rel="icon" type="image/x-icon" href="">
-    <link rel="stylesheet" href="components\css\index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="components/img/favicon.ico">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="components/js/navbar.js"></script>
-    <script src="components/lang/index.js" type="module"></script>
-    <script src="components/js/index.js" type="module"></script>
-    <script src="components/js/b4d.js"></script>
-    <!-- <script src="test.js" type="module"></script> -->
-    <!-- <script src="./components/webpack/blocklycompressed.bundle.js"></script> -->
-    <script src="./components/webpack/toastifyjs.bundle.js"></script>
-    <script src="./components/js/b4d-blockly.js"></script>
+    <title>Blockly For Discord</title>
 </head>
 <body>
-
     <script>
         AOS.init();
-      </script>
-
+    </script>
     <div class="page">
-        <div class="navbar" id="navbar"></div>
-        <div class="banner">
-            <span data-aos="fade-up" data-aos-once="true" data-aos-duration="2000" class="banner-text" id="banner.head">Simplify Bot Building</span>
-            <span data-aos="fade-up" data-aos-once="true"  data-aos-duration="2000" class="banner-text-two" id="banner.subhead">Blockly For Discord simplifies Discord bot creation with drag-and-drop coding blocks</span>
-            <div data-aos="zoom-out-up" data-aos-duration="2000"  class="banner-action">
-                <a href="https://blockly-for-discord.xyz/dashboard"><button  class="button-default button-variant-1" id="banner.button.create">Start creating <span class="material-symbols-outlined button-icon"> arrow_right_alt </span></button></a>
-                <a href="https://blockly-for-discord.xyz/projects"><button class="button-default button-variant-2" id="banner.button.explore">Explore instead <span class="material-symbols-outlined button-icon">explore</span></button></a>
+        <div class="grid">
+        <div class="nav-header">
+            <div class="branding">
+                <div class="logo"><svg class="logo" width="40" height="35" viewBox="0 0 944 804" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M561.878 89.3585C493.097 -29.7862 321.138 -29.7862 252.356 89.3585L24.398 484.226C-44.3843 603.373 41.5938 752.302 179.159 752.302H407.011C357.571 697.914 342.251 614.313 384.29 541.855L496.453 348.529C532.648 286.142 597.169 256.545 660.236 259.737L561.878 89.3585Z" fill="#308FE7"></path> <path d="M535.111 406.33C603.984 287.672 775.335 287.672 844.208 406.33L918.65 534.576C987.807 653.723 901.856 803.019 764.101 803.019H615.218C477.464 803.019 391.51 653.723 460.668 534.576L535.111 406.33Z" fill="#D9D9D9"></path> </svg></div>
+                <div class="logo-text">B4D</div>
             </div>
+            <nav class="navbar">
+                <div class="navbar-item">Docs</div>
+                <div class="navbar-item">Explore</div>
+                <div class="navbar-item">Dashboard</div>
+                <div class="navbar-search"></div>
+            </nav>
         </div>
-        <div class="sub-banner">
-            <span class="sub-banner-text" id="subbanner-text">With B4D you can make anything.</span>
-            <svg width="428" height="215" viewBox="0 0 428 215" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M21.5458 111.776C20.0101 115.791 14.6967 117.487 9.6826 115.569C4.66845 113.651 1.8429 108.842 3.37867 104.827C4.91304 100.816 10.2278 99.117 15.2419 101.035C20.2561 102.953 23.0802 107.765 21.5458 111.776ZM57.0264 117.018C55.4907 121.033 50.1773 122.728 45.1632 120.81C40.149 118.892 37.3235 114.084 38.8592 110.069C40.395 106.054 45.7084 104.359 50.7225 106.277C55.7366 108.195 58.5622 113.003 57.0264 117.018Z" fill="#A78CF8"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M53.393 115.628L65.9015 82.9273L69.5349 84.3171L57.0264 117.018L53.393 115.628ZM35.4442 75.4421L21.5459 111.776L17.9124 110.387L31.8107 74.0522L35.4442 75.4421Z" fill="#A78CF8"/> <path d="M31.9427 73.707C32.2873 72.8063 32.9541 72.0656 33.8139 71.6287C34.6736 71.1918 35.665 71.0899 36.5957 71.3426L66.7751 79.5545C67.2997 79.697 67.7887 79.9479 68.2105 80.291C68.6322 80.6341 68.9774 81.0617 69.2237 81.5464C69.47 82.0311 69.6119 82.5621 69.6404 83.105C69.6689 83.6479 69.5832 84.1908 69.389 84.6986L68.1451 87.9505L30.4209 77.6857L31.9427 73.707Z" fill="#A78CF8"/> <path d="M261.701 55.6245C252.181 53.5711 242.314 52.6876 232.317 53.0982C232.242 53.3409 232.168 53.596 232.093 53.8573C231.629 55.4751 231.17 57.3542 230.804 59.084C230.68 59.6751 230.569 60.2538 230.47 60.7951C219.896 61.4547 209.762 63.564 200.081 67.1169C198.606 65.132 196.542 62.6805 194.862 60.8885C185.615 64.4849 177.074 69.2076 169.389 74.8512C167.895 78.6157 166.618 82.3241 165.54 85.9828C161.747 98.8815 160.476 111.121 161.189 122.843C161.759 132.307 163.625 141.435 166.488 150.302C166.73 151.043 166.972 151.783 167.226 152.524C170.759 154.048 174.217 155.361 177.607 156.481C178.673 156.836 179.727 157.165 180.781 157.483C189.136 159.984 197.087 161.353 204.779 162C206.638 157.875 208.151 153.588 209.279 149.163C204.971 148.554 200.757 147.564 196.678 146.251C197.472 145.38 198.234 144.484 198.959 143.57C223.156 148.79 246.919 143.85 266.194 129.582C267.279 130.117 268.376 130.627 269.479 131.107C266.374 133.925 262.996 136.495 259.377 138.754C262.407 142.3 265.711 145.592 269.281 148.591C279.477 143.041 289.455 135.73 299 125.115C295.102 96.6228 281.85 73.9676 261.688 55.6307L261.701 55.6245ZM207.512 128.593C200.949 129.962 194.168 125.227 192.464 118.09C190.759 110.959 194.633 103.996 201.314 102.609C207.996 101.221 214.776 105.956 216.363 113.118C218.074 120.249 214.194 127.199 207.512 128.593ZM251.666 119.409C245.103 120.778 238.322 116.042 236.618 108.906C234.92 101.775 238.787 94.8122 245.469 93.4246C252.15 92.0308 258.93 96.7722 260.517 103.934C262.222 111.065 258.348 118.015 251.666 119.409Z" fill="#232323"/> <path d="M252.27 53.368C243.572 51.4005 234.655 50.5674 225.743 50.8894C225.662 50.8927 225.585 50.9209 225.521 50.9701C225.457 51.0194 225.41 51.0872 225.386 51.1643C224.711 53.3027 224.045 56.0539 223.625 58.1865C214.06 58.7343 204.633 60.7221 195.662 64.0828C194.272 62.0988 192.773 60.1945 191.169 58.3791C191.116 58.3191 191.045 58.2768 190.967 58.2576C190.889 58.2385 190.807 58.2434 190.732 58.2718C182.444 61.5682 174.622 65.9323 167.463 71.2502C167.401 71.2904 167.354 71.351 167.332 71.4217C156.473 98.4548 156.996 122.481 163.94 144.85C163.97 144.955 164.061 145.048 164.16 145.099C174.834 149.991 186.262 153.035 197.955 154.101C198.038 154.109 198.121 154.091 198.193 154.048C198.264 154.006 198.32 153.942 198.353 153.866C200.03 150.158 201.411 146.33 202.464 142.388C202.486 142.306 202.481 142.22 202.45 142.142C202.419 142.063 202.364 141.997 202.292 141.953C202.245 141.924 202.192 141.905 202.137 141.898C198.577 141.326 195.066 140.478 191.638 139.361C191.542 139.33 191.462 139.264 191.414 139.177C191.365 139.089 191.353 138.985 191.378 138.889C191.392 138.826 191.421 138.768 191.462 138.719C192.003 138.102 192.539 137.462 193.044 136.829C193.089 136.774 193.148 136.732 193.214 136.708C193.281 136.684 193.353 136.679 193.423 136.693C215.371 141.614 237.043 137.044 254.891 123.732C254.951 123.689 255.022 123.664 255.095 123.658C255.168 123.653 255.242 123.667 255.308 123.7C256.026 124.075 256.774 124.445 257.518 124.791C257.578 124.818 257.63 124.859 257.67 124.912C257.71 124.964 257.737 125.025 257.747 125.09C257.758 125.155 257.752 125.222 257.731 125.284C257.709 125.346 257.673 125.402 257.624 125.447C254.949 127.868 252.076 130.061 249.034 132.001C248.985 132.031 248.944 132.072 248.912 132.12C248.881 132.168 248.861 132.222 248.853 132.279C248.846 132.334 248.85 132.389 248.866 132.442C248.881 132.495 248.907 132.545 248.942 132.587C251.526 135.755 254.344 138.706 257.33 141.43C257.39 141.487 257.467 141.523 257.55 141.532C257.632 141.542 257.716 141.526 257.788 141.485C268.076 135.795 277.319 128.392 285.118 119.594C285.157 119.552 285.187 119.502 285.204 119.447C285.222 119.392 285.226 119.334 285.218 119.277C282.209 92.358 270.55 70.8795 252.454 53.481C252.433 53.4504 252.406 53.4245 252.374 53.405C252.343 53.3856 252.307 53.3729 252.27 53.368ZM201.38 122.44C195.348 123.712 189.22 119.223 187.789 112.435C186.356 105.639 190.058 99.0778 196.181 97.7867C202.35 96.4859 208.442 101.03 209.774 107.799C211.205 114.587 207.503 121.149 201.38 122.44ZM242.017 113.871C235.993 115.141 229.858 110.654 228.426 103.866C226.993 97.0704 230.696 90.509 236.819 89.2179C242.988 87.9171 249.088 92.4595 250.412 99.2305C251.843 106.019 248.186 112.57 242.017 113.871Z" fill="white" fill-opacity="0.3"/> <mask id="mask0_11_240" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="343" y="44" width="85" height="85"> <rect x="343" y="70.7921" width="63.3198" height="63.3198" transform="rotate(-25.0319 343 70.7921)" fill="#D9D9D9"/> </mask> <g mask="url(#mask0_11_240)"> <path d="M396.246 109.987C390.056 111.179 384.001 110.137 378.079 106.86C372.157 103.584 367.781 98.9174 364.953 92.8614L358.144 78.2793L373.919 62.177L396.392 60.4179L403.202 75C406.03 81.056 406.799 87.4061 405.51 94.0502C404.22 100.694 401.132 106.007 396.246 109.987ZM393.901 104.967C397.208 101.967 399.333 98.0996 400.276 93.3642C401.219 88.6288 400.896 83.9874 399.306 79.44L385.082 86.0822L376.291 67.2569L364.46 79.3336L370.237 91.7045C370.367 91.9834 370.574 92.3233 370.859 92.7244L385.082 86.0822L393.901 104.967Z" fill="#DDB85A"/> </g> <mask id="mask1_11_240" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="97" y="0" width="89" height="89"> <rect x="129.747" width="64.2571" height="64.2571" transform="rotate(30.6389 129.747 0)" fill="#D9D9D9"/> </mask> <g mask="url(#mask1_11_240)"> <path d="M126.491 63.419L129.424 58.4662C127.662 56.8002 126.429 54.8768 125.724 52.6958C125.019 50.5149 125.026 48.0296 125.745 45.2399L131.03 46.0364C130.514 48.2204 130.538 50.1278 131.102 51.7585C131.667 53.3892 132.87 54.7503 134.713 55.8419C136.287 56.7743 137.832 57.2094 139.346 57.1472C140.861 57.0851 142.062 56.3053 142.949 54.808C143.745 53.4642 143.954 52.1486 143.575 50.8613C143.197 49.5739 141.768 47.5215 139.287 44.7039C136.6 41.7116 135.068 39.1317 134.692 36.9642C134.316 34.7967 134.742 32.6764 135.97 30.6031C137.448 28.1076 139.403 26.6462 141.834 26.2192C144.266 25.7922 146.383 25.983 148.186 26.7916L151.051 21.954L155.658 24.683L152.793 29.5205C154.531 30.9647 155.699 32.6035 156.299 34.4368C156.899 36.2701 157.02 38.1444 156.664 40.0596L151.311 39.3782C151.578 37.8767 151.471 36.5687 150.99 35.4541C150.509 34.3395 149.539 33.3501 148.08 32.486C146.391 31.4854 144.883 31.0979 143.556 31.3235C142.23 31.5491 141.237 32.2186 140.578 33.3321C139.827 34.599 139.812 35.9384 140.531 37.3501C141.251 38.7618 142.793 40.7122 145.156 43.2013C147.351 45.5383 148.635 47.9455 149.008 50.4229C149.382 52.9004 148.921 55.2333 147.625 57.4217C146.01 60.1477 143.976 61.7433 141.522 62.2088C139.068 62.6742 136.548 62.3747 133.963 61.3103L131.098 66.1479L126.491 63.419Z" fill="#708D30"/> </g> <mask id="mask2_11_240" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="227" y="135" width="80" height="80"> <rect x="227" y="149.574" width="67" height="67" transform="rotate(-12.564 227 149.574)" fill="#D9D9D9"/> </mask> <g mask="url(#mask2_11_240)"> <path d="M248.409 211.735C246.093 212.251 244.12 211.845 242.489 210.516C240.858 209.187 239.943 207.33 239.745 204.943L238.052 183.869C237.853 181.053 238.567 178.534 240.193 176.313C241.819 174.091 243.995 172.677 246.719 172.07L273.695 166.058C276.42 165.45 278.99 165.807 281.406 167.128C283.821 168.449 285.537 170.426 286.553 173.059L293.969 192.858C294.803 195.103 294.764 197.174 293.852 199.069C292.939 200.965 291.325 202.171 289.009 202.687C288.055 202.899 287.132 202.926 286.238 202.768C285.345 202.61 284.482 202.266 283.649 201.736L276.152 196.972L257.623 201.101L252.858 208.598C252.329 209.432 251.694 210.109 250.952 210.632C250.211 211.155 249.363 211.523 248.409 211.735ZM278.69 187.826C279.462 187.654 280.051 187.248 280.456 186.61C280.862 185.971 280.979 185.266 280.807 184.494C280.635 183.722 280.23 183.133 279.591 182.727C278.952 182.321 278.247 182.204 277.475 182.376C276.703 182.548 276.114 182.954 275.708 183.592C275.302 184.231 275.185 184.936 275.357 185.708C275.53 186.48 275.935 187.069 276.574 187.475C277.212 187.881 277.918 187.998 278.69 187.826ZM271.418 180.866C272.19 180.694 272.779 180.288 273.185 179.65C273.591 179.011 273.708 178.306 273.536 177.534C273.364 176.762 272.958 176.173 272.32 175.767C271.681 175.361 270.976 175.244 270.204 175.416C269.432 175.588 268.843 175.994 268.437 176.632C268.031 177.271 267.914 177.976 268.086 178.748C268.258 179.52 268.663 180.109 269.302 180.515C269.941 180.921 270.646 181.038 271.418 180.866ZM253.485 193.443L257.572 192.532L256.509 187.764L261.278 186.701L260.367 182.614L255.599 183.676L254.536 178.908L250.449 179.819L251.511 184.587L246.743 185.65L247.654 189.737L252.422 188.675L253.485 193.443Z" fill="#FF5E5E" fill-opacity="0.75"/> </g> <mask id="mask3_11_240" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="97" y="133" width="59" height="59"> <rect x="113.913" y="133" width="44.8456" height="44.8456" transform="rotate(22.1559 113.913 133)" fill="#D9D9D9"/> </mask> <g mask="url(#mask3_11_240)"> <path d="M131.822 182.661L126.205 169.328L131.32 167.173L136.936 180.507L131.822 182.661ZM107.94 172.936L105.786 167.822L122.589 160.744L120.845 156.604L119.14 157.322L117.832 154.217L116.388 157.764L114.683 158.483L111.58 151.116L113.284 150.398L116.832 151.842L115.55 148.798L124.195 145.156C125.007 144.814 125.797 144.649 126.566 144.659C127.335 144.67 128.066 144.816 128.758 145.098C129.451 145.38 130.075 145.785 130.633 146.315C131.191 146.845 131.641 147.516 131.983 148.327L126.382 150.687L127.664 153.731L125.959 154.449L127.703 158.589L133.183 156.281C133.196 155.917 133.238 155.547 133.307 155.171C133.375 154.796 133.48 154.435 133.621 154.089C134.314 152.387 135.483 151.19 137.126 150.497C138.77 149.805 140.443 149.805 142.145 150.498C142.577 150.674 142.971 150.885 143.325 151.13C143.679 151.375 144.023 151.666 144.356 152.004L138.329 154.543L140.175 158.927L146.203 156.387C146.24 156.873 146.216 157.326 146.129 157.745C146.043 158.163 145.912 158.589 145.735 159.022C145.042 160.723 143.874 161.921 142.23 162.613C140.586 163.306 138.914 163.305 137.212 162.612C136.866 162.471 136.531 162.302 136.209 162.103C135.886 161.904 135.596 161.668 135.337 161.395L107.94 172.936Z" fill="#E1E1E1"/> </g> </svg>
-        </div>
-        <div class="showcase">
-            <div class="showcase-1">
-                <img data-aos="fade-up" class="showcase-1-image" src="components/img/showcase-1.png" alt="" height="auto" width="30%">
-                <div data-aos="fade-up" class="showcase-1-text">
-                    <span class="showcase-1-title">Build Your Own Unique Discord Bot</span>
-                    <span class="showcase-1-desc">The best bot tools are the ones that help you
-                        stand out. And that's exactly what we offer. You won't encounter a single pay wall in our toolkit because we believe in providing unrestricted access to innovation. Therefore you can do to your hearts contents were sky's the limit!</span>
-                </div>
+        <header class="hero">
+            <div class="header">Blockly For Discord</div>
+            <div class="subheader">With our tools you can make Discord Bots with literally no coding knowledge for completely free!</div>
+            <div class="hero-buttons">
+                <button class="hero-button-getstarted hero-button-norel button">Not Released Yet</button>
+                <button class="hero-button-explore button">Coming Soon</button>
             </div>
-            <div class="showcase-2">
-                <img data-aos="fade-up" class="showcase-1-image" src="components/img/showcase-2.png" alt="" height="auto" width="30%">
-                <div data-aos="fade-up" class="showcase-1-text">
-                    <span class="showcase-1-title">Many exciting Extensions to work with</span>
-                    <span class="showcase-1-desc">Welcome to our marketplace!  The marketplace is for  extensions, unlocking endless possibilities to enhance your bot's capabilities. 
-                        Whether you're looking for more blocks to add functionality or want to explore new features, discover and share extensions here without any cost. Join the community, spark creativity, and let's build together.</span>
-            </div>
-        </div>
+        </header>
     </div>
-        <div class="final-showcase">
-            <span class="final-showcase-header ">Start with a template instead</span>
-            <div class="final-showcase-items">
-
-                <div class="final-showcase-item">Blank Template</div>
-                <div class="final-showcase-item">Music Bot</div>
-                <div class="final-showcase-item">Economy Bot</div>
-                <div class="final-showcase-item">Purge Bot</div>
-            </div>
-        </div>
-        <div class="custom-shape-divider-top-1707147562">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <div class="available-for">
-            <span class="available-for-header">Libraries</span>
-            <div class="available-items">
-                <div class="available-for-item" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="components\img\discord-js.png" alt="" height="120px" width="auto">
-                    <span class="available-item-text">DiscordJS</span>
-                </div>
-                <div class="available-for-item" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="components\img\discord-py.png" alt="" height="100px" width="auto">
-                    <span class="available-item-text">Discord.py</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="custom-shape-divider-bottom-1707147500">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <footer>
-            <div class="footer">
-                <div>Made with ❤️ by <a href="https://github.com/LarsIsHere" target="_blank">LarsIsHere</a> and <a href="https://linktr.ee/inventionpro" target="_blank">Inventionpro</a></div>
-                <div><span>support@blockly-for-discord.xyz</span></div>
-                
-            </div>
-        </footer>
     </div>
 </body>
 </html>
-

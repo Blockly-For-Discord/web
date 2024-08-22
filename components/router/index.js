@@ -3,7 +3,8 @@
 Made and Maintained by Blockly For Discord. Any Modification is prohibited and could lead to faulty behaviour of the site - v0.5.6
 
 */
-import Router from './new_router.js';
+
+import { Router } from './router.js';
 
 import { HomeInit } from '../dashboard/home.js';
 import { HomeSwitch } from '../dashboard/home.js';
@@ -22,18 +23,9 @@ import { ProjectsSwitch } from '../dashboard/projects.js';
 window.ProjectsInit = ProjectsInit;
 window.ProjectsSwitch = ProjectsSwitch;
 
+const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
-function GlobalSetPage(html) {
-    const container = document.getElementById("content");
-    container.innerHTML = html;
-}
+Routes.register('home','','components/media/pages/home.svg','top','tooltip',false ,HomeInit, HomeSwitch);
+Routes.register('projects','projects','components/media/pages/projects.svg','top','tooltip',false ,ProjectsInit, ProjectsSwitch);
 
-window.GlobalSetPage = GlobalSetPage;
-
-document.addEventListener('AuthConfirmed', function(event) {
-
-    const app = new Router();
-    app.add('Home', '', 's-home', 'Home', HomeInit, HomeSwitch);
-
-    Router.LoadCurrent();
-});
+Router.loadByPath()
