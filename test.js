@@ -11,6 +11,7 @@ Namespace.registerAllOf('discordjs');
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJSTooblox,
   renderer: 'renderer',
+  comments: false,
   grid: {
     spacing: 30,
     length: 31,
