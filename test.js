@@ -49,12 +49,13 @@ b4d.workspace = workspace;
 b4d.Blockly.setLocale(b4d.En);
 
 /* Tooltips */
-function tip() {
+function tip(event) {
+  if (event.type !== 'create') return;
   let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
   blocks.forEach(block => {
     tippy(block, {
       content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
-      delay: [1000, 200]
+      delay: [1000, 0]
     })
   })
 }
