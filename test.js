@@ -10,7 +10,7 @@ Namespace.registerAllOf('discordjs');
 // Workspace & Toolbox
 const workspace = b4d.Blockly.inject('blocklyDiv', {
   toolbox: DiscordJSTooblox,
-  renderer: 'renderer',
+  renderer: 'zelos',
   comments: false,
   grid: {
     spacing: 30,
