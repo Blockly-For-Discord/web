@@ -50,7 +50,7 @@ b4d.Blockly.setLocale(b4d.En);
 
 /* Tooltips */
 function tip(event) {
-  if (event.type !== 'create' && event.type !== 'toolbox_item_select') return;
+  if (!['create', 'toolbox_item_select', 'remove'].includes(event.type)) return;
   let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
   blocks.forEach(block => {
     tippy(block, {
