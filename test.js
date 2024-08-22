@@ -50,19 +50,17 @@ b4d.Blockly.setLocale(b4d.En);
 
 /* Tooltips */
 function tip(event) {
-  if (event.type !== 'create') return;
-  setTimeout(()=>{
-    let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
-    blocks.forEach(block => {
-      tippy(block, {
-        content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
-        delay: [1000, 0],
-        interactive: true,
-        sticky: true,
-        moveTransition: 'transform 25ms ease-in-out'
-      })
+  if (event.type !== 'create' && event.type !== 'toolbox_item_select') return;
+  let blocks = Array.from(document.querySelectorAll('.blocklyWorkspace > .blocklyBlockCanvas .blocklyDraggable'))
+  blocks.forEach(block => {
+    tippy(block, {
+      content: b4d.Blockly.Tooltip.getTooltipOfObject(b4d.workspace.getBlockById(block.getAttribute('data-id'))),
+      delay: [1000, 0],
+      interactive: true,
+      sticky: true,
+      moveTransition: 'transform 25ms ease-in-out'
     })
-  }, 50)
+  })
 }
 function letool(a, b) {
   console.log(a, b)
