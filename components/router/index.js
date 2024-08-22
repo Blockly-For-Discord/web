@@ -18,7 +18,7 @@ window.SettingsSwitch = SettingsSwitch;
 import { ProjectsInit, ProjectsSwitch } from '../dashboard/projects.js';
 window.ProjectsInit = ProjectsInit;
 window.ProjectsSwitch = ProjectsSwitch;
-import { ExploreInit, ExploreSwitch } from '../dashboard/explore.js';
+/* import { ExploreInit, ExploreSwitch } from '../dashboard/explore.js';
 window.ExploreInit = ExploreInit;
 window.ExploreSwitch = ExploreSwitch;
 import { UsersInit, UsersSwitch } from '../dashboard/users.js';
@@ -32,16 +32,16 @@ window.UpdatesInit = UpdatesInit;
 window.UpdatesSwitch = UpdatesSwitch;
 import { DeveloperInit, DeveloperSwitch } from '../dashboard/developer.js';
 window.DeveloperInit = DeveloperInit;
-window.DeveloperSwitch = DeveloperSwitch;
+window.DeveloperSwitch = DeveloperSwitch;*/
 
 const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
 Routes.register('home', '', 'components/media/pages/home.svg', 'top', 'tooltip', false, HomeInit, HomeSwitch);
 Routes.register('projects', 'projects', 'components/media/pages/projects.svg', 'top', 'tooltip', false, ProjectsInit, ProjectsSwitch);
-Routes.register('explore', 'explore', 'components/media/pages/explore.svg', 'top', 'tooltip', false, ExploreInit, ExploreSwitch);
-Routes.register('users', 'users', 'components/media/pages/users.svg', 'top', 'tooltip', false, UsersInit, UsersSwitch);
-Routes.register('extensions', 'extensions', 'components/media/pages/extensions.svg', 'top', 'tooltip', false, ExtensionsInit, ExtensionsSwitch);
-Routes.register('updates', 'updates', 'components/media/pages/updates.svg', 'top', 'tooltip', false, UpdatesInit, UpdatesSwitch);
-Routes.register('developer', 'developer', 'components/media/pages/developer.svg', 'top', 'tooltip', false, DeveloperInit, DeveloperSwitch);
+//Routes.register('explore', 'explore', 'components/media/pages/explore.svg', 'top', 'tooltip', false, ExploreInit, ExploreSwitch);
+//Routes.register('users', 'users', 'components/media/pages/users.svg', 'top', 'tooltip', false, UsersInit, UsersSwitch);
+//Routes.register('extensions', 'extensions', 'components/media/pages/extensions.svg', 'top', 'tooltip', false, ExtensionsInit, ExtensionsSwitch);
+//Routes.register('updates', 'updates', 'components/media/pages/updates.svg', 'top', 'tooltip', false, UpdatesInit, UpdatesSwitch);
+//Routes.register('developer', 'developer', 'components/media/pages/developer.svg', 'top', 'tooltip', false, DeveloperInit, DeveloperSwitch);
 
 Router.loadByPath()
