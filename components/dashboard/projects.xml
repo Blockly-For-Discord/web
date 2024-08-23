@@ -2,6 +2,6 @@
     <export sample="projects_HelloWorld"></export>
 
     <sample name="projects_HelloWorld">
-        <h1>Hello World Projects</h1>
+        <h1 id="test">Hello World Projects</h1>
     </sample>
 </citron>

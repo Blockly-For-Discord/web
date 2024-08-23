@@ -8,6 +8,7 @@ export function ProjectsInit () {
 export async function ProjectsSwitch () {
 
     console.log("bye from projects")
+    document.getElementById('test').outerHTML = '';
     const response = `{"response":"success"}`;
     return response;
 }
