@@ -2,7 +2,9 @@
 
 export function ProjectsInit () {
 
-    console.log("hello world, from projects.");
+    const testElement = document.createElement('sample');
+    testElement.setAttribute('name', 'projects_select-area');
+    document.getElementById('select-area').appendChild(testElement);
 }
 
 export async function ProjectsSwitch () {
