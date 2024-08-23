@@ -33,9 +33,6 @@ window.UpdatesSwitch = UpdatesSwitch;
 import { DeveloperInit, DeveloperSwitch } from '../dashboard/developer.js';
 window.DeveloperInit = DeveloperInit;
 window.DeveloperSwitch = DeveloperSwitch;
-import { SettingsInit, SettingsSwitch } from '../dashboard/settings.js';
-window.SettingsInit = SettingsInit;
-window.SettingsSwitch = SettingsSwitch;
 
 const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
