@@ -36,12 +36,12 @@ window.DeveloperSwitch = DeveloperSwitch;
 
 const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
-Routes.register('home', '', 'components/media/pages/home.svg', 'top', 'tooltip', false, HomeInit, HomeSwitch);
-Routes.register('projects', 'projects', 'components/media/pages/projects.svg', 'top', 'tooltip', false, ProjectsInit, ProjectsSwitch);
-Routes.register('explore', 'explore', 'components/media/pages/explore.svg', 'top', 'tooltip', false, ExploreInit, ExploreSwitch);
-Routes.register('users', 'users', 'components/media/pages/users.svg', 'top', 'tooltip', false, UsersInit, UsersSwitch);
-Routes.register('extensions', 'extensions', 'components/media/pages/extensions.svg', 'top', 'tooltip', false, ExtensionsInit, ExtensionsSwitch);
-Routes.register('updates', 'updates', 'components/media/pages/updates.svg', 'top', 'tooltip', false, UpdatesInit, UpdatesSwitch);
-Routes.register('developer', 'developer', 'components/media/pages/developer.svg', 'top', 'tooltip', false, DeveloperInit, DeveloperSwitch);
+Routes.register('home', '', 'components/media/pages/home.svg', 'top', 'Home', false, HomeInit, HomeSwitch);
+Routes.register('projects', 'projects', 'components/media/pages/projects.svg', 'top', 'Projects', false, ProjectsInit, ProjectsSwitch);
+Routes.register('explore', 'explore', 'components/media/pages/explore.svg', 'top', 'Explore', false, ExploreInit, ExploreSwitch);
+Routes.register('users', 'users', 'components/media/pages/users.svg', 'top', 'Users', false, UsersInit, UsersSwitch);
+Routes.register('extensions', 'extensions', 'components/media/pages/extensions.svg', 'top', 'Extensions', false, ExtensionsInit, ExtensionsSwitch);
+Routes.register('updates', 'updates', 'components/media/pages/updates.svg', 'top', 'Updates', false, UpdatesInit, UpdatesSwitch);
+Routes.register('developer', 'developer', 'components/media/pages/developer.svg', 'top', 'Developer', false, DeveloperInit, DeveloperSwitch);
 
 Router.loadByPath()
