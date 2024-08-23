@@ -1,7 +1,19 @@
 <citron>
-    <export sample="projects_HelloWorld"></export>
+    <export sample="projects_select-area"></export>
 
-    <sample name="projects_HelloWorld">
-        <h1 id="test">Hello World Projects</h1>
+    <sample name="projects_select-area">
+        <div class="preset_select-area">
+            <span class="preset_title">Projects</span>
+
+            <div class="projects_list-container">
+                <span class="projects_list-title" id="projects_list-title"></span>
+                <span class="projects_list-item"></span>
+
+                <div class="projects_list_sep"></div>
+
+                <span class="projects_list-title" id="projects_list-title"></span>
+                <span class="projects_list-item"></span>
+            </div>
+        </div>
     </sample>
 </citron>
