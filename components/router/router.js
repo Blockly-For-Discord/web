@@ -42,7 +42,8 @@ export class Router {
         setTimeout(() => {
             b4d.tippy(document.getElementById(name), {
                 content: tooltip,
-                placement: 'right'
+                placement: 'right',
+                delay: [500, 0]
             })
             document.getElementById(name).addEventListener('click', async function (event) {
                 // get the "destination" attribute
