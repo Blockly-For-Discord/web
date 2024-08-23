@@ -99,6 +99,11 @@ html, body, .page {
     transition: 0.25s;
     cursor: pointer;
 }
+
+.sidebar-icon:focus {
+    outline: none;
+}
+
 .sidebar-icon:active {
     fill: var(--fill-icon-active) !important;
     scale: 0.8 !important;
