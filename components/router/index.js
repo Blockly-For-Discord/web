@@ -33,6 +33,9 @@ window.UpdatesSwitch = UpdatesSwitch;
 import { DeveloperInit, DeveloperSwitch } from '../dashboard/developer.js';
 window.DeveloperInit = DeveloperInit;
 window.DeveloperSwitch = DeveloperSwitch;
+import { SettingsInit, SettingsSwitch } from '../dashboard/settings.js';
+window.SettingsInit = SettingsInit;
+window.SettingsSwitch = SettingsSwitch;
 
 const Routes = new Router('sidebar-icons', 'sidebar-bottom-region');
 
@@ -43,5 +46,6 @@ Routes.register('users', 'users', 'components/media/pages/users.svg', 'top', 'Us
 Routes.register('extensions', 'extensions', 'components/media/pages/extensions.svg', 'top', 'Extensions', false, ExtensionsInit, ExtensionsSwitch);
 Routes.register('updates', 'updates', 'components/media/pages/updates.svg', 'top', 'Updates', false, UpdatesInit, UpdatesSwitch);
 Routes.register('developer', 'developer', 'components/media/pages/developer.svg', 'top', 'Developer', false, DeveloperInit, DeveloperSwitch);
+Routes.register('settings', 'settings', 'components/media/pages/settings.svg', 'bottom', 'Settings', false, SettingsInit, SettingsSwitch);
 
 Router.loadByPath()
