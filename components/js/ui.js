@@ -6,37 +6,15 @@ This file is being maintaned by Blockly For Discord. Do NOT Modify in the browse
 */
 
 let ui = {};
-ui.toggleArea = {};
-ui.selectArea = {};
-ui.mainArea = {};
 
-ui.selectArea.clear = function () {
-    document.getElementById('').innerHTML = '';
-}
-ui.selectArea.hide = function () {
-    document.getElementById('').style.display = 'none';
-}
-ui.selectArea.show = function () {
-    document.getElementById('').style.display = 'block';
+ui.clear = function (id) {
+    document.getElementById(id).innerHTML = '';
 }
 
-ui.mainArea.clear = function () {
-    document.getElementById('').innerHTML = '';
-}
-ui.mainArea.hide = function () {
-    document.getElementById('').style.display = 'none';
-}
-ui.mainArea.show = function () {
-    document.getElementById('').style.display = 'block';
+ui.hide = function (id) {
+    document.getElementById(id).style.display = 'none';
 }
 
-// interactive toggle area
-ui.toggleArea.clear = function () {
-    document.getElementById('').innerHTML = '';
-}
-ui.toggleArea.hide = function () {
-    document.getElementById('').style.display = 'none';
-}
-ui.toggleArea.show = function () {
-    document.getElementById('').style.display = 'block';
+ui.show = function (id) {
+    document.getElementById(id).style.display = 'block';
 }
