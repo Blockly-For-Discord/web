@@ -64,34 +64,34 @@ export class Router {
             Array.from(document.querySelectorAll('#sidebar-icons > *')).forEach(e=>e.classList.remove('sidebar-icon-active'));
             document.getElementById(name).classList.add('sidebar-icon-active');
 
-        if (Router.currentPage === 'none') {
+            if (Router.currentPage === 'none') {
 
-           // theres no current page
-            const initFunc = Router.pages[name].init;
+                // theres no current page
+                const initFunc = Router.pages[name].init;
 
-            if (typeof initFunc === 'function') {
+                if (typeof initFunc === 'function') {
 
-                Router.currentPage = name;
+                    Router.currentPage = name;
 
-                await initFunc();
+                    await initFunc();
 
+                } else {
+                    console.warn("The provided initialization function for '" + name + "' is not a function");
+                }
 
             } else {
-                console.warn("The provided initialization function for '" + name + "' is not a function");
+
+                const changeFunc = Router.pages[Router.currentPage].change;
+                const initFunc = Router.pages[name].init;
+
+                if (typeof changeFunc === 'function' && typeof initFunc === 'function') {
+                    await changeFunc();
+                    await initFunc();
+                    Router.currentPage = name;
+                } else {
+                    console.warn(`Either the change or the initialization function provided is not a function.`);
+                }
             }
-
-        } else {
-
-            const changeFunc = Router.pages[Router.currentPage].change;
-            const initFunc = Router.pages[name].init;
-
-            if (typeof changeFunc === 'function' && typeof initFunc === 'function') {
-                await changeFunc();
-                await initFunc();
-            } else {
-                console.warn(`Either the change or the initialization function provided is not a function.`);
-            }
-        }
         } else {
             Router.load("home");
         }
