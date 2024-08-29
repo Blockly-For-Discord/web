@@ -2,7 +2,7 @@ import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as Blockly from '/components/webpack/blocklycompressed.bundle.js';
 
 discordjs.createBlock('channel_create', {
-  "message0": "Create channel in server %1 with name %2 type %3",
+  "message0": "Create channel in server %1 with name %2 type %3 then %4",
   "args0": [
     {
       "type": "input_value",
@@ -47,6 +47,10 @@ discordjs.createBlock('channel_create', {
           "GuildCategory"
         ]
       ]
+    },
+    {
+      "type": "input_statement",
+      "name": "then"
     }
   ],
   "inputsInline": false,
@@ -61,8 +65,12 @@ b4d.javascriptGenerator.forBlock['discordjs:channel_create'] = function(block, g
   var value_server = generator.valueToCode(block, 'server', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_name = generator.valueToCode(block, 'name', b4d.javascriptGenerator.ORDER_ATOMIC);
   var dropdown_type = block.getFieldValue('type');
+  const statement_then = generator.statementToCode(block, 'then');
   return `${value_server}.channels.create({
   name: ${value_name}
   type: ChannelType.${dropdown_type}
-});\n`;
+})
+  .then(channel => {
+    ${statement_then}
+  });\n`;
 };

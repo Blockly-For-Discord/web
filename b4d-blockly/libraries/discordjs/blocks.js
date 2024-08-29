@@ -5,10 +5,11 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/class_test.js';
 /* Extra blockly */
 // Text
 export * from '/b4d-blockly/libraries/discordjs/blocks/text/has.js';
-// Console
-export * from '/b4d-blockly/libraries/discordjs/blocks/console/send.js';
-export * from '/b4d-blockly/libraries/discordjs/blocks/console/on_error.js';
-export * from '/b4d-blockly/libraries/discordjs/blocks/console/error.js';
+// Other
+export * from '/b4d-blockly/libraries/discordjs/blocks/other/send.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/other/throw.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/other/on_error.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/other/error.js';
 
 /* Main */
 // Base

@@ -768,15 +768,15 @@ export const DiscordJSTooblox = {
     },
     {
       kind: 'category',
-      name: 'Console',
-      colour: b4d.color.console,
+      name: 'Other',
+      colour: b4d.color.other,
       contents: [
         {
           text: 'Console',
           kind: 'label'
         },
         {
-          type: 'discordjs:console_send',
+          type: 'discordjs:other_send',
           kind: 'block',
           inputs: {
             text: {
@@ -790,15 +790,29 @@ export const DiscordJSTooblox = {
           }
         },
         {
-          text: 'Events',
+          text: 'Errors',
           kind: 'label'
         },
         {
-          type: 'discordjs:console_on_error',
+          type: 'discordjs:other_throw',
+          kind: 'block',
+          inputs: {
+            text: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: 'error'
+                }
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:other_on_error',
           kind: 'block'
         },
         {
-          type: 'discordjs:console_error',
+          type: 'discordjs:other_error',
           kind: 'block'
         }
       ]
