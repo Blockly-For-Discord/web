@@ -1151,14 +1151,122 @@ export const DiscordJSTooblox = {
               kind: 'label'
             },
             {
+              type: 'discordjs:embed_author',
+              kind: 'block',
+              inputs: {
+                text: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'B4D'
+                    }
+                  }
+                },
+                icon: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                },
+                url: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                }
+              }
+            },
+            {
               type: 'discordjs:embed_title',
               kind: 'block',
               inputs: {
-                title: {
+                text: {
                   shadow: {
                     type: 'text',
                     fields: {
                       TEXT: 'Embed'
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_url',
+              kind: 'block',
+              inputs: {
+                text: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_description',
+              kind: 'block',
+              inputs: {
+                text: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'Some description'
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_thumbnail',
+              kind: 'block',
+              inputs: {
+                url: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_image',
+              kind: 'block',
+              inputs: {
+                url: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_footer',
+              kind: 'block',
+              inputs: {
+                text: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'Footer'
+                    }
+                  }
+                },
+                icon: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: ''
                     }
                   }
                 }
