@@ -34,6 +34,7 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/message/remove_reaction.j
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/remove_reactions.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/delete.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/message/bulk_delete.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/message/get.js';
 
 // Channel
 export * from '/b4d-blockly/libraries/discordjs/blocks/channel/get.js';
@@ -54,6 +55,7 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/component/component.js';
 
 // Embed
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/create.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/title.js';
 
 // Poll
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/poll/create.js';

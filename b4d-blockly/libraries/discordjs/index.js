@@ -1092,6 +1092,29 @@ export const DiscordJSTooblox = {
               }
             }
           }
+        },
+        {
+          type: 'discordjs:message_get',
+          kind: 'block',
+          inputs: {
+            id: {
+              shadow: {
+                type: 'text',
+                fields: {
+                  TEXT: '0'
+                }
+              }
+            },
+            channel: {
+              shadow: {
+                type: 'discordjs:message_channel'
+              }
+            }
+          }
+        },
+        {
+          type: 'discordjs:message_reference',
+          kind: 'block'
         }
       ]
     },
@@ -1126,6 +1149,20 @@ export const DiscordJSTooblox = {
             {
               text: 'Embed parts',
               kind: 'label'
+            },
+            {
+              type: 'discordjs:embed_title',
+              kind: 'block',
+              inputs: {
+                title: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'Embed'
+                    }
+                  }
+                }
+              }
             },
             {
               text: 'Component',
