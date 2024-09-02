@@ -1198,7 +1198,7 @@ export const DiscordJSTooblox = {
               type: 'discordjs:embed_url',
               kind: 'block',
               inputs: {
-                text: {
+                url: {
                   shadow: {
                     type: 'text',
                     fields: {
