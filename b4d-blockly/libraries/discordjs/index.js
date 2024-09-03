@@ -753,7 +753,8 @@ export const DiscordJSTooblox = {
     },
     {
       kind: 'category',
-      name: 'Variables',
+      name: 'Color',
+      categorystyle: 'colour_category',
       contents: [
         {
           type: 'colour_picker',

@@ -1,9 +1,9 @@
 import { Namespace } from '/b4d-blockly/namespaces.js';
 
 // Colour blocks
-/*b4d.BlocklyColour.installColourBlocks({
+b4d.BlocklyColour.installColourBlocks({
   javascript: b4d.javascriptGenerator
-});*/
+});
 
 // DiscordJS
 import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
