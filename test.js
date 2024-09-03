@@ -1,5 +1,11 @@
 import { Namespace } from '/b4d-blockly/namespaces.js';
 
+// Colour blocks
+import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
+installColourBlocks({
+  javascript: b4d.javascriptGenerator
+});
+
 // DiscordJS
 import { discordjs } from '/b4d-blockly/libraries/discordjs.js';
 import * as DiscordJSBlocks from '/b4d-blockly/libraries/discordjs/blocks.js';
