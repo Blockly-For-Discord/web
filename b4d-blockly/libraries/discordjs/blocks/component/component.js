@@ -32,6 +32,6 @@ function clean(txt) {
 b4d.javascriptGenerator.forBlock['discordjs:component'] = function(block, generator) {
   var value_embed = generator.valueToCode(block, 'embed', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_poll = generator.valueToCode(block, 'poll', b4d.javascriptGenerator.ORDER_ATOMIC);
-  var code = `${embed.length > 2 ? `embeds: [${value_embed.split(',').map(e=>'embed_'+clean(e.trim()).join(', '))}],\n` : ''}${value_poll.length > 2 ? `poll: poll_${clean(value_poll)},\n` : ''}`;
+  var code = `${value_embed.length > 2 ? `embeds: [${value_embed.split(',').map(e=>'embed_'+clean(e.trim()).join(', '))}],\n` : ''}${value_poll.length > 2 ? `poll: poll_${clean(value_poll)},\n` : ''}`;
   return [code, b4d.javascriptGenerator.ORDER_NONE];
 };
