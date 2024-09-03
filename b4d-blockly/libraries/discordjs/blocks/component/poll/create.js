@@ -47,7 +47,7 @@ b4d.javascriptGenerator.forBlock['discordjs:poll_create'] = function(block, gene
   var value_time = generator.valueToCode(block, 'time', b4d.javascriptGenerator.ORDER_ATOMIC);
   var value_multi = generator.valueToCode(block, 'multi', b4d.javascriptGenerator.ORDER_ATOMIC);
   var statement_answers = generator.statementToCode(block, 'answers');
-  var code = `var poll_${value_name.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'')} = {
+  var code = `var poll_${value_name.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'').replaceAll(".",'').replaceAll(",",'')} = {
   question: { text: ${value_question} },
   duration: ${value_time},
   allow_multiselect: ${value_multi},

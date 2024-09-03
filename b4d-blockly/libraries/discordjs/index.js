@@ -1202,7 +1202,21 @@ export const DiscordJSTooblox = {
                   shadow: {
                     type: 'text',
                     fields: {
-                      TEXT: ''
+                      TEXT: 'https://example.com'
+                    }
+                  }
+                }
+              }
+            },
+            {
+              type: 'discordjs:embed_thumbnail',
+              kind: 'block',
+              inputs: {
+                url: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'https://example.com/image.png'
                     }
                   }
                 }
@@ -1223,20 +1237,6 @@ export const DiscordJSTooblox = {
               }
             },
             {
-              type: 'discordjs:embed_thumbnail',
-              kind: 'block',
-              inputs: {
-                url: {
-                  shadow: {
-                    type: 'text',
-                    fields: {
-                      TEXT: ''
-                    }
-                  }
-                }
-              }
-            },
-            {
               type: 'discordjs:embed_image',
               kind: 'block',
               inputs: {
@@ -1244,7 +1244,7 @@ export const DiscordJSTooblox = {
                   shadow: {
                     type: 'text',
                     fields: {
-                      TEXT: ''
+                      TEXT: 'https://example.com/image.png'
                     }
                   }
                 }
@@ -1275,6 +1275,20 @@ export const DiscordJSTooblox = {
             {
               text: 'Component',
               kind: 'label'
+            },
+            {
+              type: 'discordjs:component',
+              kind: 'block',
+              inputs: {
+                embed: {
+                  shadow: {
+                    type: 'text',
+                    fields: {
+                      TEXT: 'embed1, embed2'
+                    }
+                  }
+                }
+              }
             }
           ]
         },

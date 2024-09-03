@@ -25,7 +25,7 @@ discordjs.createBlock('embed_create', {
 b4d.javascriptGenerator.forBlock['discordjs:embed_create'] = function(block, generator) {
   var value_name = generator.valueToCode(block, 'name', b4d.javascriptGenerator.ORDER_ATOMIC);
   var statement_inner = generator.statementToCode(block, 'inner');
-  var code = `var embed_${value_name.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'')} = new EmbedBuilder()
+  var code = `var embed_${value_name.replaceAll(' ','_').replaceAll('-','_').replaceAll("'",'').replaceAll(".",'').replaceAll(",",'')} = new EmbedBuilder()
   ${statement_inner};\n`;
   return code;
 };

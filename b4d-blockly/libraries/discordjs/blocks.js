@@ -58,8 +58,8 @@ export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/create.js
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/author.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/title.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/url.js';
-export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/description.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/thumbnail.js';
+export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/description.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/image.js';
 export * from '/b4d-blockly/libraries/discordjs/blocks/component/embed/footer.js';
 
