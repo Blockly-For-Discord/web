@@ -40,8 +40,6 @@ b4d.javascriptGenerator.forBlock['discordjs:message_reply'] = function(block, ge
   var value_message = generator.valueToCode(block, 'message', b4d.javascriptGenerator.ORDER_ATOMIC);
   var code = `${value_message}.reply({
   content: ${value_text},
-  allowedMentions: { repliedUser: ${value_mention} },
-  ${value_component}
-});\n`;
+  allowedMentions: { repliedUser: ${value_mention} }${value_component.length < 1 ? '' : ',\n  '}${value_component}});\n`;
   return code;
 };
