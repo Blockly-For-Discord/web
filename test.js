@@ -1,8 +1,7 @@
 import { Namespace } from '/b4d-blockly/namespaces.js';
 
 // Colour blocks
-import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
-installColourBlocks({
+b4d.BlocklyColour.installColourBlocks({
   javascript: b4d.javascriptGenerator
 });
 

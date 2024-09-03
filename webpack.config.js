@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     BlocklyCompressed: './webpack/webpack-blockly.js',
     BlocklyJS: './webpack/webpack-generator.js',
+    BlocklyColour: './webpack/webpack-blockly-colour.js',
     ToastifyJS: './webpack/webpack-toastify.js',
     TippyJS: './webpack/webpack-tippy.js'
   },
