@@ -1,4 +1,4 @@
-![Stable - v1.0.0](https://img.shields.io/badge/Stable-v1.0.0-2ea44f) ![Release - soon](https://img.shields.io/badge/Release-soon-ff3333)
+![Ongoing - v0.3.2](https://img.shields.io/badge/Stable-v1.0.0-2ea44f) ![Release - soon](https://img.shields.io/badge/Release-soon-ff3333)
 
 
 !THE PRODUCTION READY SITE IS NOT OUT YET NOR DONE!
@@ -22,3 +22,9 @@ npm install
 webpack
 ```
 2. Open Live Server
+
+### Cloning B4D
+As Blockly For Discord is a product with code built from the ground up¹, it's *not* cloning abother project and there fore has its own license applied. If you wish to therefore *clone* this project you are allowed to aslong as it follows the license listed in **THIS**² repository.
+
+¹ Blockly For Discord contains 100% unique code. None of it has been borrowed or copied from similar Projects. It is not subject to the license of these similar projects, and any clones of this repo must follow the license of **this** repo.
+¹ Other repos within this organization are subject to the same license if marked with "subject to origin license".
